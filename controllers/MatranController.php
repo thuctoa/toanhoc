@@ -156,8 +156,22 @@ class MatranController extends \yii\web\Controller
                         }
                     }
                 }
-                $p_luythua=$this->luythua($p, $sobac, $somu);
-                $luythuaduoc=1;
+                if($somu==-1&&$sobac>1){
+                    if($this->matrandoclap($p, $sobac)==true){
+                        $p_luythua=  $this->matrannghichdao($p, $sobac);
+                        $luythuaduoc=1;
+                    }else{
+                        $luythuaduoc=0;
+                    }
+                }else{
+                    if($somu==0&&$this->matran0($p, $sobac)==TRUE){
+                        $luythuaduoc=0;
+                    }  else {
+                        $p_luythua=$this->luythua($p, $sobac, $somu);
+                        $luythuaduoc=1;
+                    }
+                    
+                }
             }
            
         }
@@ -197,6 +211,7 @@ class MatranController extends \yii\web\Controller
                 }
                 return $ketqua;
             }
+            
         }else if($sobac==1){
             $matran[0][0]=  pow( $matran[0][0], $somu);
             return $matran;
@@ -211,6 +226,131 @@ class MatranController extends \yii\web\Controller
             }
         }
         return true;
+    }
+    public function matrandoclap($matran, $sobac){
+        if($sobac>1){
+            $khanghich=0;
+            $a_giai=$matran;
+            for($t=1;$t<$sobac;$t++){
+                if($a_giai[$t-1][$t-1]==0){//hoan doi hang co phan tu troi khac 0
+                    $khanghich=0;
+                    for($i=$t;$i<$sobac;$i++){//tim tu hang t tro di co phan tu cung cot t-1 khac 0 la duoc
+                        if($a_giai[$i][$t-1]!=0){//hoan doi hang i va hang t-1
+                            $khanghich=1;
+                            //hoan doi a
+                            for($j=0;$j<$sobac;$j++){
+                                $hoandoi=$a_giai[$t-1][$j];
+                                $a_giai[$t-1][$j]=$a_giai[$i][$j];
+                                $a_giai[$i][$j]=$hoandoi;
+                            }
+                            break;
+                        }
+                    }
+                    if($khanghich==0){//he vo nghiem
+                        return FALSE;
+                    }
+                }
+                $khanghich=1;
+                $duongcheo=$a_giai[$t-1][$t-1];
+                for($i=$t;$i<$sobac;$i++){
+                    $u=$a_giai[$i][$t-1];
+                    for($j=$t-1;$j<$sobac;$j++){//cong thuc duon cheo troi
+                        $a_giai[$i][$j]=$a_giai[$i][$j]-$a_giai[$t-1][$j]*$u/$duongcheo;
+                    }
+                }
+            }
+            for($i=0;$i<$sobac;$i++){
+                if($a_giai[$i][$i]==0){
+                    return FALSE;
+                }
+            }
+            
+            return TRUE;
+        }
+        return FALSE;
+    }
+    public function matrandonvi($sobac){
+        $matrandonvi=[];
+        for($i=0;$i<$sobac;$i++){
+            $matrandonvi[$i]=[];
+            for($j=0;$j<$sobac;$j++){
+                if($i==$j){
+                    $matrandonvi[$i][$j]=1;
+                }else{
+                    $matrandonvi[$i][$j]=0;
+                }
+            }
+        }
+        return $matrandonvi;
+    }
+
+    public function matrannghichdao($matran, $sobac){
+        if($sobac>1){
+            $khanghich=0;
+            $a_giai=$matran;
+            $matrannghichdao=  $this->matrandonvi($sobac);
+            
+            for($t=1;$t<$sobac;$t++){
+                
+                if($a_giai[$t-1][$t-1]==0){//hoan doi hang co phan tu troi khac 0
+                    $khanghich=0;
+                    for($i=$t;$i<$sobac;$i++){//tim tu hang t tro di co phan tu cung cot t-1 khac 0 la duoc
+                        if($a_giai[$i][$t-1]!=0){//hoan doi hang i va hang t-1
+                            $khanghich=1;
+                            for($j=0;$j<$sobac;$j++){
+                                //hoan doi a
+                                $hoandoi=$a_giai[$t-1][$j];
+                                $a_giai[$t-1][$j]=$a_giai[$i][$j];
+                                $a_giai[$i][$j]=$hoandoi;
+                                //hoan doi ma tran nghich dao
+                                $hoandoi=$matrannghichdao[$t-1][$j];
+                                $matrannghichdao[$t-1][$j]=$matrannghichdao[$i][$j];
+                                $matrannghichdao[$i][$j]=$hoandoi;
+                            }
+                            
+                            break;
+                        }
+                    }
+                    if($khanghich==0){//he vo nghiem
+                        return FALSE;
+                    }
+                }
+                $khanghich=1;
+                $duongcheo=$a_giai[$t-1][$t-1];
+                for($i=$t;$i<$sobac;$i++){
+                    $u=$a_giai[$i][$t-1];
+                    
+                    for($j=$t-1;$j<$sobac;$j++){//cong thuc duon cheo troi
+                        $a_giai[$i][$j]=$a_giai[$i][$j]-$a_giai[$t-1][$j]*$u/$duongcheo;
+                        $matrannghichdao[$i][$j]=$matrannghichdao[$i][$j]-$matrannghichdao[$t-1][$j]*$u/$duongcheo;
+                    }
+                }
+            }
+            for($i=0;$i<$sobac;$i++){
+                if($a_giai[$i][$i]==0){
+                    return FALSE;
+                }
+            }
+            for($t=$sobac-2;$t>=0;$t--){
+                $duongcheo=$a_giai[$t+1][$t+1];
+                for($i=$t;$i>=0;$i--){//tat ca cac hang tu $t tro ve truoc
+                    $u=$a_giai[$i][$t+1];//a dau dong hang i
+                    for($j=$t+1;$j>=0;$j--){//cong thuc duon cheo troi
+                        $a_giai[$i][$j]=$a_giai[$i][$j]-$a_giai[$t+1][$j]*$u/$duongcheo;
+                        $matrannghichdao[$i][$j]=$matrannghichdao[$i][$j]-$matrannghichdao[$t+1][$j]*$u/$duongcheo;
+                    }
+                }
+            }
+            for($i=0;$i<$sobac;$i++){
+                $duongcheo=$a_giai[$i][$i];
+                for($j=0;$j<$sobac;$j++){
+                    $a_giai[$i][$j]=$a_giai[$i][$j]/$duongcheo;
+                    $matrannghichdao[$i][$j]=$matrannghichdao[$i][$j]/$duongcheo;
+                }
+            }
+            return $matrannghichdao;
+        }
+        return FALSE;
     }
 
     public function nhanhaimatran($matran1, $n1, $m1, $matran2, $m2){

@@ -68,6 +68,12 @@ if($sobac>0){
         <div class="col-lg-2 text-center">
             Số mũ = <input type="text" name="somu" class="matran"  value="<?=$somu?>">
         </div>
+        <div class="col-lg-4 text-center">
+            <?php if($luythuaduoc==0){
+                echo '<h5 class="text-danger ketqua"><b>Không thực hiện được phép lũy thừa vì ma trận không khả nghịch</b></h5>';
+            }
+?>
+        </div>
     </div>
 </form>     
 <?php
