@@ -26,3 +26,4 @@
 # local phpunit config
 #/phpunit.xml
 /nbproject/private/
+/config/db.php

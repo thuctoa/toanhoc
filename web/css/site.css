@@ -167,3 +167,13 @@ td{
 .mketqua{
     margin-left: -50px;
 }
+.pluythua_ketqua{
+    border-left: 1px solid;
+}
+.ketqua_matran{
+    margin-left: 50px;
+}
+.xem_ketquamatran{
+    width: 150px;
+    border: none;
+}

@@ -111,7 +111,7 @@ class MatranController extends \yii\web\Controller
 
                     }
                 }
-                else if($soan==1){
+                else if($soan==1){//neu chi co 1 an mot phuong trinh
                     if($a[0][0]==0){
                         $conghiem=0;
                     }else{
@@ -132,9 +132,100 @@ class MatranController extends \yii\web\Controller
     }
     public function actionMatran(){
         $sobac=0;
+        $somu=1;
+        $p=[];
+        $p_luythua=[];
+        $luythuaduoc=-1;
+        if(isset($_POST['sobac'])){//thay doi so an, so phuong trinh
+            $sobac=$_POST['sobac'];
+            for($i=0;$i<$sobac;$i++){//khoi tao ma tran a va b
+                $p[$i]=[];
+                for($j=0;$j<$sobac;$j++){
+                    $p[$i][$j]='';
+                }
+            }
+            if(isset($_POST['p'])){//gan dau vao tu ngoai
+                $p=$_POST['p'];
+                $somu=$_POST['somu'];
+                for($i=0;$i<$sobac;$i++){
+                    for($j=0;$j<$sobac;$j++){
+                        if($p[$i][$j]!=''){
+                            $p[$i][$j]= $this->calculate_string($p[$i][$j]); 
+                        }else{
+                            $p[$i][$j]=0;
+                        }
+                    }
+                }
+                $p_luythua=$this->luythua($p, $sobac, $somu);
+                $luythuaduoc=1;
+            }
+           
+        }
         return $this->render('matran',[
             'sobac'=>$sobac,
+            'somu'=>$somu,
+            'p'=> $p,
+            'p_luythua'=>$p_luythua,
+            'luythuaduoc'=>$luythuaduoc,
         ]);
     }
+    public function luythua($matran, $sobac,$somu){
+        if($sobac>1){
+            $ketqua=$matran;
+            if($somu==0){//neu la luy thua 0 se ra ma tran don vi
+                if($this->matran0($matran, $sobac)==  FALSE){
+                    for($i=0;$i<$sobac;$i++){
+                        for($j=0;$j<$sobac;$j++){
+                            if($i==$j){
+                                $ketqua[$i][$j]=1;
+                            }else{
+                                $ketqua[$i][$j]=0;
+                            }
+                        }
+                    }
+                    return $ketqua;
+                }else{
+                    return $matran;
+                }
+            }
+            if($somu==1){//neu luy thua 1 se chinh no
+                return $ketqua;
+            }
+            if($somu>1){
+                for($i=1;$i<$somu;$i++){
+                    $ketqua=  $this->nhanhaimatran($ketqua, $sobac, $sobac, $matran, $sobac);
+                }
+                return $ketqua;
+            }
+        }else if($sobac==1){
+            $matran[0][0]=  pow( $matran[0][0], $somu);
+            return $matran;
+        }
+    }
+    public function matran0($matran, $sobac){
+        for($i=0;$i<$sobac;$i++){
+            for($j=0;$j<$sobac;$j++){
+                if($matran[$i][$j]!=0){
+                    return FALSE;
+                }
+            }
+        }
+        return true;
+    }
 
+    public function nhanhaimatran($matran1, $n1, $m1, $matran2, $m2){
+        $ketqua=[];
+        for($i=0;$i<$n1;$i++){
+            $ketqua[$i]=[];
+        }
+        for($i=0;$i<$n1;$i++){
+            for($j=0;$j<$m2;$j++){
+                $ketqua[$i][$j]=0;
+                for($t=0;$t<$m1;$t++){
+                    $ketqua[$i][$j]+=$matran1[$i][$t]*$matran2[$t][$j];
+                }
+            }
+        }
+        return $ketqua;
+    }
 }
