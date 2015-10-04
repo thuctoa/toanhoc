@@ -156,9 +156,14 @@ class MatranController extends \yii\web\Controller
                         }
                     }
                 }
-                if($somu==-1&&$sobac>1){
+                if($somu<0&&$sobac>1){
                     if($this->matrandoclap($p, $sobac)==true){
-                        $p_luythua=  $this->matrannghichdao($p, $sobac);
+                        if($somu==-1){
+                            $p_luythua=  $this->matrannghichdao($p, $sobac);
+                        }else{
+                            $p_luythua=  $this->matrannghichdao($p, $sobac);
+                            $p_luythua=$this->luythua($p_luythua, $sobac, $somu*-1);
+                        }
                         $luythuaduoc=1;
                     }else{
                         $luythuaduoc=0;
