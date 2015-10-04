@@ -291,7 +291,6 @@ class MatranController extends \yii\web\Controller
             $matrannghichdao=  $this->matrandonvi($sobac);
             
             for($t=1;$t<$sobac;$t++){
-                
                 if($a_giai[$t-1][$t-1]==0){//hoan doi hang co phan tu troi khac 0
                     $khanghich=0;
                     for($i=$t;$i<$sobac;$i++){//tim tu hang t tro di co phan tu cung cot t-1 khac 0 la duoc
@@ -322,6 +321,9 @@ class MatranController extends \yii\web\Controller
                     
                     for($j=$t-1;$j<$sobac;$j++){//cong thuc duon cheo troi
                         $a_giai[$i][$j]=$a_giai[$i][$j]-$a_giai[$t-1][$j]*$u/$duongcheo;
+                        
+                    }
+                    for($j=0;$j<$sobac;$j++){
                         $matrannghichdao[$i][$j]=$matrannghichdao[$i][$j]-$matrannghichdao[$t-1][$j]*$u/$duongcheo;
                     }
                 }
@@ -337,6 +339,9 @@ class MatranController extends \yii\web\Controller
                     $u=$a_giai[$i][$t+1];//a dau dong hang i
                     for($j=$t+1;$j>=0;$j--){//cong thuc duon cheo troi
                         $a_giai[$i][$j]=$a_giai[$i][$j]-$a_giai[$t+1][$j]*$u/$duongcheo;
+                        
+                    }
+                    for($j=0;$j<$sobac;$j++){
                         $matrannghichdao[$i][$j]=$matrannghichdao[$i][$j]-$matrannghichdao[$t+1][$j]*$u/$duongcheo;
                     }
                 }
