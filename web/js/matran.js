@@ -34,3 +34,12 @@ function kytuhoplebieuthuc(kytu){
                 return false;
     }
 }
+function dongcuamatranb(){
+    document.getElementById('mb').value=document.getElementById('na').value;
+
+}
+
+function dongcuamatrana(){
+    document.getElementById('na').value=document.getElementById('mb').value;
+
+}

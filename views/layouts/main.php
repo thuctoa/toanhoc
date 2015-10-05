@@ -36,6 +36,7 @@ AppAsset::register($this);
             $items = [
                     ['label' => 'Giải hệ phương trình tuyến tính', 'url' => ['/site/index']],
                     ['label' => 'Lũy thừa ma trận', 'url' => ['/matran/matran']],
+                    ['label' => 'Nhân hai ma trận', 'url' => ['/matran/nhanhaimatran']],
                   //  ['label' => Yii::t('app','About'), 'url' => ['/site/about']],
                     ['label' => Yii::t('app','Contact'), 'url' => ['/site/contact']],
                    // ['label' => Yii::t('app','Books'), 'url' => ['/book/index']],

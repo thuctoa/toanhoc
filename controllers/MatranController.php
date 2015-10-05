@@ -130,6 +130,7 @@ class MatranController extends \yii\web\Controller
             'conghiem'=>$conghiem
         ]);
     }
+    
     public function actionMatran(){
         $sobac=0;
         $somu=1;
@@ -186,6 +187,68 @@ class MatranController extends \yii\web\Controller
             'p'=> $p,
             'p_luythua'=>$p_luythua,
             'luythuaduoc'=>$luythuaduoc,
+        ]);
+    }
+    public function actionNhanhaimatran(){
+        
+        $na=0;//so cot cua ma tran a
+        $ma=0;//so dong cua ma tran a
+        $nb=0;
+        $mb=0;
+        $a=[];
+        $b=[];
+        $ab=[];//ma tran ket qua
+        $nhanthanhcong=-1;
+        if(isset($_POST['ma'])){//thay doi so an, so phuong trinh
+            $ma=$_POST['ma'];
+            $mb=$na=$_POST['na'];
+            $nb=$_POST['nb'];
+            for($i=0;$i<$ma;$i++){
+                $a[$i]=[];
+                for($j=0;$j<$na;$j++){
+                    $a[$i][$j]='';
+                }
+            }
+            for($i=0;$i<$mb;$i++){
+                $b[$i]=[];
+                for($j=0;$j<$nb;$j++){
+                    $b[$i][$j]='';
+                }
+            }
+            if(isset($_POST['a'])){
+                $a=$_POST['a'];
+                $b=$_POST['b'];
+                for($i=0;$i<$ma;$i++){
+                    for($j=0;$j<$na;$j++){
+                        if($a[$i][$j]!=''){
+                            $a[$i][$j]= $this->calculate_string($a[$i][$j]); 
+                        }else{
+                            $a[$i][$j]=0;
+                        }
+                    }
+                }
+                for($i=0;$i<$mb;$i++){
+                    for($j=0;$j<$nb;$j++){
+                        if($b[$i][$j]!=''){
+                            $b[$i][$j]= $this->calculate_string($b[$i][$j]); 
+                        }else{
+                            $b[$i][$j]=0;
+                        }
+                    }
+                }
+                $ab=  $this->nhanhaimatran($a, $ma, $na, $b, $nb);
+                $nhanthanhcong=1;
+            }
+        }
+        return $this->render('nhanhaimatran',[
+            'na'=>$na,
+            'ma'=>$ma,
+            'nb'=>$nb,
+            'mb'=>$mb,
+            'a'=>$a,
+            'b'=>$b,
+            'ab'=>$ab,
+            'nhanthanhcong'=>$nhanthanhcong,
         ]);
     }
     public function luythua($matran, $sobac,$somu){
