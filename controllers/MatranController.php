@@ -329,6 +329,11 @@ class MatranController extends \yii\web\Controller
                     }
                 }
                 $phanphoidung=  $this->giaihe($a_ppd, $b_ppd, $sobac);
+                for($i=0;$i<$sobac;$i++){
+                    if($phanphoidung[$i]=='-0'){
+                        $phanphoidung[$i]=0;
+                    }
+                }
             }
            
         }
