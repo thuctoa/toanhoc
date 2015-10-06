@@ -210,8 +210,12 @@ class MatranController extends \yii\web\Controller
         $p_luythua=[];
         $phanphoidung=[];
         $markovduoc=-1;
+        $dakiemtrapp=-1;
         if(isset($_POST['khoitao'])){
             $markovduoc=-10;
+        }
+        if(isset($_POST['dakiemtrapp'])){
+            $dakiemtrapp=1;
         }
         if(isset($_POST['sobac'])){//thay doi so an, so phuong trinh
             $sobac=$_POST['sobac'];
@@ -340,6 +344,7 @@ class MatranController extends \yii\web\Controller
             'p_luythua'=>$p_luythua,
             'markovduoc'=>$markovduoc,
             'phanphoidung'=>$phanphoidung,
+            'dakiemtrapp'=>$dakiemtrapp,
         ]);
     }
     public function lamdepketqua($matran, $hang, $cot){

@@ -89,6 +89,7 @@ if($sobac>0){
     </table>
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
     <input type="hidden" name="kiemtrapp" class="text-warning"  value="1">
+    <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
     <div class="row giaihe">
         <div class="col-lg-3 text-center">
             <button type="submit" class="btn btn-success ">Kiểm tra P có là ma trận xác suất chuyển</button>
@@ -115,8 +116,11 @@ if($sobac>0){
         </div>
     </div>
 </form> 
-
+<?php
+    if($dakiemtrapp==1){
+?>
 <form action="/matran/markov" method="post">
+    <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
     <?php
         for($i=0;$i<$sobac;$i++){
@@ -144,6 +148,7 @@ if($sobac>0){
     </div>
 </form>
 <form action="/matran/markov" method="post">
+    <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
     <?php
         for($i=0;$i<$sobac;$i++){
@@ -168,6 +173,7 @@ if($sobac>0){
     </div>
 </form>
 <form action="/matran/markov" method="post">
+    <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
     <?php
         for($i=0;$i<$sobac;$i++){
@@ -192,6 +198,7 @@ if($sobac>0){
     </div>
 </form>
 <form action="/matran/markov" method="post">
+    <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
     <?php
         for($i=0;$i<$sobac;$i++){
@@ -216,6 +223,7 @@ if($sobac>0){
     </div>
 </form>
 <?php
+    }
 }
 ?>
 
