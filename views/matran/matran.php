@@ -6,7 +6,7 @@ $this->title = 'Lũy thừa ma trận';
 <h1><?= Html::encode($this->title) ?></h1>
 
 <form action="/matran/matran" method="post">
-        Số bậc, cấp của ma trận P là <input type="text" class="matran" name="sobac" value="<?=$sobac?>">
+        Số bậc, cấp của ma trận P là <input type="text" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
         <button type="submit" class="btn btn-success">Ma trận mới</button><br><br><br>
 </form>
  <?php 

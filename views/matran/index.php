@@ -4,7 +4,7 @@ $this->title = 'Giải hệ phương trình tuyến tính';
 ?>
 <h1>Giải hệ phương trình tuyến tính</h1>
 <form action="/matran/index" method="post">
-    Số ẩn, số phương trình là: <input type="text" class="matran" name="soan" value="<?=$soan?>">
+    Số ẩn, số phương trình là: <input type="text" name="soan" placeholder="Nhập một số ..." value="<?=$soan?>">
     <button type="submit" class="btn btn-success">Gải hệ mới</button><br><br><br>
 </form>
 

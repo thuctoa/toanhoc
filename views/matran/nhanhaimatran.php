@@ -6,10 +6,10 @@ $this->title = 'Nhân hai ma trận';
 <h1><?= Html::encode($this->title) ?></h1>
 
 <form action="/matran/nhanhaimatran" method="post">
-        Số dòng của ma trận A là <input type="text" class="matran" name="ma" value="<?=$ma?>">
-        Số cột <input type="text"value="<?=$na?>" class="matran" id="na" name="na" onchange="dongcuamatranb();" ><br>
-        Số dòng của ma trận B là <input type="text" value="<?=$mb?>" id="mb" onchange="dongcuamatrana();" class="matran" name="mb" >
-        Số cột <input type="text" class="matran" name="nb"  value="<?=$nb?>"><br>
+        Số dòng của ma trận A là <input type="text" placeholder="Số hàng của A ..." name="ma" value="<?=$ma?>">
+        Số cột <input type="text"value="<?=$na?>" placeholder="Số cột của A ..." id="na" name="na" onchange="dongcuamatranb();" ><br>
+        Số dòng của ma trận B là <input type="text" value="<?=$mb?>" id="mb" onchange="dongcuamatrana();" placeholder="Số hàng của B ..." name="mb" >
+        Số cột <input type="text" placeholder="Số cột của B ..." name="nb"  value="<?=$nb?>"><br>
         <button type="submit" class="btn btn-success">Nhân hai ma trận mới</button><br><br><br>
 </form>
 

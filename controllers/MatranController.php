@@ -17,7 +17,7 @@ class MatranController extends \yii\web\Controller
     }
     public function actionIndex()
     {
-        $soan=0;
+        $soan='';
         $conghiem=-1;
         $a=[];
         $b=[];
@@ -204,7 +204,7 @@ class MatranController extends \yii\web\Controller
 
     public function actionMarkov(){
         $esilon=0.000000001;
-        $sobac=0;
+        $sobac='';
         $somu=1;
         $p=[];
         $p_luythua=[];
@@ -366,7 +366,7 @@ class MatranController extends \yii\web\Controller
         return $matran;
     }
     public function actionMatrannghichdao(){
-        $sobac=0;
+        $sobac='';
         $somu=1;
         $p=[];
         $p_luythua=[];
@@ -424,7 +424,7 @@ class MatranController extends \yii\web\Controller
         ]);
     }
     public function actionMatran(){
-        $sobac=0;
+        $sobac='';
         $somu=1;
         $p=[];
         $p_luythua=[];
@@ -483,10 +483,10 @@ class MatranController extends \yii\web\Controller
     }
     public function actionNhanhaimatran(){
         
-        $na=0;//so cot cua ma tran a
-        $ma=0;//so dong cua ma tran a
-        $nb=0;
-        $mb=0;
+        $na='';//so cot cua ma tran a
+        $ma='';//so dong cua ma tran a
+        $nb='';
+        $mb='';
         $a=[];
         $b=[];
         $ab=[];//ma tran ket qua
