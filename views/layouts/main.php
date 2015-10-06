@@ -26,7 +26,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-                'brandLabel' => 'Đầu trang',
+                'brandLabel' =>  '<img src= "/favicon.ico" style="width:170px; margin-left:-70px;margin-top:-10px;" class="img-responsive">',
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
