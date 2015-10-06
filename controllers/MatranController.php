@@ -130,7 +130,218 @@ class MatranController extends \yii\web\Controller
             'conghiem'=>$conghiem
         ]);
     }
-    
+    public function giaihe($a, $b, $soan){
+        $x=[];
+        $b_giai=$b;
+        $a_giai=$a;
+        $conghiem=0;//kiem tra tinh co nghiem
+        if($soan>1){
+            for($t=1;$t<$soan;$t++){//thuc hien giai he
+                if($a_giai[$t-1][$t-1]==0){//hoan doi hang co phan tu troi khac 0
+                    $conghiem=0;
+                    for($i=$t;$i<$soan;$i++){//tim tu hang t tro di co phan tu cung cot t-1 khac 0 la duoc
+                        if($a_giai[$i][$t-1]!=0){//hoan doi hang i va hang t-1
+                            $conghiem=1;
+                            //hoan doi a
+                            for($j=0;$j<$soan;$j++){
+                                $hoandoi=$a_giai[$t-1][$j];
+                                $a_giai[$t-1][$j]=$a_giai[$i][$j];
+                                $a_giai[$i][$j]=$hoandoi;
+                            }
+                            //hoan doi b
+                            $hoandoi=$b_giai[$t-1];
+                            $b_giai[$t-1]=$b_giai[$i];
+                            $b_giai[$i]=$hoandoi;
+                            break;
+                        }
+                    }
+                    if($conghiem==0){//he vo nghiem
+                        break;
+                    }
+                }
+                $conghiem=1;
+                $duongcheo=$a_giai[$t-1][$t-1];
+                for($i=$t;$i<$soan;$i++){
+                    $u=$a_giai[$i][$t-1];
+                    for($j=$t-1;$j<$soan;$j++){//cong thuc duon cheo troi
+                        $a_giai[$i][$j]=$a_giai[$i][$j]-$a_giai[$t-1][$j]*$u/$duongcheo;
+                    }
+                     $b_giai[$i]=$b_giai[$i]-$u*$b_giai[$t-1]/$duongcheo;
+                }
+            }
+            for($i=0;$i<$soan;$i++){
+                if($a_giai[$i][$i]==0){
+                    if($b_giai[$i]==0){
+                        $conghiem=2;
+                    }else{
+                        $conghiem=0;
+                        break;
+                    }
+
+                }
+            }
+            if($conghiem==1){
+                for($i=$soan-1;$i>=0;$i--){//tim nghiem
+                    $tongax=0;
+                    for($j=$i+1;$j<$soan;$j++){
+                        $tongax+=$a_giai[$i][$j]*$x[$j];
+                    }
+                    $x[$i]=($b_giai[$i]-$tongax)/$a_giai[$i][$i];
+                }
+
+            }
+        }
+        else if($soan==1){//neu chi co 1 an mot phuong trinh
+            if($a[0][0]==0){
+                $conghiem=0;
+            }else{
+                $conghiem=1;
+                $x[0]=$b[0]/$a[0][0];
+            }
+        }
+        return $x;
+    }
+
+    public function actionMarkov(){
+        $esilon=0.000000001;
+        $sobac=0;
+        $somu=1;
+        $p=[];
+        $p_luythua=[];
+        $phanphoidung=[];
+        $markovduoc=-1;
+        if(isset($_POST['khoitao'])){
+            $markovduoc=-10;
+        }
+        if(isset($_POST['sobac'])){//thay doi so an, so phuong trinh
+            $sobac=$_POST['sobac'];
+            for($i=0;$i<$sobac;$i++){//khoi tao ma tran a va b
+                $p[$i]=[];
+                for($j=0;$j<$sobac;$j++){
+                    $p[$i][$j]='';
+                }
+            }
+            if(isset($_POST['p'])){//gan dau vao tu ngoai
+                $markovduoc=-1;
+                $p=$_POST['p'];
+                for($i=0;$i<$sobac;$i++){
+                    for($j=0;$j<$sobac;$j++){
+                        if($p[$i][$j]!=''){
+                            $p[$i][$j]= $this->calculate_string($p[$i][$j]); 
+                        }else{
+                            $p[$i][$j]=0;
+                        }
+                    }
+                }
+                for($i=0;$i<$sobac;$i++){
+                    $lamda=0;
+                    for($j=0;$j<$sobac;$j++){
+                        if($p[$i][$j]<0){
+                            $markovduoc=2;//khong phai ma tran xs chuyen
+                            break;
+                        }  else {
+                            $lamda+=$p[$i][$j];
+                        }
+                    }
+                    if($lamda>1+$esilon||$lamda<1-$esilon){
+                        $markovduoc=2;//khong phai ma tran xs chuyen
+                        break;
+                    }
+                }
+                
+            }
+            if(isset($_POST['somu'])&&$markovduoc!=2){
+                $somu=$_POST['somu'];
+                if($somu<0){
+                    $markovduoc=0;
+                }else{
+                    if($somu==0&&$this->matran0($p, $sobac)==TRUE){
+                        $markovduoc=0;
+                    }  else {
+                        $p_luythua=$this->luythua($p, $sobac, $somu);
+                        $markovduoc=1;
+                    }
+
+                }
+            }
+            if(isset($_POST['tinhtoigian'])&&!isset($_POST['kiemtrapp'])&&$markovduoc!=2){
+                $p_toigian=[];
+                $p_toigian=$this->luythua($p, $sobac, $sobac+1);
+                for($i=0;$i<$sobac;$i++){
+                    for($j=0;$j<$sobac;$j++){
+                        if($p_toigian[$i][$j]==0){
+                            $markovduoc=5;//ma tran khong toi gian
+                            break;
+                        }
+                    }
+                }
+                if($markovduoc!=5){
+                    $markovduoc=6;//ma tran toi gian
+                }
+            }
+            if(isset($_POST['phanphoigioihan'])&&!isset($_POST['kiemtrapp'])&&$markovduoc!=2){
+                $p_toigian=[];
+                $p_toigian=$this->luythua($p, $sobac, $sobac+1);
+                for($i=0;$i<$sobac;$i++){
+                    for($j=0;$j<$sobac;$j++){
+                        if($p_toigian[$i][$j]==0){
+                            $markovduoc=5;//ma tran khong toi gian
+                            break;
+                        }
+                    }
+                }
+                if($markovduoc!=5){
+                    $markovduoc=7;//ma tran toi gian
+                    $p_luythua=$this->luythua($p, $sobac, 30*$sobac);
+                    
+                }
+            }
+            if(isset($_POST['phanphoidung'])&&!isset($_POST['kiemtrapp'])&&$markovduoc!=2){//tim phan phoi dung
+                $markovduoc=3;
+                $tinhdung=0;
+                for($i=0;$i<$sobac;$i++){
+                    if($p[$i][$i]==1){
+                        $tinhdung++;
+                    }
+                }
+                if($tinhdung>1){//xich co nhieu hon mot trang thai hut, vay xich khong dung
+                    $markovduoc=4;
+                }
+                //thuc hien giai he tim pi
+                $a_ppd=[];
+                $b_ppd=[];
+                for($i=0;$i<$sobac;$i++){
+                    if($i==0){
+                        $b_ppd[$i]=1;
+                    }else{
+                         $b_ppd[$i]=0;
+                    }
+                    for($j=0;$j<$sobac;$j++){
+                        if($i==0){
+                            $a_ppd[$i][$j]=1;
+                        }else{
+                            if($i==$j){
+                                $a_ppd[$i][$j]=$p[$j][$i]-1;
+                            }else{
+                                $a_ppd[$i][$j]=$p[$j][$i];
+                            }
+                        }
+                    }
+                }
+                $phanphoidung=  $this->giaihe($a_ppd, $b_ppd, $sobac);
+            }
+           
+        }
+        return $this->render('markov',[
+            'sobac'=>$sobac,
+            'somu'=>$somu,
+            'p'=> $p,
+            'p_luythua'=>$p_luythua,
+            'markovduoc'=>$markovduoc,
+            'phanphoidung'=>$phanphoidung,
+        ]);
+    }
+
     public function actionMatran(){
         $sobac=0;
         $somu=1;
