@@ -34,7 +34,7 @@ AppAsset::register($this);
             ]);
             
             $items = [
-                    ['label' => 'Bài 6', 'url' => ['/matran/markov']],
+                //    ['label' => 'Bài 6', 'url' => ['/matran/markov']],
                     ['label' => 'Giải hệ phương trình tuyến tính', 'url' => ['/matran/index']],
                     ['label' => 'Lũy thừa ma trận', 'url' => ['/matran/matran']],
                     ['label' => 'Nhân hai ma trận', 'url' => ['/matran/nhanhaimatran']],
