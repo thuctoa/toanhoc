@@ -33,7 +33,7 @@ if($sobac>0){
                 }
             ?>
             <?php
-            if($markovduoc==7){
+            if($markovduoc==8){
             ?>
                 <th colspan="<?=$sobac?>" class="text-center" >Ma trận phân phối giới hạn</th>
             <?php
@@ -52,7 +52,7 @@ if($sobac>0){
                 </td>
         <?php
                 }
-                if($markovduoc==1||$markovduoc==7){
+                if($markovduoc==1||$markovduoc==8){
         ?>
                 <td class="pluythua_ketqua">
                     <input  type="text" id="<?='p_luythua'.$i.'0'?>" onchange="bieuthuc('<?='p_luythua'.$i.'0'?>')" value="<?=$p_luythua[$i][0]?>" class="matran ketqua_matran xem_ketquamatran" placeholder="p_luythua[<?php echo $i;?>][<?php echo 0;?>]" name="p_luythua[<?php echo $i;?>][<?php echo 0;?>]"> 
@@ -107,6 +107,9 @@ if($sobac>0){
             }
             else if($markovduoc==6){
                 echo '<h5 class="text-success ketqua"><b>Ma trận là tối giản </b></h5>';
+            }
+             else if($markovduoc==7){
+                echo '<h5 class="text-danger ketqua"><b>Không có phân phối giới hạn của ma trận </b></h5>';
             }
             ?>
         </div>

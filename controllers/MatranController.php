@@ -285,13 +285,13 @@ class MatranController extends \yii\web\Controller
                 for($i=0;$i<$sobac;$i++){
                     for($j=0;$j<$sobac;$j++){
                         if($p_toigian[$i][$j]==0){
-                            $markovduoc=5;//ma tran khong toi gian
+                            $markovduoc=7;//ma tran khong toi gian
                             break;
                         }
                     }
                 }
-                if($markovduoc!=5){
-                    $markovduoc=7;//ma tran toi gian
+                if($markovduoc!=7){
+                    $markovduoc=8;//ma tran toi gian
                     $p_luythua=$this->luythua($p, $sobac, 30*$sobac);
                     
                 }
