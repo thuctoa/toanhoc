@@ -365,7 +365,64 @@ class MatranController extends \yii\web\Controller
         }
         return $matran;
     }
-
+    public function actionMatrannghichdao(){
+        $sobac=0;
+        $somu=1;
+        $p=[];
+        $p_luythua=[];
+        $luythuaduoc=-1;
+        if(isset($_POST['sobac'])){//thay doi so an, so phuong trinh
+            $sobac=$_POST['sobac'];
+            for($i=0;$i<$sobac;$i++){//khoi tao ma tran a va b
+                $p[$i]=[];
+                for($j=0;$j<$sobac;$j++){
+                    $p[$i][$j]='';
+                }
+            }
+            if(isset($_POST['p'])){//gan dau vao tu ngoai
+                $p=$_POST['p'];
+                $somu=$_POST['somu'];
+                for($i=0;$i<$sobac;$i++){
+                    for($j=0;$j<$sobac;$j++){
+                        if($p[$i][$j]!=''){
+                            $p[$i][$j]= $this->calculate_string($p[$i][$j]); 
+                        }else{
+                            $p[$i][$j]=0;
+                        }
+                    }
+                }
+                if($somu<0&&$sobac>1){
+                    if($this->matrandoclap($p, $sobac)==true){
+                        if($somu==-1){
+                            $p_luythua=  $this->matrannghichdao($p, $sobac);
+                        }else{
+                            $p_luythua=  $this->matrannghichdao($p, $sobac);
+                            $p_luythua=$this->luythua($p_luythua, $sobac, $somu*-1);
+                        }
+                        $luythuaduoc=1;
+                    }else{
+                        $luythuaduoc=0;
+                    }
+                }else{
+                    if($somu==0&&$this->matran0($p, $sobac)==TRUE){
+                        $luythuaduoc=0;
+                    }  else {
+                        $p_luythua=$this->luythua($p, $sobac, $somu);
+                        $luythuaduoc=1;
+                    }
+                    
+                }
+            }
+           
+        }
+        return $this->render('matrannghichdao',[
+            'sobac'=>$sobac,
+            'somu'=>$somu,
+            'p'=> $p,
+            'p_luythua'=>$p_luythua,
+            'luythuaduoc'=>$luythuaduoc,
+        ]);
+    }
     public function actionMatran(){
         $sobac=0;
         $somu=1;
