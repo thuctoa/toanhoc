@@ -329,11 +329,7 @@ class MatranController extends \yii\web\Controller
                     }
                 }
                 $phanphoidung=  $this->giaihe($a_ppd, $b_ppd, $sobac);
-                for($i=0;$i<$sobac;$i++){
-                    if($phanphoidung[$i]=='-0'){
-                        $phanphoidung[$i]=0;
-                    }
-                }
+                $phanphoidung=  $this->lamdepketqua($phanphoidung, $sobac, 0);
             }
            
         }
@@ -345,6 +341,24 @@ class MatranController extends \yii\web\Controller
             'markovduoc'=>$markovduoc,
             'phanphoidung'=>$phanphoidung,
         ]);
+    }
+    public function lamdepketqua($matran, $hang, $cot){
+        if($cot==0){
+            for($i=0;$i<$hang;$i++){
+                    if($matran[$i]=='-0'){
+                        $matran[$i]=0;
+                    }
+                }
+        }else{
+             for($i=0;$i<$hang;$i++){
+                    for($j=0;$j<$cot;$j++){
+                        if($matran[$i][$j]=='-0'){
+                            $matran[$i][$j]=0;
+                    }
+                }
+             }
+        }
+        return $matran;
     }
 
     public function actionMatran(){
