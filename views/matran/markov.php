@@ -6,7 +6,7 @@ $this->title = 'Nhập vào ma trận xac suất chuyển';
 <h1><?= Html::encode($this->title) ?></h1>
 
 <form action="/matran/markov" method="post">
-        Số bậc, cấp của ma trận P là <input type="text" class="matran" name="sobac" value="<?=$sobac?>">
+        Số bậc, cấp của ma trận P là <input type="text" id ="sobac" class="matran" name="sobac" value="<?=$sobac?>">
          <input type="hidden" name="khoitao" class="text-warning"  value="1">
         <button type="submit" class="btn btn-success">Ma trận mới</button><br><br><br>
 </form>
@@ -48,7 +48,14 @@ if($sobac>0){
             for($j=0;$j<$sobac;$j++){
         ?>
                 <td>
-                    <input type="text" id="<?='p'.$i.$j?>" onchange="bieuthuc('<?='p'.$i.$j?>')" value="<?=$p[$i][$j]?>" class="matran" placeholder="p[<?php echo $i;?>][<?php echo $j;?>]" name="p[<?php echo $i;?>][<?php echo $j;?>]"> 
+                    <input  type="text" 
+                            onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
+                            id="<?='p'.$i.$j?>"
+                            onchange="bieuthuc('<?='p'.$i.$j?>')"
+                            value="<?=$p[$i][$j]?>"
+                            class="matran"
+                            placeholder="p[<?php echo $i;?>][<?php echo $j;?>]"
+                            name="p[<?php echo $i;?>][<?php echo $j;?>]"> 
                 </td>
         <?php
                 }
