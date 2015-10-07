@@ -14,6 +14,16 @@ if($soan>0){
     ?>
 <form action="/matran/index" method="post">
     <table class="hephuongtrinh">
+        <tr>
+                <th colspan="<?=$soan?>" class="text-center">Hệ ban đầu</th>
+            <?php
+                if($conghiem==1){
+            ?>
+                <th colspan="<?=$soan?>" class="text-center" >Nghiệm giải được</th>
+            <?php
+                }
+            ?>
+            </tr>
 <?php
     for($i=0;$i<$soan;$i++){
 ?>
