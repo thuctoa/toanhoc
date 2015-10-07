@@ -4,7 +4,7 @@ $this->title = 'Giải hệ phương trình tuyến tính';
 ?>
 <h1>Giải hệ phương trình tuyến tính</h1>
 <form action="/matran/index" method="post">
-    Số ẩn, số phương trình là <input type="text" name="soan" placeholder="Nhập một số ..." value="<?=$soan?>">
+    Số ẩn, số phương trình là <input id="soan" type="text" name="soan" placeholder="Nhập một số ..." value="<?=$soan?>">
     <button type="submit" class="btn btn-success">Gải hệ mới</button><br><br><br>
 </form>
 
@@ -22,7 +22,13 @@ if($soan>0){
             for($j=0;$j<$soan-1;$j++){
         ?>
                 <td>
-                    <input type="text" id="<?='a'.$i.$j?>" onchange="bieuthuc('<?='a'.$i.$j?>')" value="<?=$a[$i][$j]?>" class="matran" placeholder="a[<?php echo $i;?>][<?php echo $j;?>]" name="a[<?php echo $i;?>][<?php echo $j;?>]"> 
+                    <input type="text"
+                           id="<?='a'.$i.$j?>" 
+                            onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
+                           onchange="bieuthuc('<?='a'.$i.$j?>')" 
+                           value="<?=$a[$i][$j]?>" class="matran" 
+                           placeholder="a[<?php echo $i;?>][<?php echo $j;?>]" 
+                           name="a[<?php echo $i;?>][<?php echo $j;?>]"> 
                     <b>
                     x<sub><?=$j?></sub> +
                     </b>
@@ -32,7 +38,13 @@ if($soan>0){
         ?>
 
         <td>
-            <input type="text" id="<?='a'.$i.$j?>" onchange="bieuthuc('<?='a'.$i.$j?>')"value="<?=$a[$i][$j]?>" class="matran" placeholder="a[<?php echo $i;?>][<?php echo $j;?>]" name="a[<?php echo $i;?>][<?php echo $j;?>]">
+            <input type="text" id="<?='a'.$i.$j?>" 
+                   onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
+                   onchange="bieuthuc('<?='a'.$i.$j?>')"
+                   value="<?=$a[$i][$j]?>" 
+                   class="matran" 
+                   placeholder="a[<?php echo $i;?>][<?php echo $j;?>]" 
+                   name="a[<?php echo $i;?>][<?php echo $j;?>]">
             <b>x<sub><?=$j?></sub></b>
         </td>
 
@@ -40,7 +52,12 @@ if($soan>0){
             <b>
                 =  
             </b>
-           <input type="text" id="<?='b'.$i?>" onchange="bieuthuc('<?='b'.$i?>')" value="<?=$b[$i]?>" class="matran" placeholder="b[<?php echo $i;?>]" name="b[<?php echo $i;?>]"> 
+           <input type="text" id="<?='b'.$i?>" 
+                  onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
+                  onchange="bieuthuc('<?='b'.$i?>')" 
+                  value="<?=$b[$i]?>" class="matran" 
+                  placeholder="b[<?php echo $i;?>]" 
+                  name="b[<?php echo $i;?>]"> 
         </td>  
         <?php
         if($conghiem==1){

@@ -1,0 +1,1 @@
+<input  type="text" onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';">

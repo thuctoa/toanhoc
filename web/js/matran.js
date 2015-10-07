@@ -7,7 +7,6 @@ function bieuthuc(iddangxet) {
             break;
         }
     }
-
 }
 function kytuhoplebieuthuc(kytu){
     switch(kytu){
@@ -42,4 +41,32 @@ function dongcuamatranb(){
 function dongcuamatrana(){
     document.getElementById('na').value=document.getElementById('mb').value;
 
+}
+if(document.getElementById('sobac')){
+    var sobac=document.getElementById('sobac').value;
+
+    for(var i=0;i<sobac;i++){
+        for(var j=0;j<sobac;j++){
+            str=document.getElementById('p'+i+j);
+            if(str.value.length!=0){
+                str.style.width = ((str.value.length + 1) * 8+10) + 'px';
+            }
+        }
+    }
+}
+if(document.getElementById('soan')){
+    var sobac=document.getElementById('soan').value;
+
+    for(var i=0;i<sobac;i++){
+        for(var j=0;j<sobac;j++){
+            str=document.getElementById('a'+i+j);
+            if(str.value.length!=0){
+                str.style.width = ((str.value.length + 1) * 8+10) + 'px';
+            }
+        }
+        str=document.getElementById('b'+i);
+        if(str.value.length!=0){
+            str.style.width = ((str.value.length + 1) * 8+10) + 'px';
+        }
+    }
 }

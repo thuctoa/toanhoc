@@ -6,7 +6,7 @@ $this->title = 'Tính ma trận nghịch đảo';
 <h1><?= Html::encode($this->title) ?></h1>
 
 <form action="/matran/matrannghichdao" method="post">
-        Số bậc, cấp của ma trận P là <input type="text" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
+        Số bậc, cấp của ma trận P là <input type="text" id ="sobac" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
         <button type="submit" class="btn btn-success">Ma trận mới</button><br><br><br>
 </form>
  <?php 
@@ -33,7 +33,14 @@ if($sobac>0){
             for($j=0;$j<$sobac;$j++){
         ?>
                 <td>
-                    <input type="text" id="<?='p'.$i.$j?>" onchange="bieuthuc('<?='p'.$i.$j?>')" value="<?=$p[$i][$j]?>" class="matran" placeholder="p[<?php echo $i;?>][<?php echo $j;?>]" name="p[<?php echo $i;?>][<?php echo $j;?>]"> 
+                    <input type="text"
+                           onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
+                           id="<?='p'.$i.$j?>" 
+                           onchange="bieuthuc('<?='p'.$i.$j?>')" 
+                           value="<?=$p[$i][$j]?>" 
+                           class="matran" 
+                           placeholder="p[<?php echo $i;?>][<?php echo $j;?>]" 
+                           name="p[<?php echo $i;?>][<?php echo $j;?>]"> 
                 </td>
         <?php
                 }
