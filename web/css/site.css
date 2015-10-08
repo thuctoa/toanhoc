@@ -166,6 +166,7 @@ td{
 }
 .mketqua{
     margin-left: -50px;
+    margin-top: -6px;
 }
 .pluythua_ketqua{
     border-left: 1px solid black;
@@ -179,4 +180,13 @@ td{
 }
 .cachtren50{
     padding-top: 50px;
+}
+.hephuongtrinh{
+    border: none;
+    padding-bottom: 14px;
+    margin-top: 5px;
+}
+.hevephai{
+    margin-top: 12px;
+    margin-left: -50px;
 }

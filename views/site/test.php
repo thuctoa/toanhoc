@@ -1,1 +1,5 @@
-<input  type="text" onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';">
+$$\begin{cases}
+3x + 5y + z \\
+7x - 2y + 4z \\
+-6x + 3y + 2z
+\end{cases}$$

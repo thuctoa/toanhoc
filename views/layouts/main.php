@@ -31,6 +31,12 @@ AppAsset::register($this);
         ga('create', 'UA-68540870-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript"
+        src="/js/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
 <?php $this->beginBody() ?>
     <div class="wrap">
         <?php
