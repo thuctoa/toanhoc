@@ -97,7 +97,7 @@ if($soan>0){
                         ?>
                         \}\\
                         \\
-                       & \text{Tóm tắt bước giải : }
+                       & \mathbf{\text{Tóm tắt bước giải} }
                 \end{array}$$
                 <?php
                     }else if($conghiem==0){
