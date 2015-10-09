@@ -6,7 +6,7 @@ $this->title ="Hướng dẫn và kiến thức nhớ lại";
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1 class="text-primary"><?= Html::encode($this->title) ?></h1>
 
     <div class="row">
         <div class="col-sm-3">
@@ -72,7 +72,7 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
     <div id="hephuongtrinh" class="huongdan">
-        <h2>Giải hệ phương trình tuyến tính</h2>
+        <a  href="/matran/index"><h2 >Giải hệ phương trình tuyến tính</h2></a>
         Ví dụ ta giải một hệ sau
         $\begin{cases}
             3x + 5y + z = 9\\
@@ -136,7 +136,7 @@ $this->params['breadcrumbs'][] = $this->title;
         \end{cases}$, Sau đó ta nhập các hệ số <a  href="/matran/index">ở đây</a> ta sẽ thu được kết quả.
     </div>
     <div id="luythuamatran" class="huongdan">
-        <h2>Lũy thừa ma trận</h2>
+        <a  href="/matran/matran"><h2 >Lũy thừa ma trận</h2></a>
         Trong thực tế việc ta có một ma trận và cần tìm lũy thừa của nó n lần, như các bài toán hồi quy, markov thì việc tìm 
         ma trận phân phối xác suất sau n bước, chính là ma trận phân phối xác suất chuyển mũ n. Lúc này ma trận cần được lũy thừa 
         Ta áp dụng thuật toán nhân và bình phương liên tiếp, nhằm giảm độ phức tạp của thuật toán lũy thừa thông thường.
@@ -234,7 +234,7 @@ $this->params['breadcrumbs'][] = $this->title;
        
     </div>
     <div id="nhanhaimatran" class="huongdan">
-        <h2>Nhân hai ma trận</h2>
+        <a  href="/matran/nhanhaimatran"><h2 >Nhân hai ma trận</h2></a>
         Ta áp dụng thuật toán của Strassen, giúp ích cho việc độ phức tạp của phép nhân giảm xuống
         so với cách nhân thông thường, điều này giúp cho việc có thể tìm được các ma trận lũy thừa cao hơn phục vụ cho việc tìm
         ma trận giới hạn của chúng. Ví dụ ta tính C= AB tổng quát.
@@ -289,7 +289,7 @@ $this->params['breadcrumbs'][] = $this->title;
         Mời bạn tính tích của hai ma trận <a  href="/matran/nhanhaimatran">ở đây</a>
     </div>
     <div id="nghichdaomatran" class="huongdan">
-        <h2>Ma trận nghịch đảo</h2>
+        <a  href="/matran/matrannghichdao"><h2 >Ma trận nghịch đảo</h2></a>
         Sử dụng phương pháp Gauss-Jordan để ta tính ma trận nghịch đảo của ma trận
         $$
         A=
