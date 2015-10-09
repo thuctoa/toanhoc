@@ -57,7 +57,7 @@ return [
     'Thank you for contacting us. We will respond to you as soon as possible.' =>
     'Cảm ơn bạn đã liên lạc cho chúng tôi. Chúng tôi sẽ phản hồi tới bạn sớm nhất có thể.',
     'If you have business inquiries or other questions, please fill out the following form to contact us. Thank you.'
-    => 'Nếu bạn có các câu hỏi về thương mại, vui lòng điền vào các lĩnh vực trong form liên lạc của chúng tôi. Cảm ơn.',
+    => 'Nếu bạn có góp ý về nội dung hình thức website, vui lòng điền vào các lĩnh vực trong form liên lạc của chúng tôi. Cảm ơn.',
     'Our fields' => 'Các lĩnh vực của chúng tôi',
     'Heading here' => 'Tiêu đề ở đây',
     'Description goes here' => 'Tóm tắt ở đây',
