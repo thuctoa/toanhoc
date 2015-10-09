@@ -53,11 +53,12 @@ class ContactForm extends Model
     public function contact($email)
     {
         if ($this->validate()) {
+            $noidung=  'Email: '.$this->email.'<br>Họ và tên: '.$this->name.'<br>Chủ đề: '.$this->subject.'<br>Nội dung: '.$this->body;
             Yii::$app->mailer->compose()
                 ->setTo($email)
                 ->setFrom([$this->email => $this->name])
                 ->setSubject($this->subject)
-                ->setTextBody($this->body)
+                ->setHtmlBody($noidung)
                 ->send();
 
             return true;
