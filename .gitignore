@@ -27,3 +27,5 @@
 #/phpunit.xml
 /nbproject/private/
 /config/db.php
+/web/index.php
+/vendor

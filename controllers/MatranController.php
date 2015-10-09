@@ -15,6 +15,15 @@ class MatranController extends \yii\web\Controller
         $compute = create_function("", "return (" . $mathString . ");" );
         return 0 + $compute();
     }
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+                'view' => '@common/views/error.php',
+            ],
+        ];
+    }
     public function actionIndex()
     {
         $soan='';
