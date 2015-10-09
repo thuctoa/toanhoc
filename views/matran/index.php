@@ -86,6 +86,7 @@ if($soan>0){
                     if($conghiem==1){
                         ?>
                 $$\begin{array}{lcl}
+                \\
                         & \text{Hệ có nghiệm duy nhất là }
                         \{
                          <?php
@@ -114,6 +115,18 @@ if($soan>0){
 ?>
 <?php
     if($conghiem==1){
+        $khac=0;
+        for($i=0;$i<$soan;$i++){
+            for($j=0;$j<$soan;$j++){
+                if($a[$i][$j]!=$a_giai[$i][$j]){
+                    $khac=1;
+                    break;
+                }
+            }
+            if($khac==1){
+                break;
+            }
+        }
     ?>
     <div class="row">
         $$\begin{array}{lcl}
@@ -147,37 +160,43 @@ if($soan>0){
                 }
                 ?>
             \end{cases}
-            \Longleftrightarrow 
-            \begin{cases}
-                <?php
-                for($i=0;$i<$soan;$i++){
-                    for($j=0;$j<$soan-1;$j++){
-                        if($a_giai[$i][$j]!=0){
-                            echo $a_giai[$i][$j].'x_'.$j;
-                            for($k=$j+1;$k<$soan;$k++){
-                                if($a_giai[$i][$k]!=0){
-                                    if($a_giai[$i][$k]>0){
-                                        echo ' + ';
+            <?php 
+            if($khac==1){
+            ?>
+                \Longleftrightarrow 
+                \begin{cases}
+                    <?php
+                    for($i=0;$i<$soan;$i++){
+                        for($j=0;$j<$soan-1;$j++){
+                            if($a_giai[$i][$j]!=0){
+                                echo $a_giai[$i][$j].'x_'.$j;
+                                for($k=$j+1;$k<$soan;$k++){
+                                    if($a_giai[$i][$k]!=0){
+                                        if($a_giai[$i][$k]>0){
+                                            echo ' + ';
+                                        }
+                                        break;
                                     }
-                                    break;
                                 }
-                            }
-                           
-                        }
-                        
-                ?>
 
-                <?php 
+                            }
+
+                    ?>
+
+                    <?php 
+                        }
+                        if($a_giai[$i][$j]!=0){
+                            echo $a_giai[$i][$j].'x_'.$j.' = '.$b_giai[$i];
+                        }else{
+                            echo ' = '.$b_giai[$i];
+                        }
+                        echo "\\\\";
                     }
-                    if($a_giai[$i][$j]!=0){
-                        echo $a_giai[$i][$j].'x_'.$j.' = '.$b_giai[$i];
-                    }else{
-                        echo ' = '.$b_giai[$i];
-                    }
-                    echo "\\\\";
-                }
-                ?>
-            \end{cases}
+                    ?>
+                \end{cases}
+            <?php
+            }
+            ?>
             \Longleftrightarrow 
             \begin{cases}
             <?php
