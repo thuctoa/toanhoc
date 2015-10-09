@@ -124,8 +124,10 @@ if($soan>0){
                         if($a[$i][$j]!=0){
                             echo $a[$i][$j].'x_'.$j;
                             for($k=$j+1;$k<$soan;$k++){
-                                 if($a[$i][$k]>0){
-                                    echo ' + ';
+                                if($a[$i][$k]!=0){
+                                    if($a[$i][$k]>0){
+                                       echo ' + ';
+                                    }
                                     break;
                                 }
                             }
@@ -153,8 +155,10 @@ if($soan>0){
                         if($a_giai[$i][$j]!=0){
                             echo $a_giai[$i][$j].'x_'.$j;
                             for($k=$j+1;$k<$soan;$k++){
-                                 if($a_giai[$i][$k]>0){
-                                    echo ' + ';
+                                if($a_giai[$i][$k]!=0){
+                                    if($a_giai[$i][$k]>0){
+                                        echo ' + ';
+                                    }
                                     break;
                                 }
                             }
