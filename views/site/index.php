@@ -278,7 +278,7 @@ $this->params['breadcrumbs'][] = $this->title;
         $$
         \begin{cases}
             C_\text{00} = M_0 + M_1-M_3 + M_5\\
-            C_\text{01} = M_3+M_5\\
+            C_\text{01} = M_3+M_4\\
             C_\text{10} = M_5+M_6\\
             C_\text{11} = M_1-M_2+M_4-M_6\\
         \end{cases}

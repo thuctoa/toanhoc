@@ -722,15 +722,15 @@ class MatranController extends \yii\web\Controller
         return FALSE;
     }
 
-    public function nhanhaimatran($matran1, $n1, $m1, $matran2, $m2){
+    public function nhanhaimatran($matran1, $hang1, $cot1, $matran2, $cot2){
         $ketqua=[];
-        for($i=0;$i<$n1;$i++){
+        for($i=0;$i<$hang1;$i++){
             $ketqua[$i]=[];
         }
-        for($i=0;$i<$n1;$i++){
-            for($j=0;$j<$m2;$j++){
+        for($i=0;$i<$hang1;$i++){
+            for($j=0;$j<$cot2;$j++){
                 $ketqua[$i][$j]=0;
-                for($t=0;$t<$m1;$t++){
+                for($t=0;$t<$cot1;$t++){
                     $ketqua[$i][$j]+=$matran1[$i][$t]*$matran2[$t][$j];
                 }
             }
