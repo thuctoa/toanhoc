@@ -86,3 +86,35 @@ $this->title = 'Lũy thừa ma trận';
     ?>
 </div>
 
+<?php
+     if($luythuaduoc==1){
+?>
+    $$
+    \begin{bmatrix}
+    <?php
+        for($i=0;$i<$sobac;$i++){
+            for($j=0;$j<$sobac-1;$j++){
+    ?>  
+                <?=$p[$i][$j]?>&
+    <?php
+            }
+            echo $p[$i][$j].'\\\\';
+        }
+    ?>
+    
+    \end{bmatrix}^\mathrm{<?=$somu?>}
+    =
+    \begin{bmatrix}
+    <?php
+        for($i=0;$i<$sobac;$i++){
+            for($j=0;$j<$sobac-1;$j++){
+    ?>  
+                <?=$p_luythua[$i][$j]?>&
+    <?php
+            }
+            echo $p_luythua[$i][$j].'\\\\';
+        }
+    ?>
+    \end{bmatrix}
+    $$
+<?php } ?>
