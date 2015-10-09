@@ -41,7 +41,7 @@ AppAsset::register($this);
     <div class="wrap">
         <?php
             NavBar::begin([
-               // 'brandLabel' =>  '<img src= "/favicon.ico" style="width:170px; margin-left:-70px;margin-top:-10px;" class="img-responsive">',
+                'brandLabel' => "Hướng dẫn",
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
@@ -50,6 +50,7 @@ AppAsset::register($this);
             
             $items = [
                 //    ['label' => 'Bài 6', 'url' => ['/matran/markov']],
+                   // ['label' => 'Hướng dẫn', 'url' => ['/site/index']],
                     ['label' => 'Giải hệ phương trình tuyến tính', 'url' => ['/matran/index']],
                     ['label' => 'Lũy thừa ma trận', 'url' => ['/matran/matran']],
                     ['label' => 'Nhân hai ma trận', 'url' => ['/matran/nhanhaimatran']],

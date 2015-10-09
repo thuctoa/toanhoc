@@ -90,10 +90,16 @@ if($na>0&&$ma>0&&$mb>0&&$nb>0){
 <?php
 }
 ?>
+<br>
+<br>
+<br>
+<br>
 <?php
             if($nhanthanhcong==1){
 ?>
     $$
+    \\ 
+    \\ 
     \begin{bmatrix}
     <?php
         for($i=0;$i<$ma;$i++){
