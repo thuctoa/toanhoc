@@ -17,13 +17,6 @@ if($sobac>0){
     <table class="hephuongtrinh">
         <tr>
             <th colspan="<?=$sobac?>" class="text-center">Ma trận ban đầu</th>
-        <?php
-            if($luythuaduoc==1){
-        ?>
-            <th colspan="<?=$sobac?>" class="text-center" >Ma trận nghịch đảo là</th>
-        <?php
-            }
-        ?>
         </tr>
 <?php
     for($i=0;$i<$sobac;$i++){
@@ -44,23 +37,10 @@ if($sobac>0){
                 </td>
         <?php
                 }
-                if($luythuaduoc==1){
+                
         ?>
-                <td class="pluythua_ketqua">
-                    <input  type="text" id="<?='p_luythua'.$i.'0'?>" onchange="bieuthuc('<?='p_luythua'.$i.'0'?>')" value="<?=$p_luythua[$i][0]?>" class="matran ketqua_matran xem_ketquamatran" placeholder="p_luythua[<?php echo $i;?>][<?php echo 0;?>]" name="p_luythua[<?php echo $i;?>][<?php echo 0;?>]"> 
-                    </td>
-        <?php
-                     for($j=1;$j<$sobac;$j++){
-        ?>
-                    <td >
-                        <input type="text" id="<?='p_luythua'.$i.$j?>" onchange="bieuthuc('<?='p_luythua'.$i.$j?>')" value="<?=$p_luythua[$i][$j]?>" class="matran xem_ketquamatran" placeholder="p_luythua[<?php echo $i;?>][<?php echo $j;?>]" name="p_luythua[<?php echo $i;?>][<?php echo $j;?>]"> 
-                    </td>
-        <?php
-                    }
-
-                }
-        ?>
-   </tr>
+               
+    </tr>
    
  <?php
     }
@@ -86,3 +66,36 @@ if($sobac>0){
 <?php
 }
 ?>
+<?php 
+    if($luythuaduoc==1){
+?>
+    $$
+    \begin{bmatrix}
+    <?php
+        for($i=0;$i<$sobac;$i++){
+            for($j=0;$j<$sobac-1;$j++){
+    ?>  
+                <?=$p[$i][$j]?>&
+    <?php
+            }
+            echo $p[$i][$j].'\\\\';
+        }
+    ?>
+    
+    \end{bmatrix}^\mathrm{<?=$somu?>}
+    =
+    \begin{bmatrix}
+    <?php
+        for($i=0;$i<$sobac;$i++){
+            for($j=0;$j<$sobac-1;$j++){
+    ?>  
+                <?=$p_luythua[$i][$j]?>&
+    <?php
+            }
+            echo $p_luythua[$i][$j].'\\\\';
+        }
+    ?>
+    \end{bmatrix}
+    $$
+ <?php } ?>
+

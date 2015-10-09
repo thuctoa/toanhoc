@@ -17,13 +17,6 @@ $this->title = 'Lũy thừa ma trận';
         <table class="hephuongtrinh">
             <tr>
                 <th colspan="<?=$sobac?>" class="text-center">Ma trận ban đầu</th>
-            <?php
-                if($luythuaduoc==1){
-            ?>
-                <th colspan="<?=$sobac?>" class="text-center" >Ma trận kết quả</th>
-            <?php
-                }
-            ?>
             </tr>
     <?php
         for($i=0;$i<$sobac;$i++){
@@ -41,21 +34,6 @@ $this->title = 'Lũy thừa ma trận';
                                name="p[<?php echo $i;?>][<?php echo $j;?>]"> 
                     </td>
             <?php
-                    }
-                    if($luythuaduoc==1){
-            ?>
-                    <td class="pluythua_ketqua">
-                        <input  type="text" id="<?='p_luythua'.$i.'0'?>" onchange="bieuthuc('<?='p_luythua'.$i.'0'?>')" value="<?=$p_luythua[$i][0]?>" class="matran ketqua_matran xem_ketquamatran" placeholder="p_luythua[<?php echo $i;?>][<?php echo 0;?>]" name="p_luythua[<?php echo $i;?>][<?php echo 0;?>]"> 
-                        </td>
-            <?php
-                         for($j=1;$j<$sobac;$j++){
-            ?>
-                        <td >
-                            <input type="text" id="<?='p_luythua'.$i.$j?>" onchange="bieuthuc('<?='p_luythua'.$i.$j?>')" value="<?=$p_luythua[$i][$j]?>" class="matran xem_ketquamatran" placeholder="p_luythua[<?php echo $i;?>][<?php echo $j;?>]" name="p_luythua[<?php echo $i;?>][<?php echo $j;?>]"> 
-                        </td>
-            <?php
-                        }
-
                     }
             ?>
        </tr>

@@ -77,37 +77,6 @@ if($na>0&&$ma>0&&$mb>0&&$nb>0){
             </table>
         </div>
     </div>
-    <table>
-        <?php
-            if($nhanthanhcong==1){
-        ?>
-            <tr >
-                <th colspan="<?=$na?>" class="text-center cachtren50">Kết quả A*B là </th>
-            </tr>
-        <?php
-
-            for($i=0;$i<$ma;$i++){
-        ?>
-            <tr>
-                <?php
-                    for($j=0;$j<$nb;$j++){
-                ?>
-                        <td>
-                            <input type="text" id="<?='ab'.$i.$j?>" onchange="bieuthuc('<?='ab'.$i.$j?>')" value="<?=$ab[$i][$j]?>" class="matran xem_ketquamatran" placeholder="ab[<?php echo $i;?>][<?php echo $j;?>]" name="ab[<?php echo $i;?>][<?php echo $j;?>]"> 
-                        </td>
-                <?php
-                        }
-
-                ?>
-
-
-           </tr>
-
-        <?php
-            }
-        }
-    ?>
-    </table>
     <input type="hidden" name="ma" class="text-warning"  value="<?=$ma?>">
     <input type="hidden" name="na" class="text-warning"  value="<?=$na?>">
     <input type="hidden" name="mb" class="text-warning"  value="<?=$mb?>">
@@ -121,3 +90,47 @@ if($na>0&&$ma>0&&$mb>0&&$nb>0){
 <?php
 }
 ?>
+<?php
+            if($nhanthanhcong==1){
+?>
+    $$
+    \begin{bmatrix}
+    <?php
+        for($i=0;$i<$ma;$i++){
+            for($j=0;$j<$na-1;$j++){
+    ?>  
+                <?=$a[$i][$j]?>&
+    <?php
+            }
+            echo $a[$i][$j].'\\\\';
+        }
+    ?>
+    
+    \end{bmatrix}
+    \begin{bmatrix}
+    <?php
+        for($i=0;$i<$mb;$i++){
+            for($j=0;$j<$nb-1;$j++){
+    ?>  
+                <?=$b[$i][$j]?>&
+    <?php
+            }
+            echo $b[$i][$j].'\\\\';
+        }
+    ?>
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+    <?php
+        for($i=0;$i<$ma;$i++){
+            for($j=0;$j<$nb-1;$j++){
+    ?>  
+                <?=$ab[$i][$j]?>&
+    <?php
+            }
+            echo $ab[$i][$j].'\\\\';
+        }
+    ?>
+    \end{bmatrix}
+    $$
+<?php } ?>
