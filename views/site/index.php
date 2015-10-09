@@ -112,7 +112,7 @@ $this->params['breadcrumbs'][] = $this->title;
             a_\text{20} & a_\text{21} &  a_\text{22} & | & b_2\\
         \end{bmatrix}
         $$
-        Qua một số bước biến đổi tương đương nếu hệ có nghiệm duy nhất thì ma trận mở rộng có dạng
+        Qua một số bước biến đổi sơ cấp nếu hệ có nghiệm duy nhất thì ma trận mở rộng có dạng
         $$\begin{bmatrix}
             a_\text{00}^\text{'} & a_\text{01}^\text{'} &  a_\text{02}^\text{'} & | & b_0^\text{'}\\
             0 & a_\text{11}^\text{'} &  a_\text{12}^\text{'} & | & b_1^\text{'}\\
@@ -211,7 +211,25 @@ $this->params['breadcrumbs'][] = $this->title;
         Hay là việc tính toán được nhanh hơn, bằng việc chi trả không gian lưu trữ các biến trung gian là 
         $A_2$ và $A_1$.
         <br>
-        Mời bạn <a  href="/matran/matran">click vào đây</a> để thực hiện tính lũy thừa ma trận của mình.
+        Còn đối với số mũ nhỏ hơn 0 $( m < 0)$thì ta có
+        $$
+        \begin{bmatrix}
+            a_\text{00}  & \cdots & a_\text{0n}  \\
+            \vdots & \ddots & \vdots \\
+            a_\text{n0}& \cdots & a_\text{nn}
+        \end{bmatrix}^m
+        = 
+        \begin{pmatrix}
+        \begin{bmatrix}
+            a_\text{00}  & \cdots & a_\text{0n}  \\
+            \vdots & \ddots & \vdots \\
+            a_\text{n0}& \cdots & a_\text{nn}
+        \end{bmatrix}^{-1}
+        \end{pmatrix}^{-m}
+        $$
+        Vậy để ma trận có lũy thừa âm thì ma trận đó phải khả nghịch, sau đó ta tính ma trận 
+        nghịch đảo của nó rồi áp dụng lũy thừa dương như ở trên ta được ma trận kết quả.
+        <br>Mời bạn <a  href="/matran/matran">click vào đây</a> để thực hiện tính lũy thừa ma trận của mình.
         
        
     </div>
@@ -272,7 +290,47 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
     <div id="nghichdaomatran" class="huongdan">
         <h2>Ma trận nghịch đảo</h2>
-        Áp dụng với công thức lũy thừa khi số mũ n =-1 
-        <a  href="/matran/matrannghichdao"> Tính ở đây</a>
+        Sử dụng phương pháp Gauss-Jordan để ta tính ma trận nghịch đảo của ma trận
+        $$
+        A=
+        \begin{bmatrix}
+            a_\text{00}  & \cdots & a_\text{0n}  \\
+            \vdots & \ddots & \vdots \\
+            a_\text{n0}& \cdots & a_\text{nn}
+        \end{bmatrix}
+        $$
+        Bằng cách ta thêm n cột và ma trận A để được ma trận $\bar{A}$ như sau
+        $$
+        \bar{A}=
+        \begin{bmatrix}
+            a_\text{00}  & a_\text{01}  & \cdots & a_\text{0n} & | & 1  & 0 & \cdots & 0  \\
+            a_\text{10}  & a_\text{11}  & \cdots & a_\text{1n} & | & 0  & 1 & \cdots & 0  \\
+            \vdots & \ddots & \vdots & \vdots & | & \vdots & \ddots & \vdots & \vdots \\
+            a_\text{n0}  & a_\text{n1} & \cdots & a_\text{nn} & | & 0  & 0 & \cdots & 1  \\
+            
+        \end{bmatrix}
+        $$
+        Sau một số phép biến đổi sơ cấp ta biến $\bar{A}$ về dạng
+        $$
+        \bar{A} 
+        \longrightarrow
+        \begin{bmatrix}
+            1  & 0 & \cdots & 0 & | & a_\text{00}^{'}  & a_\text{01}^{'}  & \cdots & a_\text{0n}^{'}\\
+            0  & 1 & \cdots & 0 & | & a_\text{10}^{'}  & a_\text{11}^{'}  & \cdots & a_\text{1n}^{'}\\
+            \vdots & \ddots & \vdots & \vdots & | & \vdots & \ddots & \vdots & \vdots  \\
+            0  & 0 & \cdots & 1 & | & a_\text{n0}^{'}  & a_\text{n1}^{'} & \cdots & a_\text{nn}^{'}  \\
+            
+        \end{bmatrix}
+        $$
+        Nếu làm được việc trên, thì ma trận A là khả nghịch và có ma trận nghịch đảo là
+        $$
+            A^{-1}=
+            \begin{bmatrix}
+                a_\text{00}^{'}  & \cdots & a_\text{0n}^{'}  \\
+                \vdots & \ddots & \vdots \\
+                a_\text{n0}^{'}& \cdots & a_\text{nn}^{'}
+            \end{bmatrix}
+        $$
+        Mời bạn tìm ma trận nghịch đảo của ma trận <a  href="/matran/matrannghichdao">ở đây</a>
     </div>
 </div>
