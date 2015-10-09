@@ -94,8 +94,9 @@ if($soan>0){
                             }
                             echo 'x_'.$i.'='.$x[$i];
                         ?>
-                        \}
-                        \text{. Dạng hệ: }
+                        \}\\
+                        \\
+                       & \text{Tóm tắt bước giải : }
                 \end{array}$$
                 <?php
                     }else if($conghiem==0){
@@ -116,21 +117,62 @@ if($soan>0){
     ?>
     <div class="row">
         $$\begin{array}{lcl}
-        
-        \begin{cases}
-            <?php
-            for($i=0;$i<$soan;$i++){
-                for($j=0;$j<$soan-1;$j++){
-                    
-                    echo $a[$i][$j].'x_'.$j.' + ';
-            ?>
-                    
-            <?php 
+            \begin{cases}
+                <?php
+                for($i=0;$i<$soan;$i++){
+                    for($j=0;$j<$soan-1;$j++){
+                        if($a[$i][$j]!=0){
+                            echo $a[$i][$j].'x_'.$j;
+                            for($k=$j+1;$k<$soan;$k++){
+                                 if($a[$i][$k]>0){
+                                    echo ' + ';
+                                    break;
+                                }
+                            }
+                           
+                        }
+                        
+                ?>
+
+                <?php 
+                    }
+                    if($a[$i][$j]!=0){
+                        echo $a[$i][$j].'x_'.$j.' = '.$b[$i];
+                    }else{
+                        echo ' = '.$b[$i];
+                    }
+                    echo "\\\\";
                 }
-                echo $a[$i][$j].'x_'.$j.' = '.$b[$i];
-                echo "\\\\";
-            }
-            ?>
+                ?>
+            \end{cases}
+            \Longleftrightarrow 
+            \begin{cases}
+                <?php
+                for($i=0;$i<$soan;$i++){
+                    for($j=0;$j<$soan-1;$j++){
+                        if($a_giai[$i][$j]!=0){
+                            echo $a_giai[$i][$j].'x_'.$j;
+                            for($k=$j+1;$k<$soan;$k++){
+                                 if($a_giai[$i][$k]>0){
+                                    echo ' + ';
+                                    break;
+                                }
+                            }
+                           
+                        }
+                        
+                ?>
+
+                <?php 
+                    }
+                    if($a_giai[$i][$j]!=0){
+                        echo $a_giai[$i][$j].'x_'.$j.' = '.$b_giai[$i];
+                    }else{
+                        echo ' = '.$b_giai[$i];
+                    }
+                    echo "\\\\";
+                }
+                ?>
             \end{cases}
             \Longleftrightarrow 
             \begin{cases}

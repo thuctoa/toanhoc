@@ -22,6 +22,8 @@ class MatranController extends \yii\web\Controller
         $a=[];
         $b=[];
         $x=[];
+        $a_giai=[];
+        $b_giai=[];
         if(isset($_POST['soan'])){//thay doi so an, so phuong trinh
             $soan=$_POST['soan'];
             
@@ -124,6 +126,8 @@ class MatranController extends \yii\web\Controller
         
         return $this->render('index',[
             'soan'=>$soan,
+            'a_giai'=>$a_giai,
+            'b_giai'=>$b_giai,
             'a'=>$a,
             'b'=>$b,
             'x'=>$x,
