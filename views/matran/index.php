@@ -12,69 +12,54 @@ $this->title = 'Giải hệ phương trình tuyến tính';
 if($soan>0){
 ?>
 <form action="/matran/index" method="post">
-    
-    <div class="row" >
-        <div class="col-lg-1">
-            $$\begin{cases}
-            <?php
-                for($i=0;$i<$soan;$i++){
-                    echo "\\\\";
-                    echo "\\\\";
+    <table>
+        <?php
+            for($i=0;$i<$soan;$i++){
+                echo "<tr>";
+                for($j=0;$j<$soan-1;$j++){
+        ?>
+        <td >
+                    <input type="text"
+                           id="<?='a'.$i.$j?>" 
+                            onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
+                           onchange="bieuthuc('<?='a'.$i.$j?>')" 
+                           value="<?=$a[$i][$j]?>" class="matran" 
+                           placeholder="a[<?php echo $i;?>][<?php echo $j;?>]" 
+                           name="a[<?php echo $i;?>][<?php echo $j;?>]"> 
+                    <b>
+                        x<sub><?=$j?></sub> +
+                    </b>
+                </td>
+        <?php
                 }
-            ?>
-            \end{cases}$$
-        </div>
-        <div class="col-lg-11 hevephai">
-            <table>
-                <?php
-                    for($i=0;$i<$soan;$i++){
-                        echo "<tr>";
-                        for($j=0;$j<$soan-1;$j++){
-                ?>
-                <td class="hephuongtrinh">
-                            <input type="text"
-                                   id="<?='a'.$i.$j?>" 
-                                    onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
-                                   onchange="bieuthuc('<?='a'.$i.$j?>')" 
-                                   value="<?=$a[$i][$j]?>" class="matran" 
-                                   placeholder="a[<?php echo $i;?>][<?php echo $j;?>]" 
-                                   name="a[<?php echo $i;?>][<?php echo $j;?>]"> 
-                            <b>
-                                x<sub><?=$j?></sub> +
-                            </b>
-                        </td>
-                <?php
-                        }
-                ?>
-                        <td class="hephuongtrinh">
-                            <input type="text" id="<?='a'.$i.$j?>" 
-                                   onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
-                                   onchange="bieuthuc('<?='a'.$i.$j?>')"
-                                   value="<?=$a[$i][$j]?>" 
-                                   class="matran" 
-                                   placeholder="a[<?php echo $i;?>][<?php echo $j;?>]" 
-                                   name="a[<?php echo $i;?>][<?php echo $j;?>]">
-                            <b>x<sub><?=$j?></sub></b>
-                        </td>
+        ?>
+                <td >
+                    <input type="text" id="<?='a'.$i.$j?>" 
+                           onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
+                           onchange="bieuthuc('<?='a'.$i.$j?>')"
+                           value="<?=$a[$i][$j]?>" 
+                           class="matran" 
+                           placeholder="a[<?php echo $i;?>][<?php echo $j;?>]" 
+                           name="a[<?php echo $i;?>][<?php echo $j;?>]">
+                    <b>x<sub><?=$j?></sub></b>
+                </td>
 
-                        <td class="hephuongtrinh">
-                            <b>
-                                =  
-                            </b>
-                           <input type="text" id="<?='b'.$i?>" 
-                                  onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
-                                  onchange="bieuthuc('<?='b'.$i?>')" 
-                                  value="<?=$b[$i]?>" class="matran" 
-                                  placeholder="b[<?php echo $i;?>]" 
-                                  name="b[<?php echo $i;?>]"> 
-                        </td>      
-                <?php
-                        echo "</tr>";
-                    }
-                ?>
-            </table>
-        </div>
-    </div>
+                <td >
+                    <b>
+                        =  
+                    </b>
+                   <input type="text" id="<?='b'.$i?>" 
+                          onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
+                          onchange="bieuthuc('<?='b'.$i?>')" 
+                          value="<?=$b[$i]?>" class="matran" 
+                          placeholder="b[<?php echo $i;?>]" 
+                          name="b[<?php echo $i;?>]"> 
+                </td>      
+        <?php
+                echo "</tr>";
+            }
+        ?>
+    </table>
     
     <input type="hidden" name="soan" class="text-warning"  value="<?=$soan?>">
         <div class="row giaihe">
