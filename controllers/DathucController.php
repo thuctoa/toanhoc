@@ -91,7 +91,7 @@ class DathucController extends \yii\web\Controller
 
                             $nghiem=[];
                             if(count($khoangphanly)>0){//neu co khoang phan ly thi lap
-                              //  $saiso=0.00000001;
+                                $saiso=0.0000000001;
                                 foreach ($khoangphanly as $val){
                                     $center=($val[0]+$val[1])/2;
                                     $f2=$this->giaitrifx($a_daoham[$bactinh-3], $bactinh-2, $center);
@@ -117,7 +117,8 @@ class DathucController extends \yii\web\Controller
                                     $fxd=$this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $d);
                                     $x1=$x0;
                                     if( $fxd - $fx0!=0){
-                                        for($i=0;$i<500;$i++){
+                                        
+                                        do{
                                             $fx0=$this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $x0);
                                             $fxd=$this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $d);
                                             
@@ -130,12 +131,12 @@ class DathucController extends \yii\web\Controller
                                                 if($this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $x1)==0){
                                                     break;
                                                 }
-    //                                            if(abs($x1-$x0)<$saiso){
-    //                                                break;
-    //                                            }
+                                                if(abs($x1-$x0)<$saiso){
+                                                    break;
+                                                }
                                             }
                                             $x0=$x1;
-                                        }
+                                        }while(true);
                                     }
                                     array_push($nghiem, $x1);//ta co duoc nghiem va cho lap lai
                                 }
