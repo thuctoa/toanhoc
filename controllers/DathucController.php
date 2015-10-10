@@ -115,6 +115,7 @@ class DathucController extends \yii\web\Controller
                                     //phuong phap day cung de lap
                                     $fx0=$this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $x0);
                                     $fxd=$this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $d);
+                                    $x1=$x0;
                                     if( $fxd - $fx0!=0){
                                         for($i=0;$i<500;$i++){
                                             $fx0=$this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $x0);
