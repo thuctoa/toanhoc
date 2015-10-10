@@ -94,37 +94,38 @@ class DathucController extends \yii\web\Controller
                               //  $saiso=0.00000001;
                                 foreach ($khoangphanly as $val){
                                     $center=($val[0]+$val[1])/2;
-                                    if( $this->giaitrifx($a_daoham[$bactinh-3], $bactinh-2, $center)>=0
-                                        &&$this->giaitrifx($a_daoham[$bactinh-2], $bactinh-1, $center)>=0){
+                                    $f2=$this->giaitrifx($a_daoham[$bactinh-3], $bactinh-2, $center);
+                                    $f1=$this->giaitrifx($a_daoham[$bactinh-2], $bactinh-1, $center);
+                                    if( $f2>=0&&$f1>=0){
                                         $x0=$val[0];
                                         $d=$val[1];
                                     }
-                                    if( $this->giaitrifx($a_daoham[$bactinh-3], $bactinh-2, $center)<=0
-                                        &&$this->giaitrifx($a_daoham[$bactinh-2], $bactinh-1, $center)<=0){
+                                    if( $f2<=0&&$f1<=0){
                                         $x0=$val[0];
                                         $d=$val[1];
                                     }
-                                    if( $this->giaitrifx($a_daoham[$bactinh-3], $bactinh-2, $center)<=0
-                                        &&$this->giaitrifx($a_daoham[$bactinh-2], $bactinh-1, $center)>=0){
+                                    if( $f2<=0&&$f1>=0){
                                         $x0=$val[1];
                                         $d=$val[0];
                                     }
-                                    if( $this->giaitrifx($a_daoham[$bactinh-3], $bactinh-2, $center)>=0
-                                        &&$this->giaitrifx($a_daoham[$bactinh-2], $bactinh-1, $center)<=0){
+                                    if( $f2>=0&&$f1<=0){
                                         $x0=$val[1];
                                         $d=$val[0];
                                     }
-                                    if($this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $d)-
-                                                $this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $x0)!=0){
+                                    //phuong phap day cung de lap
+                                    $fx0=$this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $x0);
+                                    $fxd=$this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $d);
+                                    if( $fxd - $fx0!=0){
                                         for($i=0;$i<500;$i++){
-                                            if($this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $d)-
-                                                        $this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $x0)==0){
+                                            $fx0=$this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $x0);
+                                            $fxd=$this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $d);
+                                            
+                                            if($fxd - $fx0==0){
                                                 $x1=$x0;
                                                 break;
                                             }else{
-                                                $x1=$x0- ($d-$x0)*  $this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $x0)/
-                                                        ($this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $d)-
-                                                            $this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $x0));
+                                                $x1=$x0- ($d-$x0)* $fx0/
+                                                        ($fxd - $fx0);
                                                 if($this->giaitrifx($a_daoham[$bactinh-1], $bactinh, $x1)==0){
                                                     break;
                                                 }
