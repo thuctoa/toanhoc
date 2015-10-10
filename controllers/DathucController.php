@@ -140,6 +140,7 @@ class DathucController extends \yii\web\Controller
                                     array_push($nghiem, $x1);//ta co duoc nghiem va cho lap lai
                                 }
                             }
+                            $nghiem=  $this->nghiemphanbiet($nghiem);
                             $bactinh++;
                         }
                     }
@@ -175,9 +176,17 @@ class DathucController extends \yii\web\Controller
         }
         return $nghiem;
     }
-    public function khoangphanly($taokhoangphanly, $fx){
-        
+    public function nghiemphanbiet($nghiem){//loai bot gia tri trung
+        $nghiemdep=[];
+        foreach ($nghiem as $val){
+            if(!in_array($val, $nghiemdep)){
+                array_push($nghiemdep, $val);
+            }
+            
+        }
+        return $nghiemdep;
     }
+
     public function giaitrifx($fx,$sobac,$c){
         $b=$fx[$sobac];
         for($i=1;$i<=$sobac;$i++){
