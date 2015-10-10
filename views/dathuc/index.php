@@ -46,7 +46,8 @@ if($sobac>0){
                 . '</b></h5>';
             }
         ?>   
-            
+<!--            <input  name="tinh" class="text-warning"  >
+            <input  name="ketqua" value= "<?php //echo $gtt;?>" class="text-warning"  >-->
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
 
     <div class="row " style="margin-top: 30px;">
@@ -61,14 +62,27 @@ if($sobac>0){
         </div>
     </div>
 </form>  
-    <?= $this->render('dathuc', [
-        'sobac' => $sobac,
-        'a' => $a,
-    ]) ?>
-    <?= $this->render('dathuc', [
-        'sobac' => $sobac-1,
-        'a' => $a_daoham,
-    ]) ?>
-<?php
+    <?php
+    if(count($nghiem)>0){
+        echo '$$\begin{cases}';
+        foreach ($nghiem as $key=>$val){
+            echo 'x_{'.$key.'}='.$val.'\\\\';
+        }
+        echo '\end{cases}$$';
+    }
+//    if($conghiem==100){
+//        
+//        echo $this->render('dathuc', [
+//            'a' => $a,
+//            'daohamcap'=>0,
+//        ]);
+//       
+//        for($i=$sobac;$i>1;$i--){
+//            echo $this->render('dathuc', [
+//            'a' => $a_daoham[$sobac-$i],
+//            'daohamcap'=>$i-2,
+//            ]) ;
+//        }
+//    }
 }
 ?>
