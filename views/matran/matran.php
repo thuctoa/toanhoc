@@ -26,10 +26,12 @@ $this->title = 'Lũy thừa ma trận';
                 for($j=0;$j<$sobac;$j++){
             ?>
                     <td>
-                        <input type="text" id="<?='p'.$i.$j?>" 
+                        <input type="text" 
+                               id="<?='p'.$i.$j?>" 
                                onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
                                onchange="bieuthuc('<?='p'.$i.$j?>')" 
-                               value="<?=$p[$i][$j]?>" class="matran" 
+                               value="<?=$p[$i][$j]?>" 
+                               class="matran" 
                                placeholder="p[<?php echo $i;?>][<?php echo $j;?>]" 
                                name="p[<?php echo $i;?>][<?php echo $j;?>]"> 
                     </td>

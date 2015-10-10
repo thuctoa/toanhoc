@@ -54,6 +54,16 @@ if(document.getElementById('sobac')){
         }
     }
 }
+
+if(document.getElementById('nghiemdathuc')){
+    var sobac=document.getElementById('nghiemdathuc').value;
+    for(var i=0;i<=sobac;i++){
+        str=document.getElementById('a'+i);
+        if(str.value.length!=0){
+            str.style.width = ((str.value.length + 1) * 8) + 'px';
+        }
+    }
+}
 if(document.getElementById('soan')){
     var sobac=document.getElementById('soan').value;
 

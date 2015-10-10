@@ -52,9 +52,23 @@ AppAsset::register($this);
                 //    ['label' => 'Bài 6', 'url' => ['/matran/markov']],
                    // ['label' => 'Hướng dẫn', 'url' => ['/site/index']],
                     ['label' => 'Giải hệ phương trình tuyến tính', 'url' => ['/matran/index']],
-                    ['label' => 'Lũy thừa ma trận', 'url' => ['/matran/matran']],
-                    ['label' => 'Nhân hai ma trận', 'url' => ['/matran/nhanhaimatran']],
-                    ['label' => 'Ma trận nghịch đảo', 'url' => ['/matran/matrannghichdao']],
+                    [
+                        'label'=>'Ma trận',
+                        'items'=>
+                        [
+                            ['label' => 'Lũy thừa ma trận', 'url' => ['/matran/matran']],
+                            ['label' => 'Nhân hai ma trận', 'url' => ['/matran/nhanhaimatran']],
+                            ['label' => 'Ma trận nghịch đảo', 'url' => ['/matran/matrannghichdao']],
+                        ]
+                    ],
+                    [
+                        'label'=>'Đa thức',
+                        'items'=>
+                        [
+                            ['label' => 'Nghiệm của đa thức', 'url' => ['/dathuc/index']],
+                            ['label' => 'Đồ thị của đa thức', 'url' => ['/dathuc/dothi']],
+                        ]
+                    ],
                   //  ['label' => Yii::t('app','About'), 'url' => ['/site/about']],
                     ['label' => Yii::t('app','Contact'), 'url' => ['/site/contact']],
                    // ['label' => Yii::t('app','Books'), 'url' => ['/book/index']],
