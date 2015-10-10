@@ -65,7 +65,7 @@ AppAsset::register($this);
                         'label'=>'Đa thức',
                         'items'=>
                         [
-                            ['label' => 'Nghiệm của đa thức', 'url' => ['/dathuc/index']],
+                            ['label' => 'Nghiệm gần đúng của đa thức', 'url' => ['/dathuc/index']],
                             ['label' => 'Nhân hai đa thức', 'url' => ['/dathuc/nhanhaidathuc']],
                             ['label' => 'Chia đa thức cho đa thức', 'url' => ['/dathuc/chiadachodathuc']],
                             ['label' => 'Đồ thị của đa thức', 'url' => ['/dathuc/dothi']],

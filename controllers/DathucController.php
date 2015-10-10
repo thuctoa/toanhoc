@@ -41,7 +41,10 @@ class DathucController extends \yii\web\Controller
                 if($a[$sobac]==0){
                     $conghiem=-10;
                 }
-                if($conghiem!=-10)
+                if($sobac>16){
+                    $conghiem=-20;
+                }
+                if($conghiem!=-10&&$conghiem!=-20)
                 {
                     if(isset($_POST['tinh'])){
                         $gtt=  $this->giaitrifx($a, $sobac, $_POST['tinh']);

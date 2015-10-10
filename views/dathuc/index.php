@@ -46,6 +46,13 @@ if($sobac>0){
                 . '</b></h5>';
             }
         ?>   
+        <?php
+            if($conghiem==-20){
+                echo '<h5 class="text-danger ketqua"><b>'
+                . 'Vì lý do tài nguyên của máy tính nên bạn hãy nhập số bậc không vượt quá 16. '
+                . '</b></h5>';
+            }
+        ?> 
 <!--            <input  name="tinh" class="text-warning"  >
             <input  name="ketqua" value= "<?php //echo $gtt;?>" class="text-warning"  >-->
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
