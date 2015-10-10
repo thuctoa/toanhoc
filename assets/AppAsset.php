@@ -22,7 +22,8 @@ class AppAsset extends AssetBundle
         'css/ihover.css',
     ];
     public $js = [
-        'js/matran.js'
+        'js/matran.js',
+        'js/html.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

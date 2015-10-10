@@ -39,10 +39,16 @@ class DathucController extends \yii\web\Controller
                         $a[$i]=0;
                     }
                 }
-                
-                for($i=0;$i<=$bacdaoham;$i++){
-                    $a_daoham[$i]=$a[$i+1]*($i+1);
+                if($a[$sobac]==0){
+                    $conghiem=-10;
                 }
+                if($conghiem!=-10)
+                {
+                    for($i=0;$i<=$bacdaoham;$i++){
+                        $a_daoham[$i]=$a[$i+1]*($i+1);
+                    }
+                }
+                
             }   
         }
         

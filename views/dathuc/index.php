@@ -39,7 +39,13 @@ if($sobac>0){
                    
             >$x^{<?=$i?>} =0 $
             
-            
+        <?php
+            if($conghiem==-10){
+                echo '<h5 class="text-danger ketqua"><b>'
+                . 'Hệ số $a_{'.$sobac.'}$ bắt buộc phải khác 0 mời nhập lại.'
+                . '</b></h5>';
+            }
+        ?>   
             
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
 
