@@ -70,26 +70,28 @@ if($sobac>0){
     </div>
 </form>  
     <?php
-    if(count($nghiem)>0){
-        echo '$$\begin{cases}';
-        foreach ($nghiem as $key=>$val){
-            echo 'x_{'.$key.'}='.$val.'\\\\';
-        }
-        echo '\end{cases}$$';
-    }
-//    if($conghiem==100){
-//        
-//        echo $this->render('dathuc', [
-//            'a' => $a,
-//            'daohamcap'=>0,
-//        ]);
-//       
+    
+    if($conghiem==100){
+        
+        echo $this->render('dathuc', [
+            'a' => $a,
+            'daohamcap'=>0,
+        ]);
+       
 //        for($i=$sobac;$i>1;$i--){
 //            echo $this->render('dathuc', [
 //            'a' => $a_daoham[$sobac-$i],
 //            'daohamcap'=>$i-2,
 //            ]) ;
 //        }
-//    }
+    }
+    if(count($nghiem)>0){
+        echo '$$\text{Có thể tìm thấy được số nghiệm gần đúng có thể thiếu của đa thức là}$$';
+        echo '$$\begin{cases}';
+        foreach ($nghiem as $key=>$val){
+            echo 'x_{'.$key.'}='.$val.'\\\\';
+        }
+        echo '\end{cases}$$';
+    }
 }
 ?>

@@ -94,7 +94,7 @@ class DathucController extends \yii\web\Controller
 
                             $nghiem=[];
                             if(count($khoangphanly)>0){//neu co khoang phan ly thi lap
-                                $saiso=0.0000000001;
+                                $saiso=0.0000001;
                                 foreach ($khoangphanly as $val){
                                     $center=($val[0]+$val[1])/2;
                                     $f2=$this->giaitrifx($a_daoham[$bactinh-3], $bactinh-2, $center);
