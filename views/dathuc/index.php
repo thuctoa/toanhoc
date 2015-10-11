@@ -87,7 +87,11 @@ if($sobac>0){
 //        }
     }
     if(count($nghiem)>0){
-        echo '$$\text{Có thể tìm thấy được số nghiệm gần đúng và có thể bỏ sót nghiệm của phương trình là}$$';
+        if($sobac>5){
+            echo '$$\text{Có thể tìm thấy được số nghiệm gần đúng và có thể bỏ sót nghiệm của phương trình là}$$';
+        }else{
+            echo '$$\text{Nghiệm của phương trình là}$$';
+        }
         echo '$$\begin{cases}';
         foreach ($nghiem as $key=>$val){
             echo 'x_{'.$key.'}='.$val.'\\\\';
