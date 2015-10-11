@@ -2,7 +2,7 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-$this->title ="Hướng dẫn và kiến thức nhớ lại";
+$this->title ="Tìm nghiệm phương trình, hệ phương trình ...";
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
