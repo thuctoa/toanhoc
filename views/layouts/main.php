@@ -42,7 +42,8 @@ AppAsset::register($this);
         <?php
             NavBar::begin([
                 'brandLabel' => "Hướng dẫn & kiến thức",
-                'brandUrl' => Yii::$app->homeUrl,
+               // 'brandUrl' => Yii::$app->homeUrl,
+                'brandUrl'=>'/site/index',
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',
                 ],
