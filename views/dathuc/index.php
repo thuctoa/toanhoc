@@ -93,6 +93,8 @@ if($sobac>0){
             echo 'x_{'.$key.'}='.$val.'\\\\';
         }
         echo '\end{cases}$$';
+    }else{
+        echo '<h5 class="text-danger ketqua"><b>Không thể tìm được nghiệm của phương trình</b></h5>';
     }
 }
 ?>
