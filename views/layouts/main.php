@@ -61,16 +61,9 @@ AppAsset::register($this);
                             ['label' => 'Ma trận nghịch đảo', 'url' => ['/matran/matrannghichdao']],
                         ]
                     ],
-                    [
-                        'label'=>'Đa thức',
-                        'items'=>
-                        [
-                            ['label' => 'Nghiệm gần đúng của đa thức', 'url' => ['/dathuc/index']],
-                            ['label' => 'Nhân hai đa thức', 'url' => ['/dathuc/nhanhaidathuc']],
-                            ['label' => 'Chia đa thức cho đa thức', 'url' => ['/dathuc/chiadachodathuc']],
-                            ['label' => 'Đồ thị của đa thức', 'url' => ['/dathuc/dothi']],
-                        ]
-                    ],
+                    
+                    ['label' => 'Phương trình đa thức bậc cao', 'url' => ['/dathuc/index']],
+//                       
                   //  ['label' => Yii::t('app','About'), 'url' => ['/site/about']],
                     ['label' => Yii::t('app','Contact'), 'url' => ['/site/contact']],
                    // ['label' => Yii::t('app','Books'), 'url' => ['/book/index']],

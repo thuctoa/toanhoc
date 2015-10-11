@@ -1,6 +1,6 @@
 $$
     <?php
-    $sobac=count($a)-1;
+    //$sobac=count($a)-1;
         if($daohamcap==0){   
     ?>
         P_{<?=$sobac?>}(x)=

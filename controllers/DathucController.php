@@ -20,6 +20,9 @@ class DathucController extends \yii\web\Controller
         $sobac='';
         $conghiem=-1;
         $a=[];
+        $a_giai=[];
+        $bac_giai=0;
+        $conghiem0=-1;
         $a_daoham=[];
         $miennghiem=[];
         $nghiem=[];
@@ -49,17 +52,28 @@ class DathucController extends \yii\web\Controller
                     if(isset($_POST['tinh'])){
                         $gtt=  $this->giaitrifx($a, $sobac, $_POST['tinh']);
                     }
-                    if($sobac==1){
-                        $nghiem[0]=-1*$a[0]/$a[1];
+                    $a_giai=$a;
+                    $bac_giai=$sobac;
+                    while ($this->giaitrifx($a_giai, $bac_giai, 0)==0){
+                        for($i=0;$i<$bac_giai;$i++){
+                            $a_giai[$i]=$a_giai[$i+1];
+                        }
+                        $bac_giai--;
+                        $conghiem0=1;
+                    }
+                    
+                    if($bac_giai==1){
+                        $nghiem[0]=-1*$a_giai[0]/$a_giai[1];
                         $conghiem=25;
                     }
-                    if($sobac==2){
-                        $nghiem=  $this->giaiphuongtrinhbachai($a);
+                    if($bac_giai==2){
+                        $nghiem=  $this->giaiphuongtrinhbachai($a_giai);
                         $conghiem=50;
                     }
-                    if($sobac>2){
+                    if($bac_giai>2){
                         $conghiem=100;//khac -10 va -1
-                        $a_daoham=  $this->tinhdaohamncap($a, $sobac);//tinh dao ham
+                        
+                        $a_daoham=  $this->tinhdaohamncap($a_giai, $bac_giai);//tinh dao ham
 
                         //dao nguoc lai de khu de quy
                         $a_tmp=[];
@@ -67,16 +81,16 @@ class DathucController extends \yii\web\Controller
                             array_push($a_tmp, array_pop($a_daoham));
                         }
                         $a_daoham=$a_tmp;
-                        array_push($a_daoham, $a);
+                        array_push($a_daoham, $a_giai);
                         //giai phuong trinh bac hai
                         $nghiem=  $this->giaiphuongtrinhbachai($a_daoham[1]);
                         $nghiem=  $this->xapxepgiam($nghiem);
-
+                        
 
 
                         //tim nghiem phuong trinh bac 3
                         $bactinh=3;
-                        while($bactinh<=$sobac){
+                        while($bactinh<=$bac_giai){
                             $nghiem=  $this->xapxepgiam($nghiem);
                             $miennghiem=  $this->miennghiem($a_daoham[$bactinh-1],$bactinh);
                             $taokhoangphany=  $this->tronhaimanggiamdan($nghiem, $miennghiem);
@@ -153,7 +167,10 @@ class DathucController extends \yii\web\Controller
                 
             }   
         }
-        
+        if($conghiem0==1){
+            array_push($nghiem, 0);
+        }
+        $nghiem=  $this->xapxeptang($nghiem);
         return $this->render('index',[
             'sobac'=>$sobac,
             'conghiem'=>$conghiem,
@@ -234,7 +251,19 @@ class DathucController extends \yii\web\Controller
         }
         return $array;
     }
-
+    public function xapxeptang($array){
+        $n=count($array);
+        for($i=0;$i<$n-1;$i++){
+            for($j=$i+1;$j<$n;$j++){
+                if($array[$i]>$array[$j]){
+                    $tmp=$array[$i];
+                    $array[$i]=$array[$j];
+                    $array[$j]=$tmp;
+                }
+            }
+        }
+        return $array;
+    }
     public function miennghiem($a, $sobac){
         $miennghiem=[];
         $a_chuan=[];

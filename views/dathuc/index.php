@@ -1,7 +1,7 @@
 <?php
 use yii\helpers\Html;
 /* @var $this yii\web\View */
-$this->title = 'Tìm nghiệm của đa thức';
+$this->title = 'Tìm nghiệm của đa thức bậc';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <h1><?= Html::encode($this->title)?></h1>
@@ -71,9 +71,10 @@ if($sobac>0){
 </form>  
     <?php
     
-    if($conghiem==100){
+    if($conghiem>0){
         
         echo $this->render('dathuc', [
+            'sobac'=>$sobac,
             'a' => $a,
             'daohamcap'=>0,
         ]);
@@ -86,7 +87,7 @@ if($sobac>0){
 //        }
     }
     if(count($nghiem)>0){
-        echo '$$\text{Có thể tìm thấy được số nghiệm gần đúng có thể thiếu của đa thức là}$$';
+        echo '$$\text{Có thể tìm thấy được số nghiệm gần đúng và có thể bỏ sót nghiệm của phương trình là}$$';
         echo '$$\begin{cases}';
         foreach ($nghiem as $key=>$val){
             echo 'x_{'.$key.'}='.$val.'\\\\';

@@ -121,6 +121,7 @@ $config = [
         'allowActions' => [
             'site/*',
             'matran/*',
+            'dathuc/index',
         ],
     ],
     'as beforeRequest' => [
