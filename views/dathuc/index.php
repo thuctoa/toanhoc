@@ -1,14 +1,14 @@
 <?php
 use yii\helpers\Html;
 /* @var $this yii\web\View */
-$this->title = 'Tìm nghiệm của đa thức bậc';
+$this->title = 'Tìm nghiệm của phương trình bậc';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <h1><?= Html::encode($this->title)?></h1>
 
  <form action="/dathuc/index" method="post">
-            Số bậc đa thức P là <input id ="nghiemdathuc" type="text" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
-            <button type="submit" class="btn btn-success">Đa thức mới</button><br><br><br>
+            Số bậc của đa thức P là <input id ="nghiemdathuc" type="text" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
+            <button type="submit" class="btn btn-success">Phương trình mới</button><br><br><br>
 </form>
 <?php 
 if($sobac>0){
@@ -63,7 +63,7 @@ if($sobac>0){
         </div>
         <div class="col-lg-4 text-center">
             <?php if($conghiem==0){
-                echo '<h5 class="text-danger ketqua"><b>Đa thức không có nghiệm thực</b></h5>';
+                echo '<h5 class="text-danger ketqua"><b>Phương trình không có nghiệm thực</b></h5>';
             }
             ?>
         </div>
@@ -93,8 +93,8 @@ if($sobac>0){
             echo 'x_{'.$key.'}='.$val.'\\\\';
         }
         echo '\end{cases}$$';
-    }else{
-        echo '<h5 class="text-danger ketqua"><b>Không thể tìm được nghiệm của phương trình</b></h5>';
+    }else if($conghiem>0){
+        echo '<h5 class="text-danger ketqua"><b>Không thể tìm được nghiệm thực của phương trình</b></h5>';
     }
 }
 ?>

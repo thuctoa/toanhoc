@@ -62,7 +62,7 @@ AppAsset::register($this);
                         ]
                     ],
                     
-                    ['label' => 'Phương trình đa thức bậc cao', 'url' => ['/dathuc/index']],
+                    ['label' => 'Phương trình bậc cao', 'url' => ['/dathuc/index']],
 //                       
                   //  ['label' => Yii::t('app','About'), 'url' => ['/site/about']],
                     ['label' => Yii::t('app','Contact'), 'url' => ['/site/contact']],

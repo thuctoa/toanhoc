@@ -71,6 +71,24 @@ $this->params['breadcrumbs'][] = $this->title;
 
         </div>
     </div>
+    <div id="giaiphuongtrinh" class="huongdan">
+        <a  href="/dathuc/index"><h2 >Giải phương trình bậc cao</h2></a>
+        Như các bạn đã biết bài toán tìm nghiệm của phương trình, có một đóng góp cực kỳ quan trọng không những trong các ngành kỹ thuật, 
+        mà trong cả các ngành kinh tế.
+        Vì vậy mình xin đưa ra một tính năng tính toán giúp làm được một phần điều này.
+        <p>Gợi nhắc kiến thức</p>
+        Vì chúng ta đã quá quen thuộc với việc giải bài toán tìm nghiệm, nên mình chỉ có một số điều chú ý nhỏ cho các bạn.
+         
+        $$
+        \begin{array}{|c|c|c|} \text{Về phương trình} & \text{Về khả năng tìm nghiệm}  \\
+            \hline
+            \text{Hệ số ứng với bậc của đa thức luôn khác 0}  &\text{Nghiệm là gần đúng và chưa chắc đủ số nghiệm}\\
+            x^0=1 &\text{Với số bậc càng cao thì tốc độ tính toán càng chậm}\\
+            x^1=x &\text{Phụ thuộc vào phần cứng của máy tính}\\
+        \end{array}
+        $$
+        Mời bạn nhấn chuột <a  href="/dathuc/index">ở đây</a> để tìm nghiệm gần đúng.
+    </div>
     <div id="hephuongtrinh" class="huongdan">
         <a  href="/matran/index"><h2 >Giải hệ phương trình tuyến tính</h2></a>
         Ví dụ ta giải một hệ sau
