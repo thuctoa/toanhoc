@@ -231,7 +231,17 @@ if($sobac>0){
 </form>
 <?php
     }
+     
 }
+?>
+<p style="margin-top: 20px;"></p>
+<?php
+    if($dakiemtrapp==1&&$markovduoc!=2){
+       echo $this->render('/matran/bieudo',[
+           'p'=>$p,
+           'sobac'=>$sobac
+       ]);
+   }
 ?>
 
 

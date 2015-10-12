@@ -69,9 +69,8 @@ $this->title = 'Biểu đồ';
 <script>window.onload = webvowl.app().initialize;</script>
 
 <?php
-    $sophantu=15;
+    $sophantu=$sobac;
     $sophantu--;
-    $soquanhe=8;
     $content = '{
     "_comment" : "Created with OWL2VOWL (version 0.2.0), http://vowl.visualdataweb.org",
     "namespace" : [ ],
@@ -138,9 +137,100 @@ $this->title = 'Biểu đồ';
         $content=$content.'},
             "instances" : 0
         }
-    ],"propertyAttribute" : [ ]
+    ],"propertyAttribute" : [';
+        
+    $soquanhe=0;
+    for($i=0;$i<$sobac;$i++){
+        for($j=0;$j<$sobac;$j++){
+            if($p[$i][$j]>0){
+                $soquanhe++;
+            }
+    }}
+    $soquanhe--;
+    $demsqh=0;
+    for($i=0;$i<$sobac;$i++){
+        for($j=0;$j<$sobac;$j++){
+            if($p[$i][$j]>0){
+                $content=$content.'{
+            "id" : "property'.$demsqh.'",
+                        "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "'.$p[$i][$j].'"
+            },
+            "comment" : {
+              "undefined" : "Bieu do trang thai."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class'.$i.'",
+            "range" : "class'.$j.'"
+        },';
+                
+                $demsqh++;
+                if($demsqh==$soquanhe){
+                    break;
+                }
+            }
+        }
+        if($demsqh==$soquanhe){
+                    break;
+                }
+    }
+    $demsqh=0;
+    for($i=0;$i<$sobac;$i++){
+        for($j=0;$j<$sobac;$j++){
+            if($p[$i][$j]>0){
+                $demsqh++;
+                if($demsqh==$soquanhe+1){
+                    $content=$content.'{
+                        "id" : "property'.($demsqh-1).'",
+                                    "label" : {
+                          "IRI-based" : "focus",
+                          "undefined" : "'.$p[$i][$j].'"
+                        },
+                        "comment" : {
+                          "undefined" : "Bieu do trang thai."
+                        },
+                        "annotations" : {
+                          "term_status" : [ {
+                            "identifier" : "term_status",
+                            "language" : "undefined",
+                            "value" : "testing",
+                            "type" : "label"
+                          } ]
+                        },
+                        "domain" : "class'.$i.'",
+                        "range" : "class'.$j.'"
+                    }';
+                }
+            }
+        }
+    }
+    $content=$content.' ],
+    "property":[
+        ';
+    for($i=0;$i<$soquanhe;$i++){
+        $content=$content.'{
+            "id" : "property'.$i.'"';
+        $content=$content.',
+            "type" : "owl:objectProperty"
+        },';
+    }
+    $content=$content.'{
+            "id" : "property'.$i.'"';
+        $content=$content.',
+            "type" : "owl:objectProperty"
+        }
+        ';
+    $content=$content.'
+    ]
 }';
-    
     $fp = fopen($_SERVER['DOCUMENT_ROOT'] . "/data/bieudo.json","wb");
     fwrite($fp,$content);
     fclose($fp);

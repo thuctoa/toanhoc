@@ -32,42 +32,6 @@
         },{
             "id" : "class2",
             "type" : "owl:Class"
-        },{
-            "id" : "class3",
-            "type" : "owl:Class"
-        },{
-            "id" : "class4",
-            "type" : "owl:Class"
-        },{
-            "id" : "class5",
-            "type" : "owl:Class"
-        },{
-            "id" : "class6",
-            "type" : "owl:Class"
-        },{
-            "id" : "class7",
-            "type" : "owl:Class"
-        },{
-            "id" : "class8",
-            "type" : "owl:Class"
-        },{
-            "id" : "class9",
-            "type" : "owl:Class"
-        },{
-            "id" : "class10",
-            "type" : "owl:Class"
-        },{
-            "id" : "class11",
-            "type" : "owl:Class"
-        },{
-            "id" : "class12",
-            "type" : "owl:Class"
-        },{
-            "id" : "class13",
-            "type" : "owl:Class"
-        },{
-            "id" : "class14",
-            "type" : "owl:Class"
         }
     ],"classAttribute" : [
         {
@@ -93,101 +57,119 @@
               "undefined" : "2"},
             "instances" : 0
         }
-        ,
+    ],"propertyAttribute" : [{
+            "id" : "property0",
+                        "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.5"
+            },
+            "comment" : {
+              "undefined" : "Bieu do trang thai."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class0",
+            "range" : "class1"
+        },{
+            "id" : "property1",
+                        "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.5"
+            },
+            "comment" : {
+              "undefined" : "Bieu do trang thai."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class0",
+            "range" : "class2"
+        },{
+            "id" : "property2",
+                        "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.33333333333333"
+            },
+            "comment" : {
+              "undefined" : "Bieu do trang thai."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class1",
+            "range" : "class0"
+        },{
+            "id" : "property3",
+                        "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.66666666666667"
+            },
+            "comment" : {
+              "undefined" : "Bieu do trang thai."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class1",
+            "range" : "class2"
+        },{
+                        "id" : "property4",
+                                    "label" : {
+                          "IRI-based" : "focus",
+                          "undefined" : "1"
+                        },
+                        "comment" : {
+                          "undefined" : "Bieu do trang thai."
+                        },
+                        "annotations" : {
+                          "term_status" : [ {
+                            "identifier" : "term_status",
+                            "language" : "undefined",
+                            "value" : "testing",
+                            "type" : "label"
+                          } ]
+                        },
+                        "domain" : "class2",
+                        "range" : "class0"
+                    } ],
+    "property":[
         {
-           "id" : "class3",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "3"},
-            "instances" : 0
+            "id" : "property0",
+            "type" : "owl:objectProperty"
+        },{
+            "id" : "property1",
+            "type" : "owl:objectProperty"
+        },{
+            "id" : "property2",
+            "type" : "owl:objectProperty"
+        },{
+            "id" : "property3",
+            "type" : "owl:objectProperty"
+        },{
+            "id" : "property4",
+            "type" : "owl:objectProperty"
         }
-        ,
-        {
-           "id" : "class4",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "4"},
-            "instances" : 0
-        }
-        ,
-        {
-           "id" : "class5",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "5"},
-            "instances" : 0
-        }
-        ,
-        {
-           "id" : "class6",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "6"},
-            "instances" : 0
-        }
-        ,
-        {
-           "id" : "class7",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "7"},
-            "instances" : 0
-        }
-        ,
-        {
-           "id" : "class8",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "8"},
-            "instances" : 0
-        }
-        ,
-        {
-           "id" : "class9",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "9"},
-            "instances" : 0
-        }
-        ,
-        {
-           "id" : "class10",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "10"},
-            "instances" : 0
-        }
-        ,
-        {
-           "id" : "class11",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "11"},
-            "instances" : 0
-        }
-        ,
-        {
-           "id" : "class12",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "12"},
-            "instances" : 0
-        }
-        ,
-        {
-           "id" : "class13",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "13"},
-            "instances" : 0
-        }
-        ,
-        {
-           "id" : "class14",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "14"},
-            "instances" : 0
-        }
-    ],"propertyAttribute" : [ ]
+        
+    ]
 }
