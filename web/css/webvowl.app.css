@@ -81,6 +81,7 @@ nav#optionsArea {
 	height: 40px;
 	margin: 0;
 	padding: 0;
+        background-color: black;
 }
 ul#optionsMenu {
 	box-sizing: border-box;
