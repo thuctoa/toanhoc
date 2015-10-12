@@ -75,6 +75,7 @@ main {
 	margin: 0;
 	overflow: hidden;
 	padding: 0;
+        width: 100%;
 }
 nav#optionsArea {
 	height: 40px;
