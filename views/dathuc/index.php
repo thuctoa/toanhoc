@@ -87,7 +87,7 @@ if($sobac>0){
 //        }
     }
     if(count($nghiem)>0){
-        if($sobac>5){
+        if($sobac>5&&$sobac!=  count($nghiem)){
             echo '$$\text{Có thể tìm thấy được số nghiệm gần đúng và có thể bỏ sót nghiệm của phương trình là}$$';
         }else{
             echo '$$\text{Nghiệm của phương trình là}$$';

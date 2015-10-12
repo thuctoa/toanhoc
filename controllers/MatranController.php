@@ -15,6 +15,12 @@ class MatranController extends \yii\web\Controller
         $compute = create_function("", "return (" . $mathString . ");" );
         return 0 + $compute();
     }
+    public function actionBieudo(){
+        return $this->render('bieudo',[
+            
+        ]);
+    }
+            
     public function actionIndex()
     {
         $soan='';

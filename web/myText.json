@@ -1,0 +1,94 @@
+{
+    "_comment" : "Created with OWL2VOWL (version 0.2.0), http://vowl.visualdataweb.org",
+    "namespace" : [ ],
+    "header" : {
+      "languages" : [ "IRI-based", "undefined" ],
+      "title" : {
+        "undefined" : ""
+      },
+      "iri" : "http://xmlns.com/foaf/0.1/",
+      "version" : "0.99",	
+      "author" : [ "Dan Brickley", "Libby Miller" ],		
+      "description" : {
+        "undefined" : "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language."
+      }
+    },
+    "metrics" : {
+      "classCount" : 22,
+      "datatypeCount" : 27,
+      "objectPropertyCount" : 40,
+      "datatypePropertyCount" : 27,
+      "propertyCount" : 67,
+      "nodeCount" : 49,
+      "axiomCount" : 551,
+      "individualCount" : 0
+    },"class" : [
+        {
+            "id" : "class0",
+            "type" : "owl:Class"
+        },{
+            "id" : "class1",
+            "type" : "owl:Class"
+        },{
+            "id" : "class2",
+            "type" : "owl:Class"
+        },{
+            "id" : "class3",
+            "type" : "owl:Class"
+        },{
+            "id" : "class4",
+            "type" : "owl:Class"
+        },{
+            "id" : "class5",
+            "type" : "owl:Class"
+        }
+    ],"classAttribute" : [
+        {
+           "id" : "class0",
+            "label" : {
+              "IRI-based" : "Concept",
+              "undefined" : "0"},
+            "instances" : 0
+        }
+        ,
+        {
+           "id" : "class1",
+            "label" : {
+              "IRI-based" : "Concept",
+              "undefined" : "1"},
+            "instances" : 0
+        }
+        ,
+        {
+           "id" : "class2",
+            "label" : {
+              "IRI-based" : "Concept",
+              "undefined" : "2"},
+            "instances" : 0
+        }
+        ,
+        {
+           "id" : "class3",
+            "label" : {
+              "IRI-based" : "Concept",
+              "undefined" : "3"},
+            "instances" : 0
+        }
+        ,
+        {
+           "id" : "class4",
+            "label" : {
+              "IRI-based" : "Concept",
+              "undefined" : "4"},
+            "instances" : 0
+        }
+        ,
+        {
+           "id" : "class5",
+            "label" : {
+              "IRI-based" : "Concept",
+              "undefined" : "5"},
+            "instances" : 0
+        }
+    ],"propertyAttribute" : [ ]
+}

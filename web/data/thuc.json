@@ -1,0 +1,258 @@
+{
+    "_comment" : "Created with OWL2VOWL (version 0.2.0), http://vowl.visualdataweb.org",
+    "namespace" : [ ],
+    "header" : {
+      "languages" : [ "IRI-based", "undefined" ],
+      "title" : {
+        "undefined" : ""
+      },
+      "iri" : "http://xmlns.com/foaf/0.1/",
+      "version" : "0.99",	
+      "author" : [ "Dan Brickley", "Libby Miller" ],		
+      "description" : {
+        "undefined" : "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language."
+      }
+    },
+    "metrics" : {
+      "classCount" : 22,
+      "datatypeCount" : 27,
+      "objectPropertyCount" : 40,
+      "datatypePropertyCount" : 27,
+      "propertyCount" : 67,
+      "nodeCount" : 49,
+      "axiomCount" : 551,
+      "individualCount" : 0
+    },
+    "class" : [
+        {
+            "id" : "class1",
+            "type" : "owl:Class"
+        },
+        {
+            "id" : "class2",
+            "type" : "owl:Class"
+        }
+        ,
+        {
+            "id" : "class3",
+            "type" : "owl:Class"
+        }
+        ,
+        {
+            "id" : "class4",
+            "type" : "owl:Class"
+        }
+    ],
+    "classAttribute" : [ 
+        {
+           "id" : "class1",
+            "label" : {
+              "IRI-based" : "Concept1",
+              "undefined" : "1"
+            },
+            "instances" : 0
+        },{
+            "id" : "class2",
+            "label" : {
+              "IRI-based" : "Concept",
+              "undefined" : "2"
+            },
+            "instances" : 0
+        }
+        ,{
+            "id" : "class3",
+            "label" : {
+              "IRI-based" : "Concept",
+              "undefined" : "3"
+            },
+            "instances" : 0
+        }
+        ,{
+            "id" : "class4",
+            "label" : {
+              "IRI-based" : "Concept",
+              "undefined" : "4"
+            },
+            "instances" : 0
+        }
+    ],
+    "propertyAttribute" : [ 
+        {
+            "id" : "property1",
+            "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.6"
+            },
+            "comment" : {
+              "undefined" : "The underlying or 'focal' entity associated with some SKOS-described concept."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class1",
+            "range" : "class2"
+        },
+        {
+            "id" : "property2",
+            "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "1"
+            },
+            "comment" : {
+              "undefined" : "The underlying or 'focal' entity associated with some SKOS-described concept."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class3",
+            "range" : "class3"
+        },
+        {
+            "id" : "property3",
+            "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.4"
+            },
+            "comment" : {
+              "undefined" : "The underlying or 'focal' entity associated with some SKOS-described concept."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class1",
+            "range" : "class3"
+        }
+        ,
+        {
+            "id" : "property4",
+            "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.4"
+            },
+            "comment" : {
+              "undefined" : "The underlying or 'focal' entity associated with some SKOS-described concept."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class2",
+            "range" : "class4"
+        }
+        ,
+        {
+            "id" : "property5",
+            "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.4"
+            },
+            "comment" : {
+              "undefined" : "The underlying or 'focal' entity associated with some SKOS-described concept."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class2",
+            "range" : "class3"
+        }
+        ,
+        {
+            "id" : "property6",
+            "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.4"
+            },
+            "comment" : {
+              "undefined" : "The underlying or 'focal' entity associated with some SKOS-described concept."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class3",
+            "range" : "class4"
+        }
+        ,
+        {
+            "id" : "property7",
+            "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.4"
+            },
+            "comment" : {
+              "undefined" : "The underlying or 'focal' entity associated with some SKOS-described concept."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class1",
+            "range" : "class4"
+        }
+    ],
+    "property":[
+        {
+            "id" : "property1",
+            "type" : "owl:objectProperty"
+        },{
+            "id" : "property2",
+            "type" : "owl:objectProperty"
+        },
+        {
+            "id" : "property3",
+            "type" : "owl:objectProperty"
+        }
+        ,
+        {
+            "id" : "property4",
+            "type" : "owl:objectProperty"
+        }
+        ,
+        {
+            "id" : "property5",
+            "type" : "owl:objectProperty"
+        }
+        ,
+        {
+            "id" : "property6",
+            "type" : "owl:objectProperty"
+        }
+        ,
+        {
+            "id" : "property7",
+            "type" : "owl:ObjectProperty"
+        }
+    ]
+}
