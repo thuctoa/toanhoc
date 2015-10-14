@@ -10,7 +10,7 @@ $this->title = 'Chia hai đa thức';
        
         , Số bậc của đa thức chia $B(x)$ là<input type="text" value="<?=$n2?>" id="n2"
                                           placeholder="Nhập vào một số ..." name="n2" >
-        <button type="submit" id="nhanhaidathuc"  class="btn btn-success">Nhân hai ma trận mới</button><br><br><br>
+        <button type="submit" id="nhanhaidathuc"  class="btn btn-success">Chia hai ma trận mới</button><br><br><br>
 </form>
 <?php 
     if($n1>0&&$n2>0){
@@ -128,7 +128,11 @@ $this->title = 'Chia hai đa thức';
                      'a'=>$phanchia,
                  ]);
             }else{
-                echo 0;
+                if(isset($phanchia[0])){
+                    echo $phanchia[0];
+                }  else {
+                    echo 0;
+                }
             }
     ?>
     +
