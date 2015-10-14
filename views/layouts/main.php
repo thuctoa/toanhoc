@@ -68,8 +68,9 @@ AppAsset::register($this);
                         'items'=>
                         [
                             ['label' => 'Giải phương trình', 'url' => ['/dathuc/index']],
-                            ['label' => 'Nhân hai đa thức', 'url' => ['/dathuc/nhanhaidathuc']],
                             ['label' => 'Lũy thừa đa thức', 'url' => ['/dathuc/luythuadathuc']],
+                            ['label' => 'Nhân hai đa thức', 'url' => ['/dathuc/nhanhaidathuc']],
+                            
                         ]
                     ],
                   //  ['label' => Yii::t('app','About'), 'url' => ['/site/about']],
