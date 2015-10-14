@@ -11,7 +11,6 @@ class DathucController extends \yii\web\Controller
     function calculate_string( $mathString )    {
         $mathString = trim($mathString);     // trim white spaces
         $mathString = ereg_replace ('[^0-9\+-\*\/\(\) ]', '', $mathString);    // remove any non-numbers chars; exception for math operators
-
         $compute = create_function("", "return (" . $mathString . ");" );
         return 0 + $compute();
     }
@@ -382,16 +381,7 @@ class DathucController extends \yii\web\Controller
                 $ladathuc=4;//tat ca da hop le
             }
             if($ladathuc==4){
-                for($i=0;$i<=$n12;$i++){
-                    $ab[$i]=0;
-                    for($j=0;$j<=$n1;$j++){
-                        for($k=0;$k<=$n2;$k++){
-                            if($j+$k==$i){
-                                $ab[$i]+=$a[$j]*$b[$k];
-                            }
-                        }
-                    }
-                }
+                $ab=  $this->nhanhaidathuc($a, $n1, $b, $n2);
             }
             
         }
@@ -405,6 +395,79 @@ class DathucController extends \yii\web\Controller
             'ladathuc'=>$ladathuc
         ]);
     }
+    public function actionLuythuadathuc(){
+        $n='';
+        $n_luythua='';
+        $a=[];
+        $somu=1;
+        $ladathuc=-1;
+        $a_luythua=[];
+        if(isset($_POST['n'])){
+            $n=$_POST['n'];
+            for($i=0;$i<=$n;$i++){
+                $a[$i]='';
+            }
+        }
+        if(isset($_POST['a'])){
+            $a=$_POST['a'];
+            $somu=$_POST['somu'];
+            for($i=0;$i<=$n;$i++){
+                if($a[$i]!=''){
+                    $a[$i]= $this->calculate_string($a[$i]); 
+                }else{
+                    $a[$i]=0;
+                }
+            }
+            
+            if($a[$n]==0){
+                $ladathuc=1;
+                
+            } else if($somu<1){
+                $ladathuc=2;
+            }else {
+                $ladathuc=4;//tat ca da hop le
+            }
+            if($ladathuc==4){
+                if($somu==1){
+                    $a_luythua=$a;
+                    $n_luythua=$n;
+                }else{
+                    $a_luythua=$a;
+                    $n_luythua=$n;
+                    for($i=1;$i<$somu;$i++){
+                        $a_luythua=  $this->nhanhaidathuc($a_luythua, $n_luythua, $a, $n);
+                        $n_luythua+=$n;
+                    }
+                }
+            }
+            
+        }
+        return $this->render('luythuadathuc',[
+            'n'=>$n,
+            'a'=>$a,
+            'ladathuc'=>$ladathuc,
+            'somu'=>$somu,
+            'a_luythua'=>$a_luythua,
+            'n_luythua'=>$n_luythua,
+        ]);
+    }
+
+    public function nhanhaidathuc($a, $na, $b, $nb){
+        $ab=[];
+        $nab=$na+$nb;
+        for($i=0;$i<=$nab;$i++){
+            $ab[$i]=0;
+            for($j=0;$j<=$na;$j++){
+                for($k=0;$k<=$nb;$k++){
+                    if($j+$k==$i){
+                        $ab[$i]+=$a[$j]*$b[$k];
+                    }
+                }
+            }
+        }
+        return $ab;
+    }
+
     public function actionChiadachodathuc()
     {
         return $this->render('chiadachodathuc',[
