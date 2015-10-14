@@ -64,6 +64,23 @@ if(document.getElementById('nghiemdathuc')){
         }
     }
 }
+if(document.getElementById('nhanhaidathuc')){
+    var n1=document.getElementById('n1').value;
+    for(var i=0;i<=n1;i++){
+        str=document.getElementById('a'+i);
+        if(str.value.length!=0){
+            str.style.width = ((str.value.length + 1) * 8) + 'px';
+        }
+    }
+    var n2=document.getElementById('n2').value;
+    for(var i=0;i<=n2;i++){
+        str=document.getElementById('b'+i);
+        if(str.value.length!=0){
+            str.style.width = ((str.value.length + 1) * 8) + 'px';
+        }
+    }
+}
+
 if(document.getElementById('soan')){
     var sobac=document.getElementById('soan').value;
 

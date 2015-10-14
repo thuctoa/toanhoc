@@ -201,3 +201,6 @@ td{
 .dathuc{
     width: 40px;
 }
+tr>th{
+    padding: 10px;
+}

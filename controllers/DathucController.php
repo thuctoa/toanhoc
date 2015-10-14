@@ -335,8 +335,74 @@ class DathucController extends \yii\web\Controller
 
     public function actionNhanhaidathuc()
     {
-        return $this->render('nhanhaidathuc',[
+        $n1='';
+        $n2='';
+        $a=[];
+        $b=[];
+        $ab=[];
+        $n12=[];
+        $ladathuc=-1;
+        if(isset($_POST['n1'])){
+            $n1=$_POST['n1'];
+            $n2=$_POST['n2'];
+            $n12=$n1+$n2;
+            for($i=0;$i<=$n1;$i++){
+                $a[$i]='';
+            }
+            for($i=0;$i<=$n2;$i++){
+                $b[$i]='';
+            }
+        }
+        if(isset($_POST['a'])){
+            $b=$_POST['b'];//gan gia tri dau vao
+            $a=$_POST['a'];
+            for($i=0;$i<=$n1;$i++){
+                if($a[$i]!=''){
+                    $a[$i]= $this->calculate_string($a[$i]); 
+                }else{
+                    $a[$i]=0;
+                }
+            }
+            for($i=0;$i<=$n2;$i++){
+                if($b[$i]!=''){
+                    $b[$i]= $this->calculate_string($b[$i]); 
+                }else{
+                    $b[$i]=0;
+                }
+            }
+            if($a[$n1]==0){
+                if($b[$n2]==0){
+                    $ladathuc=2;
+                }else{
+                    $ladathuc=1;
+                }
+            }else if($b[$n2]==0){
+                    $ladathuc=3;
+            }  else {
+                $ladathuc=4;//tat ca da hop le
+            }
+            if($ladathuc==4){
+                for($i=0;$i<=$n12;$i++){
+                    $ab[$i]=0;
+                    for($j=0;$j<=$n1;$j++){
+                        for($k=0;$k<=$n2;$k++){
+                            if($j+$k==$i){
+                                $ab[$i]+=$a[$j]*$b[$k];
+                            }
+                        }
+                    }
+                }
+            }
             
+        }
+        return $this->render('nhanhaidathuc',[
+            'n1'=>$n1,
+            'n2'=>$n2,
+            'n12'=>$n12,
+            'a'=>$a,
+            'b'=>$b,
+            'ab'=>$ab,
+            'ladathuc'=>$ladathuc
         ]);
     }
     public function actionChiadachodathuc()
@@ -345,7 +411,10 @@ class DathucController extends \yii\web\Controller
             
         ]);
     }
-    
+    public function actionDathuccon()
+    {
+        return $this->render('dathuccon');
+    }
     public function actionDothi()
     {
         return $this->render('dothi');
