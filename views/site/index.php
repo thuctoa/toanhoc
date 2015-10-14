@@ -6,7 +6,7 @@ $this->title ="Ứng dụng toán";
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
-    <h1 class="text-primary"><Hướng dẫn và kiến thức nhớ lại</h1>
+    <h1 class="text-primary">Hướng dẫn và kiến thức nhớ lại</h1>
 
     <div class="row">
         <div class="col-sm-3">

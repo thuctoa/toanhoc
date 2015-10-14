@@ -1,6 +1,6 @@
 <?php
 /* @var $this yii\web\View */
-$this->title = 'Giải hệ phương trình tuyến tính';
+$this->title = 'Ứng dụng toán';
 ?>
 <h1>Giải hệ phương trình tuyến tính</h1>
 <form action="/matran/index" method="post">
