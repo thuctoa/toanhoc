@@ -70,7 +70,7 @@ AppAsset::register($this);
                             ['label' => 'Giải phương trình', 'url' => ['/dathuc/index']],
                             ['label' => 'Lũy thừa đa thức', 'url' => ['/dathuc/luythuadathuc']],
                             ['label' => 'Nhân hai đa thức', 'url' => ['/dathuc/nhanhaidathuc']],
-                            
+                            ['label' => 'Chia đa thức cho đa thức', 'url' => ['/dathuc/chiadachodathuc']],
                         ]
                     ],
                   //  ['label' => Yii::t('app','About'), 'url' => ['/site/about']],

@@ -467,11 +467,172 @@ class DathucController extends \yii\web\Controller
         }
         return $ab;
     }
+    
+    public function chiahaidathuc($dathucbichia, $nbichia, $dathucchia, $nchia){
+        if($nbichia>=$nchia){
+            $thuong=[];
+            $nthuong=$nbichia-$nchia;
+            for($i=0;$i<$nthuong;$i++){
+                $thuong[$i]=0;
+            }
+            $ntrunggian=0;
+            $trungian=[];
+            while($nbichia>=$nchia){
+                $thuongtrung=[];
+                $hieu=$nbichia-$nchia;
+                $thuong[$hieu]=$dathucbichia[$nbichia]/$dathucchia[$nchia];
+                for($i=0;$i<$hieu;$i++){
+                    $thuongtrung[$i]=0;
+                }
+                $thuongtrung[$hieu]=$thuong[$nbichia-$nchia];
+                $trungian=  $this->nhanhaidathuc($dathucchia, $nchia, $thuongtrung, $nbichia-$nchia);
+                $ntrunggian=  $this->baccuadathuc($trungian);
+                $dathucbichia=  $this->hieucuahaidathuc($dathucbichia, $nbichia, $trungian, $ntrunggian);
+                $nbichia=  $this->baccuadathuc($dathucbichia);
+            }
+            
+            return $thuong;
+        }
+    }
+    public function chiahaidathucdu($dathucbichia, $nbichia, $dathucchia, $nchia){
+        if($nbichia>=$nchia){
+            $thuong=[];
+            $nthuong=$nbichia-$nchia;
+            for($i=0;$i<$nthuong;$i++){
+                $thuong[$i]=0;
+            }
+            $ntrunggian=0;
+            $trungian=[];
+            while($nbichia>=$nchia){
+                $thuongtrung=[];
+                $hieu=$nbichia-$nchia;
+                $thuong[$hieu]=$dathucbichia[$nbichia]/$dathucchia[$nchia];
+                for($i=0;$i<$hieu;$i++){
+                    $thuongtrung[$i]=0;
+                }
+                $thuongtrung[$hieu]=$thuong[$nbichia-$nchia];
+                $trungian=  $this->nhanhaidathuc($dathucchia, $nchia, $thuongtrung, $nbichia-$nchia);
+                $ntrunggian=  $this->baccuadathuc($trungian);
+                $dathucbichia=  $this->hieucuahaidathuc($dathucbichia, $nbichia, $trungian, $ntrunggian);
+                $nbichia=  $this->baccuadathuc($dathucbichia);
+            }
+            
+            return $dathucbichia;
+        }
+    }
+    public function tichcuadathucvoimotso($a, $na, $so){
+        $ketqua=[];
+        for($i=0;$i<=$na;$i++){
+            $ketqua[$i]=$a[$i]*$so;
+        }
+        return $ketqua;
+    }
+    public function tongcuahaidathuc($a, $na, $b, $nb){
+        if($na>=$nb){
+            $tong=[];
+            for($i=0;$i<=$nb;$i++){
+                $tong[$i]=$a[$i]
+                        +$b[$i];
+            }
+            for(;$i<=$na;$i++){
+                $tong[$i]=$a[$i];
+            }
+            return $tong;
+        }  else {
+            return $this->tongcuahaidathuc($b, $nb, $a, $na);
+        }
+    }
+    public function hieucuahaidathuc($a, $na, $b, $nb){
+        $trub=  $this->tichcuadathucvoimotso($b, $nb, -1);
+        return $this->tongcuahaidathuc($a, $na, $trub, $nb);
+    }
+    public function baccuadathuc($a){
+        $bac=0;
+        foreach ($a as $key=>$val){
+            if($val!=0){
+                if($bac<$key){
+                    $bac=$key;
+                }
+            }
+        }
+        return $bac;
+    }
 
     public function actionChiadachodathuc()
     {
-        return $this->render('chiadachodathuc',[
+        $n1='';
+        $n2='';
+        $a=[];
+        $b=[];
+        $phanchia=[];
+        $phandu=[];
+        $nphanchia='';
+        $nphandu='';
+        $ladathuc=-1;
+        if(isset($_POST['n1'])){
+            $n1=$_POST['n1'];
+            $n2=$_POST['n2'];
+            for($i=0;$i<=$n1;$i++){
+                $a[$i]='';
+            }
+            for($i=0;$i<=$n2;$i++){
+                $b[$i]='';
+            }
+        }
+        if(isset($_POST['a'])){
+            $b=$_POST['b'];//gan gia tri dau vao
+            $a=$_POST['a'];
+            for($i=0;$i<=$n1;$i++){
+                if($a[$i]!=''){
+                    $a[$i]= $this->calculate_string($a[$i]); 
+                }else{
+                    $a[$i]=0;
+                }
+            }
+            for($i=0;$i<=$n2;$i++){
+                if($b[$i]!=''){
+                    $b[$i]= $this->calculate_string($b[$i]); 
+                }else{
+                    $b[$i]=0;
+                }
+            }
+            if($a[$n1]==0){
+                if($b[$n2]==0){
+                    $ladathuc=2;
+                }else{
+                    $ladathuc=1;
+                }
+            }else if($b[$n2]==0){
+                    $ladathuc=3;
+            }  else {
+                $ladathuc=4;//tat ca da hop le
+            }
+            if($ladathuc==4){
+                if($n1>=$n2){
+                    $phanchia=  $this->chiahaidathuc($a, $n1, $b, $n2);//phan chia duoc
+                    $nphanchia=  $this->baccuadathuc($phanchia);
+                    $phandu=  $this->chiahaidathucdu($a, $n1, $b, $n2);//phan du lai
+                    $nphandu=  $this->baccuadathuc($phandu);
+                }else{
+                    $phanchia[0]=0;
+                    $nphanchia=0;
+                    $phandu=$a;
+                    $nphandu=$n1;
+                }
+            }
             
+        }
+
+        return $this->render('chiadachodathuc',[
+            'n1'=>$n1,
+            'n2'=>$n2,
+            'nphanchia'=>$nphanchia,
+            'nphandu'=>$nphandu,
+            'a'=>$a,
+            'b'=>$b,
+            'phanchia'=>$phanchia,
+            'phandu'=>$phandu,
+            'ladathuc'=>$ladathuc
         ]);
     }
     public function actionDathuccon()
