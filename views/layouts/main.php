@@ -54,7 +54,7 @@ AppAsset::register($this);
                    // ['label' => 'Hướng dẫn', 'url' => ['/site/index']],
                     
                     [
-                        'label'=>'Giải hệ, Ma trận',
+                        'label'=>'Giải hệ phương trình, Ma trận',
                         'items'=>
                         [
                             ['label' => 'Giải hệ phương trình tuyến tính', 'url' => ['/matran/index']],
