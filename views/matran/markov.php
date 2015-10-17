@@ -116,11 +116,16 @@ if($sobac>0){
             else if($markovduoc==6){
                 echo '<h5 class="text-success ketqua"><b>Ma trận là tối giản </b></h5>';
             }
-             else if($markovduoc==7){
-                echo '<h5 class="text-danger ketqua"><b>Không có phân phối giới hạn của ma trận </b></h5>';
+            else if($markovduoc==7){
+                echo '<h5 class="text-danger ketqua"><b>Không có phân phối giới hạn của ma trận,'
+                 . ' mặc dù P là tối giản nhưng tuần hoàn </b></h5>';
             }
             else if($markovduoc==8){
                 echo '<h5 class="text-success ketqua"><b>Ma trận là tối giản, và phi tuần hoàn nên có phân phối giới hạn</b></h5>';
+            }
+            else if($markovduoc==9){
+                echo '<h5 class="text-danger ketqua"><b>Không có phân phối giới hạn của ma trận,'
+                 . ' vì P là không tối giản</b></h5>';
             }
             ?>
         </div>
@@ -229,6 +234,7 @@ if($sobac>0){
      <?php
         }
     ?>
+    <input type="hidden" name="tinhtoigian" class="text-warning"  value="1">  
     <input type="hidden" name="phanphoigioihan" class="text-warning"  value="1">           
     <div class="col-lg-2 text-center">
         <button type="submit" class="btn btn-success ">Tìm phân phối giới hạn</button>

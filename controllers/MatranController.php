@@ -291,20 +291,24 @@ class MatranController extends \yii\web\Controller
                 }
             }
             if(isset($_POST['phanphoigioihan'])&&!isset($_POST['kiemtrapp'])&&$markovduoc!=2){
-                $p_toigian=[];
-                $p_toigian=$this->luythua($p, $sobac, 2*$sobac+1);
-                for($i=0;$i<$sobac;$i++){
-                    for($j=0;$j<$sobac;$j++){
-                        if($p_toigian[$i][$j]==0){
-                            $markovduoc=7;//ma tran khong toi gian
-                            break;
+                if($markovduoc==6){
+                    $p_toigian=[];
+                    $p_toigian=$this->luythua($p, $sobac, 2*$sobac+1);
+                    for($i=0;$i<$sobac;$i++){
+                        for($j=0;$j<$sobac;$j++){
+                            if($p_toigian[$i][$j]==0){
+                                $markovduoc=7;//ma tran khong toi gian
+                                break;
+                            }
                         }
                     }
-                }
-                if($markovduoc!=7){
-                    $markovduoc=8;//ma tran toi gian
-                    $p_luythua=$this->luythua($p, $sobac, 30*$sobac);
-                    
+                    if($markovduoc!=7){
+                        $markovduoc=8;//ma tran toi gian
+                        $p_luythua=$this->luythua($p, $sobac, 30*$sobac);
+
+                    }
+                }else{
+                    $markovduoc=9;
                 }
             }
             if(isset($_POST['phanphoidung'])&&!isset($_POST['kiemtrapp'])&&$markovduoc!=2){//tim phan phoi dung
