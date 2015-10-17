@@ -119,6 +119,9 @@ if($sobac>0){
              else if($markovduoc==7){
                 echo '<h5 class="text-danger ketqua"><b>Không có phân phối giới hạn của ma trận </b></h5>';
             }
+            else if($markovduoc==8){
+                echo '<h5 class="text-success ketqua"><b>Ma trận là tối giản, và phi tuần hoàn nên có phân phối giới hạn</b></h5>';
+            }
             ?>
         </div>
     </div>
@@ -179,6 +182,7 @@ if($sobac>0){
         <button type="submit" class="btn btn-success ">Tìm phân phối dừng của xích </button>
     </div>
 </form>
+
 <form action="/matran/markov" method="post">
     <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
@@ -204,6 +208,7 @@ if($sobac>0){
         <button type="submit" class="btn btn-success ">Tính tối giản của ma trận</button>
     </div>
 </form>
+
 <form action="/matran/markov" method="post">
     <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">

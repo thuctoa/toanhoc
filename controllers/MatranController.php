@@ -279,15 +279,12 @@ class MatranController extends \yii\web\Controller
                 }
             }
             if(isset($_POST['tinhtoigian'])&&!isset($_POST['kiemtrapp'])&&$markovduoc!=2){
-                $p_toigian=[];
-                $p_toigian=$this->luythua($p, $sobac, $sobac+1);
                 for($i=0;$i<$sobac;$i++){
-                    for($j=0;$j<$sobac;$j++){
-                        if($p_toigian[$i][$j]==0){
-                            $markovduoc=5;//ma tran khong toi gian
-                            break;
-                        }
+                    if($this->lienthong($p, $sobac,0, $i)==0){
+                        $markovduoc=5;//ma tran khong toi gian
+                        break;
                     }
+                    
                 }
                 if($markovduoc!=5){
                     $markovduoc=6;//ma tran toi gian
@@ -295,7 +292,7 @@ class MatranController extends \yii\web\Controller
             }
             if(isset($_POST['phanphoigioihan'])&&!isset($_POST['kiemtrapp'])&&$markovduoc!=2){
                 $p_toigian=[];
-                $p_toigian=$this->luythua($p, $sobac, $sobac+1);
+                $p_toigian=$this->luythua($p, $sobac, 2*$sobac+1);
                 for($i=0;$i<$sobac;$i++){
                     for($j=0;$j<$sobac;$j++){
                         if($p_toigian[$i][$j]==0){
@@ -357,6 +354,36 @@ class MatranController extends \yii\web\Controller
             'dakiemtrapp'=>$dakiemtrapp,
         ]);
     }
+    public function lienthong($p,$sobac, $trangthai1, $trangthai2){
+        $p_lienthong=[];
+        $laptoida=2*$sobac+1;
+        //dau tien kiem tra trang thai 1-> trang thai 2
+        $lienthong=-1;
+        for($i=1;$i<$laptoida;$i++){
+            $p_lienthong=$this->luythua($p, $sobac,$i);
+            if($p_lienthong[$trangthai1][$trangthai2]>0){
+                $lienthong=1;
+                break;
+            }
+        }
+        // co duong di tu trang thai 1 sang trang thai 2 thi tiep tuc kiem tra nguoc lai
+        if($lienthong==1){
+            for($i=1;$i<$laptoida;$i++){
+                $p_lienthong=$this->luythua($p, $sobac,$i);
+                if($p_lienthong[$trangthai2][$trangthai1]>0){
+                    $lienthong=2;//lien thong
+                    break;
+                }
+            }
+        }
+        if($lienthong==2){
+            return 1;
+        }else{
+            return 0;
+        }
+       
+    }
+
     public function lamdepketqua($matran, $hang, $cot){
         if($cot==0){
             for($i=0;$i<$hang;$i++){
