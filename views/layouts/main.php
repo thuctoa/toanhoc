@@ -41,7 +41,7 @@ AppAsset::register($this);
     <div class="wrap">
         <div class="row noidung">
             <div class="col-lg-2 menutrai">
-                <p class="tieude" >Ứng dụng toán </p>
+                <a href="<?=Yii::$app->homeUrl?>"><p class="tieude" >Ứng dụng toán </p></a>
                 <?php  
                 $items = [
                             ['label' => 'Giải hệ phương trình', 'url' => ['/matran/index']],
@@ -60,7 +60,7 @@ AppAsset::register($this);
                  <?= $content ?>
             </div>
             <div class="col-lg-2 menuphai">
-                <p class="tieude" >Ứng dụng toán </p>
+                <a href="<?=Yii::$app->homeUrl?>"><p class="tieude" >Ứng dụng toán </p></a> 
                 <?php  
                 $items = [
                             ['label' => 'Giải phương trình', 'url' => ['/dathuc/index']],
