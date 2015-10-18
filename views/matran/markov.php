@@ -1,9 +1,9 @@
 <?php
 use yii\helpers\Html;
 /* @var $this yii\web\View */
-$this->title = 'Nhập vào ma trận xac suất chuyển';
+$this->title = 'Ứng dụng toán';
 ?>
-<h1><?= Html::encode($this->title) ?></h1>
+<p class="tieude">Nhập vào ma trận xác suất chuyển</p>
 
 <form action="/matran/markov" method="post">
     <div class="row">
@@ -11,7 +11,9 @@ $this->title = 'Nhập vào ma trận xac suất chuyển';
             Số bậc, cấp của ma trận P là <input type="text" id ="sobac" class="matran" name="sobac" value="<?=$sobac?>">
              <input type="hidden" name="khoitao" class="text-warning"  value="1">
         </div>
-        <button type="submit" class="btn btn-danger">Ma trận xác suất chuyển mới</button>
+        <div class="col-lg-3 pheptinhmoi">
+            <button type="submit" class="btn btn-danger">Ma trận chuyển mới</button>
+        </div>
     </div>
 </form>
  <?php 
