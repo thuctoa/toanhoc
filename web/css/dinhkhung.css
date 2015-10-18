@@ -9,8 +9,11 @@
     
 }
 .tieude{
-    background:  blue;
+    background:  #008000;
     color: white;
     text-align: center;
     padding: 2px;
+}
+.so_n{
+    width: 50px;
 }

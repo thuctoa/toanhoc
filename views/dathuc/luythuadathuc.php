@@ -6,8 +6,9 @@ $this->title = 'Ứng dụng toán';
 <p class="tieude">Lũy thừa một đa thức</p>
 
 <form action="/dathuc/luythuadathuc" method="post">
-        Số bậc của đa thức $A(x)$ là <input type="text" id="n" placeholder="Nhập vào một số ..." name="n" value="<?=$n?>">
-        <button type="submit"  class="btn btn-primary">Đa thức mới</button><br><br><br>
+        Số bậc của đa thức $A(x)$ là 
+        <input type="text" id="n" class="so_n" placeholder="..." name="n" value="<?=$n?>">
+        <button type="submit"  class="btn btn-danger">Đa thức mới</button><br><br><br>
 </form>
 <?php 
     if($n>0){

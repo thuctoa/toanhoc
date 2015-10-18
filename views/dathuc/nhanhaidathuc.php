@@ -6,11 +6,12 @@ $this->title = 'Ứng dụng toán';
 <p class="tieude">Nhân hai đa thức với nhau</p>
 
 <form action="/dathuc/nhanhaidathuc" method="post">
-        Số bậc của đa thức $A(x)$ là <input type="text" id="n1" placeholder="Nhập vào một số ..." name="n1" value="<?=$n1?>">
+    Số bậc của đa thức $A(x)$ là <input type="text" id="n1" class="so_n" placeholder="..." name="n1" value="<?=$n1?>">
        
-        , Số bậc của đa thức $B(x)$ là<input type="text" value="<?=$n2?>" id="n2"
-                                          placeholder="Nhập vào một số ..." name="n2" >
-        <button type="submit" id="nhanhaidathuc"  class="btn btn-primary">Nhân hai ma trận mới</button><br><br><br>
+        , Số bậc của đa thức $B(x)$ là <input class="so_n" 
+                type="text" value="<?=$n2?>" id="n2"
+                                          placeholder="..." name="n2" >
+        <button type="submit" id="nhanhaidathuc"  class="btn btn-danger">Nhân hai ma trận mới</button><br><br><br>
 </form>
 <?php 
     if($n1>0&&$n2>0){

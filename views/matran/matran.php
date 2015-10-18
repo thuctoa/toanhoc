@@ -6,8 +6,9 @@ $this->title = 'Ứng dụng toán';
 <p class="tieude">Lũy thừa ma trận</p>
 <div onload="giannonhap();">
     <form action="/matran/matran" method="post">
-            Số bậc, cấp của ma trận P là <input id ="sobac" type="text" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
-            <button type="submit" class="btn btn-primary">Ma trận mới</button><br><br><br>
+            Số bậc, cấp của ma trận P là 
+            <input id ="sobac" type="text" class="so_n" placeholder="..." name="sobac" value="<?=$sobac?>">
+            <button type="submit" class="btn btn-danger">Ma trận mới</button><br><br><br>
     </form>
      <?php 
     if($sobac>0){

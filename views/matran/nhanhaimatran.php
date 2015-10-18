@@ -6,11 +6,17 @@ $this->title = 'Ứng dụng toán';
 <p class="tieude">Nhân hai ma trận với nhau</p>
 
 <form action="/matran/nhanhaimatran" method="post">
-        Số hàng của ma trận A là <input type="text" placeholder="Số hàng của A ..." name="ma" value="<?=$ma?>">
-        Số cột <input type="text"value="<?=$na?>" placeholder="Số cột của A ..." id="na" name="na" onchange="dongcuamatranb();" ><br>
-        Số hàng của ma trận B là <input type="text" value="<?=$mb?>" id="mb" onchange="dongcuamatrana();" placeholder="Số hàng của B ..." name="mb" >
-        Số cột <input type="text" placeholder="Số cột của B ..." name="nb"  value="<?=$nb?>"><br>
-        <button type="submit" class="btn btn-primary">Nhân hai ma trận mới</button><br><br><br>
+    <div class="row">
+        <div class="col-lg-6">
+            Số hàng của ma trận A là 
+            <input type="text" class="so_n" placeholder="..." name="ma" value="<?=$ma?>">
+            , số cột <input class="so_n" type="text"value="<?=$na?>" placeholder="..." id="na" name="na" onchange="dongcuamatranb();" ><br>
+            Số hàng của ma trận B là 
+            <input type="text" class="so_n" value="<?=$mb?>" id="mb" onchange="dongcuamatrana();" placeholder="..." name="mb" >
+            , số cột <input class="so_n" type="text" placeholder="..." name="nb"  value="<?=$nb?>">
+        </div>
+        <button type="submit" class="btn btn-danger">Nhân hai ma trận mới</button>
+    </div>
 </form>
 
  <?php 

@@ -7,8 +7,10 @@ $this->title = 'Ứng dụng toán';
 <p class="tieude">Giải phương trình</p>
 
  <form action="/dathuc/index" method="post">
-            Số bậc của phương trình, có đa thức P là <input id ="nghiemdathuc" type="text" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
-            <button type="submit" class="btn btn-primary">Phương trình mới</button><br><br><br>
+            Số bậc của phương trình, có đa thức P là 
+            <input class="so_n" 
+                id ="nghiemdathuc" type="text" placeholder="..." name="sobac" value="<?=$sobac?>">
+            <button type="submit" class="btn btn-danger">Phương trình mới</button><br><br><br>
 </form>
 <?php 
 if($sobac>0){
@@ -59,7 +61,7 @@ if($sobac>0){
 
     <div class="row " style="margin-top: 30px;">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-primary " >Tìm nghiệm</button>
+            <button type="submit" class="btn btn-warning " >Tìm nghiệm</button>
         </div>
         <div class="col-lg-4 text-center">
             <?php if($conghiem==0){

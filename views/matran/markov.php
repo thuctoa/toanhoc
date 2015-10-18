@@ -8,7 +8,7 @@ $this->title = 'Nhập vào ma trận xac suất chuyển';
 <form action="/matran/markov" method="post">
         Số bậc, cấp của ma trận P là <input type="text" id ="sobac" class="matran" name="sobac" value="<?=$sobac?>">
          <input type="hidden" name="khoitao" class="text-warning"  value="1">
-        <button type="submit" class="btn btn-primary">Ma trận xác suất chuyển mới</button><br><br><br>
+        <button type="submit" class="btn btn-danger">Ma trận xác suất chuyển mới</button><br><br><br>
 </form>
  <?php 
 if($sobac>0){
