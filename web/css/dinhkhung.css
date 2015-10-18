@@ -22,9 +22,10 @@ h1{
 }
 .so_n{
     width: 60px;
+    border: 1px solid red;
 }
 .pheptinhmoi{
-    border: 1px solid #1ad280;
+    border: 1px solid #EEE;
     padding: 25px;
     text-align: center;
     margin-top: -19px;
