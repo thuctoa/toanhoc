@@ -10,7 +10,7 @@ $this->title = 'Ứng dụng toán';
             <input id="soan" type="text" name="soan" class="so_n" placeholder="n =..." value="<?=$soan?>">
         </div>
         <div class="col-lg-3 pheptinhmoi">
-            <button type="submit" class="btn btn-danger">Gải hệ mới</button>
+            <button type="submit" class="btn btn-danger">Giải hệ mới</button>
         </div>
     </div>
 </form>
