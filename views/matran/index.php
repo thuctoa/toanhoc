@@ -6,7 +6,7 @@ $this->title = 'Ứng dụng toán';
 <h1>Giải hệ phương trình tuyến tính</h1>
 <form action="/matran/index" method="post">
     Số ẩn, số phương trình là <input id="soan" type="text" name="soan" placeholder="Nhập một số ..." value="<?=$soan?>">
-    <button type="submit" class="btn btn-success">Gải hệ mới</button><br><br><br>
+    <button type="submit" class="btn btn-primary">Gải hệ mới</button><br><br><br>
 </form>
 
 <?php 
@@ -65,7 +65,7 @@ if($soan>0){
     <input type="hidden" name="soan" class="text-warning"  value="<?=$soan?>">
         <div class="row giaihe">
             <div class="col-lg-2 text-center">
-                <button type="submit" class="btn btn-success ">Giải hệ</button>
+                <button type="submit" class="btn btn-primary ">Giải hệ</button>
             </div>
             <div class="col-lg-8 mketqua">
                 <?php

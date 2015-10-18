@@ -8,7 +8,7 @@ $this->title = 'Nhập vào ma trận xac suất chuyển';
 <form action="/matran/markov" method="post">
         Số bậc, cấp của ma trận P là <input type="text" id ="sobac" class="matran" name="sobac" value="<?=$sobac?>">
          <input type="hidden" name="khoitao" class="text-warning"  value="1">
-        <button type="submit" class="btn btn-success">Ma trận mới</button><br><br><br>
+        <button type="submit" class="btn btn-primary">Ma trận xác suất chuyển mới</button><br><br><br>
 </form>
  <?php 
 if($sobac>0){
@@ -99,7 +99,7 @@ if($sobac>0){
     <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
     <div class="row giaihe">
         <div class="col-lg-3 text-center">
-            <button type="submit" class="btn btn-success ">Kiểm tra P có là ma trận xác suất chuyển</button>
+            <button type="submit" class="btn btn-primary ">Kiểm tra P</button>
         </div>
         <div class="col-lg-6 text-center">
             <?php 
@@ -155,11 +155,11 @@ if($sobac>0){
      <?php
         }
     ?>
-    <div class="col-lg-2 text-center">
+    <div class="col-lg-3 text-center">
         Số bước n = <input type="text" name="somu" class="matran"  value="<?=$somu?>">
     </div>
-    <div class="col-lg-3 text-center">
-        <button type="submit" class="btn btn-success ">Tính P sau n bước </button>
+    <div class="col-lg-2 text-center">
+        <button type="submit" class="btn btn-primary ">Tính P sau n bước </button>
     </div>
 </form>
 <form action="/matran/markov" method="post">
@@ -184,7 +184,7 @@ if($sobac>0){
     ?>
     <input type="hidden" name="phanphoidung" class="text-warning"  value="1">           
     <div class="col-lg-3 text-center">
-        <button type="submit" class="btn btn-success ">Tìm phân phối dừng của xích </button>
+        <button type="submit" class="btn btn-primary ">Tìm phân phối dừng </button>
     </div>
 </form>
 
@@ -210,7 +210,7 @@ if($sobac>0){
     ?>
     <input type="hidden" name="tinhtoigian" class="text-warning"  value="1">           
     <div class="col-lg-2 text-center">
-        <button type="submit" class="btn btn-success ">Tính tối giản của ma trận</button>
+        <button type="submit" class="btn btn-primary ">Tính tối giản</button>
     </div>
 </form>
 
@@ -237,7 +237,7 @@ if($sobac>0){
     <input type="hidden" name="tinhtoigian" class="text-warning"  value="1">  
     <input type="hidden" name="phanphoigioihan" class="text-warning"  value="1">           
     <div class="col-lg-2 text-center">
-        <button type="submit" class="btn btn-success ">Tìm phân phối giới hạn</button>
+        <button type="submit" class="btn btn-primary ">Phân phối giới hạn</button>
     </div>
 </form>
 <?php

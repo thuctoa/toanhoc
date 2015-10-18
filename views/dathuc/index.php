@@ -8,7 +8,7 @@ $this->title = 'Tìm nghiệm của phương trình bậc';
 
  <form action="/dathuc/index" method="post">
             Số bậc của đa thức P là <input id ="nghiemdathuc" type="text" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
-            <button type="submit" class="btn btn-success">Phương trình mới</button><br><br><br>
+            <button type="submit" class="btn btn-primary">Phương trình mới</button><br><br><br>
 </form>
 <?php 
 if($sobac>0){
@@ -59,7 +59,7 @@ if($sobac>0){
 
     <div class="row " style="margin-top: 30px;">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-success " >Tìm nghiệm</button>
+            <button type="submit" class="btn btn-primary " >Tìm nghiệm</button>
         </div>
         <div class="col-lg-4 text-center">
             <?php if($conghiem==0){

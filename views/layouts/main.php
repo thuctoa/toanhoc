@@ -40,41 +40,97 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
     <div class="wrap">
         <?php
-            NavBar::begin([
-                'brandLabel' => "Hướng dẫn & kiến thức",
-               // 'brandUrl' => Yii::$app->homeUrl,
-                'brandUrl'=>'/site/index',
+//            NavBar::begin([
+//                'brandLabel' => "Hướng dẫn & kiến thức",
+//               // 'brandUrl' => Yii::$app->homeUrl,
+//                'brandUrl'=>'/site/index',
+//                'options' => [
+//                    'class' => 'navbar-inverse navbar-fixed-top',
+//                ],
+//            ]);
+//            
+//            $items = [
+//                  //  ['label' => Yii::t('app','About'), 'url' => ['/site/about']],
+//                    ['label' => Yii::t('app','Contact'), 'url' => ['/site/contact']],
+//                   // ['label' => Yii::t('app','Books'), 'url' => ['/book/index']],
+//                   //  ['label' => Yii::t('app','Authors'), 'url' => ['/author/index']],
+//                    Yii::$app->user->isGuest ?
+//                        ['label' => Yii::t('app','Login'), 'url' => ['/site/login']] :
+//                        ['label' => Yii::t('app','Logout').' (' . Yii::$app->user->identity->username . ')',
+//                            'url' => ['/site/logout'],
+//                            'linkOptions' => ['data-method' => 'post']],
+//                ];
+//            if(Yii::$app->user->isGuest){
+//                $items[] = ['label' => Yii::t('app','Signup'), 'url' => ['/site/signup']];
+//            }
+//            if ( Yii::$app->user->can('permission_admin') )
+//                $items[] = ['label' => Yii::t('app','Permissions'), 'url' => ['/admin/assignment']];
+//            
+//            echo Nav::widget([
+//                'options' => ['class' => 'navbar-nav navbar-right'],
+//                'items' => $items,
+//            ]);
+//            NavBar::end();
+        ?>
+        <div class="row noidung">
+            <div class="col-lg-2 menutrai">
+                <?php  
+                $items = [
+                            ['label' => 'Giải hệ phương trình', 'url' => ['/matran/index']],
+                            ['label' => 'Lũy thừa ma trận', 'url' => ['/matran/matran']],
+                            ['label' => 'Nhân hai ma trận', 'url' => ['/matran/nhanhaimatran']],
+                            ['label' => 'Ma trận nghịch đảo', 'url' => ['/matran/matrannghichdao']],
+                        ];
+                
+                echo Nav::widget([
+                    'options' => ['class' => 'nav nav-pills nav-stacked'],
+                    'items' => $items,
+                ]);?>
+            </div>
+            <div class="col-lg-8">
+                
+                 <?= $content ?>
+            </div>
+            <div class="col-lg-2 menuphai">
+                
+                <?php  
+                $items = [
+                            ['label' => 'Giải phương trình', 'url' => ['/dathuc/index']],
+                            ['label' => 'Lũy thừa đa thức', 'url' => ['/dathuc/luythuadathuc']],
+                            ['label' => 'Nhân hai đa thức', 'url' => ['/dathuc/nhanhaidathuc']],
+                            ['label' => 'Chia đa thức', 'url' => ['/dathuc/chiadachodathuc']],
+                        ];
+                
+                echo Nav::widget([
+                    'options' => ['class' => 'nav nav-pills nav-stacked'],
+                    'items' => $items,
+                ]);?>
+            </div>
+        </div>
+        
+    </div>
+
+    <footer class="footer">
+<!--        <div  id="language-selector" class="pull-right" style="position: relative;">
+            <?php //echo \app\components\widgets\LanguageSelector::widget(); ?>
+        </div>
+        <div class="container">
+            <p class="pull-left">&copy; <?php //echo Yii::t('app','My Company')?> <?= date('Y') ?></p>
+            <p class="pull-right"><?php //echo Yii::ngongu() ?></p>
+        </div>
+         -->
+         <?php
+           NavBar::begin([
+                'brandLabel' => "Ứng dụng toán",
+                'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'navbar-inverse navbar-fixed-top',
+                    'class' => ' navbar-fixed-bottom',
                 ],
             ]);
             
             $items = [
-                //    ['label' => 'Bài 6', 'url' => ['/matran/markov']],
-                   // ['label' => 'Hướng dẫn', 'url' => ['/site/index']],
-                    
-                    [
-                        'label'=>'Giải hệ phương trình, Ma trận',
-                        'items'=>
-                        [
-                            ['label' => 'Giải hệ phương trình tuyến tính', 'url' => ['/matran/index']],
-                            ['label' => 'Lũy thừa ma trận', 'url' => ['/matran/matran']],
-                            ['label' => 'Nhân hai ma trận', 'url' => ['/matran/nhanhaimatran']],
-                            ['label' => 'Ma trận nghịch đảo', 'url' => ['/matran/matrannghichdao']],
-                        ]
-                    ],
-                    [
-                        'label'=>'Giải phương trình, Đa thức',
-                        'items'=>
-                        [
-                            ['label' => 'Giải phương trình', 'url' => ['/dathuc/index']],
-                            ['label' => 'Lũy thừa đa thức', 'url' => ['/dathuc/luythuadathuc']],
-                            ['label' => 'Nhân hai đa thức', 'url' => ['/dathuc/nhanhaidathuc']],
-                            ['label' => 'Chia đa thức cho đa thức', 'url' => ['/dathuc/chiadachodathuc']],
-                        ]
-                    ],
                   //  ['label' => Yii::t('app','About'), 'url' => ['/site/about']],
-                    ['label' => Yii::t('app','Contact'), 'url' => ['/site/contact']],
+                    ['label' => 'Góp ý', 'url' => ['/site/contact']],
                    // ['label' => Yii::t('app','Books'), 'url' => ['/book/index']],
                    //  ['label' => Yii::t('app','Authors'), 'url' => ['/author/index']],
                     Yii::$app->user->isGuest ?
@@ -95,24 +151,6 @@ AppAsset::register($this);
             ]);
             NavBar::end();
         ?>
-        
-        <div class="container">
-            <?= Breadcrumbs::widget([
-                'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-            ]) ?>
-            <?= $content ?>
-        </div>
-    </div>
-
-    <footer class="footer">
-        <div  id="language-selector" class="pull-right" style="position: relative;">
-            <?= \app\components\widgets\LanguageSelector::widget(); ?>
-        </div>
-        <div class="container">
-            <p class="pull-left">&copy; <?=Yii::t('app','My Company')?> <?= date('Y') ?></p>
-            <p class="pull-right"><?= Yii::ngongu() ?></p>
-        </div>
-         
     </footer>
 
 <?php $this->endBody() ?>

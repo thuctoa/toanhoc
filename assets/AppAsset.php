@@ -20,6 +20,7 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/ihover.css',
+        'css/dinhkhung.css',
     ];
     public $js = [
         'js/matran.js',

@@ -7,7 +7,7 @@ $this->title = 'Lũy thừa ma trận';
 <div onload="giannonhap();">
     <form action="/matran/matran" method="post">
             Số bậc, cấp của ma trận P là <input id ="sobac" type="text" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
-            <button type="submit" class="btn btn-success">Ma trận mới</button><br><br><br>
+            <button type="submit" class="btn btn-primary">Ma trận mới</button><br><br><br>
     </form>
      <?php 
     if($sobac>0){
@@ -48,7 +48,7 @@ $this->title = 'Lũy thừa ma trận';
 
         <div class="row giaihe">
             <div class="col-lg-2 text-center">
-                <button type="submit" class="btn btn-success " >Thực hiện tính</button>
+                <button type="submit" class="btn btn-primary " >Thực hiện tính</button>
             </div>
             <div class="col-lg-2 text-center">
                 Số mũ = <input type="text" name="somu" class="matran"  value="<?=$somu?>">

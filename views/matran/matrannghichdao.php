@@ -7,7 +7,7 @@ $this->title = 'Tính ma trận nghịch đảo';
 
 <form action="/matran/matrannghichdao" method="post">
         Số bậc, cấp của ma trận P là <input type="text" id ="sobac" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
-        <button type="submit" class="btn btn-success">Ma trận mới</button><br><br><br>
+        <button type="submit" class="btn btn-primary">Ma trận mới</button><br><br><br>
 </form>
  <?php 
 if($sobac>0){
@@ -50,7 +50,7 @@ if($sobac>0){
     
     <div class="row giaihe">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-success ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-primary ">Thực hiện tính</button>
         </div>
         <div class="col-lg-2 text-center">
              <input type="hidden" name="somu" class="matran"  value="-1">

@@ -57,26 +57,32 @@ if(document.getElementById('sobac')){
 
 if(document.getElementById('nghiemdathuc')){
     var sobac=document.getElementById('nghiemdathuc').value;
-    for(var i=0;i<=sobac;i++){
-        str=document.getElementById('a'+i);
-        if(str.value.length!=0){
-            str.style.width = ((str.value.length + 1) * 8) + 'px';
+    if(sobac>0){
+        for(var i=0;i<=sobac;i++){
+            str=document.getElementById('a'+i);
+            if(str.value.length!=0){
+                str.style.width = ((str.value.length + 1) * 8) + 'px';
+            }
         }
     }
 }
 if(document.getElementById('nhanhaidathuc')){
     var n1=document.getElementById('n1').value;
-    for(var i=0;i<=n1;i++){
-        str=document.getElementById('a'+i);
-        if(str.value.length!=0){
-            str.style.width = ((str.value.length + 1) * 8) + 'px';
+    if(n1>0){
+        for(var i=0;i<=n1;i++){
+            str=document.getElementById('a'+i);
+            if(str.value.length!=0){
+                str.style.width = ((str.value.length + 1) * 8) + 'px';
+            }
         }
     }
     var n2=document.getElementById('n2').value;
-    for(var i=0;i<=n2;i++){
-        str=document.getElementById('b'+i);
-        if(str.value.length!=0){
-            str.style.width = ((str.value.length + 1) * 8) + 'px';
+    if(n2>0){
+        for(var i=0;i<=n2;i++){
+            str=document.getElementById('b'+i);
+            if(str.value.length!=0){
+                str.style.width = ((str.value.length + 1) * 8) + 'px';
+            }
         }
     }
 }

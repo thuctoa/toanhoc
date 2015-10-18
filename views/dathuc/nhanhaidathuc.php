@@ -10,7 +10,7 @@ $this->title = 'Nhân hai đa thức';
        
         , Số bậc của đa thức $B(x)$ là<input type="text" value="<?=$n2?>" id="n2"
                                           placeholder="Nhập vào một số ..." name="n2" >
-        <button type="submit" id="nhanhaidathuc"  class="btn btn-success">Nhân hai ma trận mới</button><br><br><br>
+        <button type="submit" id="nhanhaidathuc"  class="btn btn-primary">Nhân hai ma trận mới</button><br><br><br>
 </form>
 <?php 
     if($n1>0&&$n2>0){
@@ -95,7 +95,7 @@ $this->title = 'Nhân hai đa thức';
     <input type="hidden" name="n2" class="text-warning"  value="<?=$n2?>">
     <div class="row">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-success ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-primary ">Thực hiện tính</button>
         </div>
     </div>
 <?php

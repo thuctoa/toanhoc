@@ -10,7 +10,7 @@ $this->title = 'Nhân hai ma trận';
         Số cột <input type="text"value="<?=$na?>" placeholder="Số cột của A ..." id="na" name="na" onchange="dongcuamatranb();" ><br>
         Số hàng của ma trận B là <input type="text" value="<?=$mb?>" id="mb" onchange="dongcuamatrana();" placeholder="Số hàng của B ..." name="mb" >
         Số cột <input type="text" placeholder="Số cột của B ..." name="nb"  value="<?=$nb?>"><br>
-        <button type="submit" class="btn btn-success">Nhân hai ma trận mới</button><br><br><br>
+        <button type="submit" class="btn btn-primary">Nhân hai ma trận mới</button><br><br><br>
 </form>
 
  <?php 
@@ -83,7 +83,7 @@ if($na>0&&$ma>0&&$mb>0&&$nb>0){
     <input type="hidden" name="nb" class="text-warning"  value="<?=$nb?>">
     <div class="row giaihe">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-success ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-primary ">Thực hiện tính</button>
         </div>
     </div>
 </form>     

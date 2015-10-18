@@ -7,7 +7,7 @@ $this->title = 'Lũy thừa đa thức';
 
 <form action="/dathuc/luythuadathuc" method="post">
         Số bậc của đa thức $A(x)$ là <input type="text" id="n" placeholder="Nhập vào một số ..." name="n" value="<?=$n?>">
-        <button type="submit"  class="btn btn-success">Đa thức mới</button><br><br><br>
+        <button type="submit"  class="btn btn-primary">Đa thức mới</button><br><br><br>
 </form>
 <?php 
     if($n>0){
@@ -56,7 +56,7 @@ $this->title = 'Lũy thừa đa thức';
     <input type="hidden" name="n" class="text-warning"  value="<?=$n?>">
     <div class="row">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-success ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-primary ">Thực hiện tính</button>
         </div>
         <div class="col-lg-2 text-center">
             <input type="text" id="somu" placeholder="Số mũ ..." name="somu" value="<?=$somu?>">
