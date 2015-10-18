@@ -55,9 +55,9 @@ if($sobac>0){
     </table>
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
     
-    <div class="row giaihe">
+    <div class="row giaihe cachtren">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-primary ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-warning ">Thực hiện tính</button>
         </div>
         <div class="col-lg-2 text-center">
              <input type="hidden" name="somu" class="matran"  value="-1">

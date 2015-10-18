@@ -101,7 +101,7 @@ $this->title = 'Ứng dụng toán';
     </div>
     <input type="hidden" name="n1" class="text-warning"  value="<?=$n1?>">
     <input type="hidden" name="n2" class="text-warning"  value="<?=$n2?>">
-    <div class="row">
+    <div class="row cachtren">
         <div class="col-lg-2 text-center">
             <button type="submit" class="btn btn-warning ">Thực hiện tính</button>
         </div>
@@ -143,18 +143,22 @@ $this->title = 'Ứng dụng toán';
                 }
             }
     ?>
-    +
-    \frac{
-    <?=$this->render('dathuccon',[
-           'sobac'=>$nphandu,
-            'a'=>$phandu,
-        ]);?>
-    }{
-    <?=$this->render('dathuccon',[
-       'sobac'=>$n2,
-        'a'=>$b,
-    ]);?>}
-    $$
+    <?php if($phandu[$nphandu]!=0){?>
+        +
+        \frac{
+        <?=$this->render('dathuccon',[
+               'sobac'=>$nphandu,
+                'a'=>$phandu,
+            ]);?>
+        }{
+        <?=$this->render('dathuccon',[
+           'sobac'=>$n2,
+            'a'=>$b,
+        ]);?>}
+    <?php
+    }
+    ?>
+        $$
 <?php
     }
 ?>

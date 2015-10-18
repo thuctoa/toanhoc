@@ -305,6 +305,38 @@ class MatranController extends \yii\web\Controller
                     if($markovduoc!=7){
                         $markovduoc=8;//ma tran toi gian
                         $p_luythua=$this->luythua($p, $sobac, 30*$sobac);
+                        $tinhdung=0;
+                        for($i=0;$i<$sobac;$i++){
+                            if($p[$i][$i]==1){
+                                $tinhdung++;
+                            }
+                        }
+                        if($tinhdung>1){//xich co nhieu hon mot trang thai hut, vay xich khong dung
+                            $markovduoc=4;
+                        }
+                        //thuc hien giai he tim pi
+                        $a_ppd=[];
+                        $b_ppd=[];
+                        for($i=0;$i<$sobac;$i++){
+                            if($i==0){
+                                $b_ppd[$i]=1;
+                            }else{
+                                 $b_ppd[$i]=0;
+                            }
+                            for($j=0;$j<$sobac;$j++){
+                                if($i==0){
+                                    $a_ppd[$i][$j]=1;
+                                }else{
+                                    if($i==$j){
+                                        $a_ppd[$i][$j]=$p[$j][$i]-1;
+                                    }else{
+                                        $a_ppd[$i][$j]=$p[$j][$i];
+                                    }
+                                }
+                            }
+                        }
+                        $phanphoidung=  $this->giaihe($a_ppd, $b_ppd, $sobac);
+                        $phanphoidung=  $this->lamdepketqua($phanphoidung, $sobac, 0);
 
                     }
                 }else{

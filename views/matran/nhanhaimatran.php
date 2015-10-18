@@ -89,9 +89,9 @@ if($na>0&&$ma>0&&$mb>0&&$nb>0){
     <input type="hidden" name="na" class="text-warning"  value="<?=$na?>">
     <input type="hidden" name="mb" class="text-warning"  value="<?=$mb?>">
     <input type="hidden" name="nb" class="text-warning"  value="<?=$nb?>">
-    <div class="row giaihe">
+    <div class="row giaihe cachtren">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-primary ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-warning ">Thực hiện tính</button>
         </div>
     </div>
 </form>     

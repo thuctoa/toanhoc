@@ -61,9 +61,9 @@ $this->title = 'Ứng dụng toán';
     </div>
     </div>
     <input type="hidden" name="n" class="text-warning"  value="<?=$n?>">
-    <div class="row">
+    <div class="row cachtren">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-primary ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-warning ">Thực hiện tính</button>
         </div>
         <div class="col-lg-2 text-center">
             <input type="text" id="somu" placeholder="Số mũ ..." name="somu" value="<?=$somu?>">

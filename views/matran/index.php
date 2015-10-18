@@ -69,9 +69,9 @@ if($soan>0){
     </table>
     
     <input type="hidden" name="soan" class="text-warning"  value="<?=$soan?>">
-        <div class="row giaihe">
+        <div class="row giaihe cachtren">
             <div class="col-lg-2 text-center">
-                <button type="submit" class="btn btn-primary ">Giải hệ</button>
+                <button type="submit" class="btn btn-warning ">Giải hệ</button>
             </div>
             <div class="col-lg-8 mketqua">
                 <?php
@@ -155,6 +155,7 @@ if($soan>0){
             <?php 
             if($khac==1){
             ?>
+            \\
                 \Longleftrightarrow 
                 \begin{cases}
                     <?php
@@ -189,6 +190,7 @@ if($soan>0){
             <?php
             }
             ?>
+                \\
             \Longleftrightarrow 
             \begin{cases}
             <?php

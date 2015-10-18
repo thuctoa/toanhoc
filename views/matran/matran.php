@@ -53,11 +53,11 @@ $this->title = 'Ứng dụng toán';
         </table>
         <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
 
-        <div class="row giaihe">
+        <div class="row giaihe cachtren">
             <div class="col-lg-2 text-center">
-                <button type="submit" class="btn btn-primary " >Thực hiện tính</button>
+                <button type="submit" class="btn btn-warning " >Thực hiện tính</button>
             </div>
-            <div class="col-lg-2 text-center">
+            <div class="col-lg-3 text-center">
                 Số mũ = <input type="text" name="somu" class="matran"  value="<?=$somu?>">
             </div>
             <div class="col-lg-4 text-center">

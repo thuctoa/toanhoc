@@ -23,28 +23,8 @@ if($sobac>0){
 <form action="/matran/markov" method="post">
     <table class="hephuongtrinh">
         <tr>
-            <th colspan="<?=$sobac?>" class="text-center">Ma trận phân phối xác suất chuyển P</th>
-            <?php
-            if($markovduoc==1){
-            ?>
-                <th colspan="<?=$sobac?>" class="text-center" >Ma trận P sau <?=$somu?> bước</th>
-            <?php
-                }
-            ?>
-            <?php
-            if($markovduoc==3){
-            ?>
-                <th colspan="<?=$sobac?>" class="text-center" >Phân phối dừng của xích là</th>
-            <?php
-                }
-            ?>
-            <?php
-            if($markovduoc==8){
-            ?>
-                <th colspan="<?=$sobac?>" class="text-center" >Ma trận phân phối giới hạn</th>
-            <?php
-                }
-            ?>    
+            <th colspan="<?=$sobac+1?>" class="text-center">Ma trận phân phối xác suất chuyển P</th>
+            
         </tr>
 <?php
     for($i=0;$i<$sobac;$i++){
@@ -58,42 +38,15 @@ if($sobac>0){
                             onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
                             id="<?='p'.$i.$j?>"
                             onchange="bieuthuc('<?='p'.$i.$j?>')"
-                            value="<?=$p[$i][$j]?>"
+                            value="<?=round($p[$i][$j],5)?>"
                             class="matran"
                             placeholder="p[<?php echo $i;?>][<?php echo $j;?>]"
                             name="p[<?php echo $i;?>][<?php echo $j;?>]"> 
                 </td>
         <?php
                 }
-                if($markovduoc==1||$markovduoc==8){
+               
         ?>
-                <td class="pluythua_ketqua">
-                    <input  type="text" id="<?='p_luythua'.$i.'0'?>" onchange="bieuthuc('<?='p_luythua'.$i.'0'?>')" value="<?=$p_luythua[$i][0]?>" class="matran ketqua_matran xem_ketquamatran" placeholder="p_luythua[<?php echo $i;?>][<?php echo 0;?>]" name="p_luythua[<?php echo $i;?>][<?php echo 0;?>]"> 
-                    </td>
-        <?php
-                     for($j=1;$j<$sobac;$j++){
-        ?>
-                            <td >
-                                <input type="text" id="<?='p_luythua'.$i.$j?>" onchange="bieuthuc('<?='p_luythua'.$i.$j?>')" value="<?=$p_luythua[$i][$j]?>" class="matran xem_ketquamatran" placeholder="p_luythua[<?php echo $i;?>][<?php echo $j;?>]" name="p_luythua[<?php echo $i;?>][<?php echo $j;?>]"> 
-                            </td>
-                <?php
-                            }
-
-                }
-                if($markovduoc==3){
-        ?>
-                    <td style=" border-left: 1px solid black; ">
-                        <b style="margin-left: 50px;">π<sup></sup><sub><?=$i?></sub></b> 
-                        = <input type="text" id="<?='phanphoidung'.$i?>"
-                                 onchange="bieuthuc('<?='phanphoidung'.$i?>')" 
-                                 value="<?=$phanphoidung[$i]?>" class="matran ketqua_matran xem_ketquamatran " 
-                                 placeholder="phanphoidung[<?php echo $i;?>]"
-                                 name="phanphoidung[<?php echo $i;?>]"> 
-                    </td>
-        <?php
-                }
-        ?>
-                    
    </tr>
    
  <?php
@@ -103,11 +56,11 @@ if($sobac>0){
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
     <input type="hidden" name="kiemtrapp" class="text-warning"  value="1">
     <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
-    <div class="row giaihe">
+    <div class="row giaihe cachtren" style="margin-bottom: 20px;">
         <div class="col-lg-3 text-center">
-            <button type="submit" class="btn btn-primary ">Kiểm tra P</button>
+            <button type="submit" class="btn btn-warning ">Kiểm tra P</button>
         </div>
-        <div class="col-lg-6 text-center">
+        <div class="col-lg-8 text-center">
             <?php 
             if($markovduoc==2){
                 echo '<h5 class="text-danger ketqua"><b>Ma trận vừa nhập không phải là một ma trận phân phối xác suất chuyển</b></h5>';
@@ -162,10 +115,10 @@ if($sobac>0){
         }
     ?>
     <div class="col-lg-3 text-center">
-        Số bước n = <input type="text" name="somu" class="matran"  value="<?=$somu?>">
+        Số bước n = <input type="text" name="somu" class="matran so_n"  value="<?=$somu?>">
     </div>
     <div class="col-lg-2 text-center">
-        <button type="submit" class="btn btn-primary ">Tính P sau n bước </button>
+        <button type="submit" class="btn btn-success ">Tính $P^{(n)}$ </button>
     </div>
 </form>
 <form action="/matran/markov" method="post">
@@ -189,8 +142,8 @@ if($sobac>0){
         }
     ?>
     <input type="hidden" name="phanphoidung" class="text-warning"  value="1">           
-    <div class="col-lg-3 text-center">
-        <button type="submit" class="btn btn-primary ">Tìm phân phối dừng </button>
+    <div class="col-lg-2 text-center">
+        <button type="submit" class="btn btn-success ">Phân phối dừng </button>
     </div>
 </form>
 
@@ -216,7 +169,7 @@ if($sobac>0){
     ?>
     <input type="hidden" name="tinhtoigian" class="text-warning"  value="1">           
     <div class="col-lg-2 text-center">
-        <button type="submit" class="btn btn-primary ">Tính tối giản</button>
+        <button type="submit" class="btn btn-success ">Tính tối giản</button>
     </div>
 </form>
 
@@ -241,9 +194,10 @@ if($sobac>0){
         }
     ?>
     <input type="hidden" name="tinhtoigian" class="text-warning"  value="1">  
+    
     <input type="hidden" name="phanphoigioihan" class="text-warning"  value="1">           
     <div class="col-lg-2 text-center">
-        <button type="submit" class="btn btn-primary ">Phân phối giới hạn</button>
+        <button type="submit" class="btn btn-success ">Phân phối giới hạn</button>
     </div>
 </form>
 <?php
@@ -251,8 +205,77 @@ if($sobac>0){
      
 }
 ?>
-<p style="margin-top: 20px;"></p>
+<br><br><br><br><br>
 <?php
+    if($markovduoc==1){
+?>
+    $$
+    \text{P sau <?=$somu?> bước là }\\
+    \begin{bmatrix}
+    <?php
+        for($i=0;$i<$sobac;$i++){
+            for($j=0;$j<$sobac-1;$j++){
+    ?>  
+                <?=round($p[$i][$j],5)?>&
+    <?php
+            }
+            echo round($p[$i][$j],5).'\\\\';
+        }
+    ?>
+    
+    \end{bmatrix}^\mathrm{<?=$somu?>}
+    =
+    \begin{bmatrix}
+    <?php
+        for($i=0;$i<$sobac;$i++){
+            for($j=0;$j<$sobac-1;$j++){
+    ?>  
+                <?=round($p_luythua[$i][$j],5)?>&
+    <?php
+            }
+            echo round($p_luythua[$i][$j],5).'\\\\';
+        }
+    ?>
+    \end{bmatrix}
+    $$
+<?php
+    }
+    if($markovduoc==3){
+?>
+    $$
+    \text{Phân phối dừng của xích là}
+    \\
+    \begin{cases}
+        <?php
+            for($i=0;$i<$sobac;$i++){
+        ?>
+            π_{<?=$i?>} = & <?=round($phanphoidung[$i],5)?> \\
+        <?php
+            }
+        ?>
+    \end{cases}
+    $$
+<?php
+    }
+    if($markovduoc==8){
+?>
+    $$
+    \text{Ma trận giới hạn là }\\
+    \begin{bmatrix}
+    <?php
+        for($i=0;$i<$sobac;$i++){
+            for($j=0;$j<$sobac-1;$j++){
+    ?>  
+                <?= round( $phanphoidung[$j],5)?>&
+    <?php
+            }
+            echo round( $phanphoidung[$j],5).'\\\\';
+        }
+    ?>
+    \end{bmatrix}
+    $$
+<?php
+    }
     if($dakiemtrapp==1&&$markovduoc!=2){
        echo $this->render('/matran/bieudo',[
            'p'=>$p,
