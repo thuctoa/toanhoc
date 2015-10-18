@@ -8,7 +8,7 @@ $this->title = 'Ứng dụng toán';
 <form action="/matran/markov" method="post">
     <div class="row">
         <div class="col-lg-9">
-            Số bậc, cấp của ma trận P là <input type="text" id ="sobac" class="matran" name="sobac" value="<?=$sobac?>">
+            Số bậc, cấp của ma trận P là <input type="text" class="so_n" id ="sobac" class="matran" name="sobac" value="<?=$sobac?>">
              <input type="hidden" name="khoitao" class="text-warning"  value="1">
         </div>
         <div class="col-lg-3 pheptinhmoi">
@@ -38,7 +38,7 @@ if($sobac>0){
                             onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
                             id="<?='p'.$i.$j?>"
                             onchange="bieuthuc('<?='p'.$i.$j?>')"
-                            value="<?=round($p[$i][$j],5)?>"
+                            value="<?=$p[$i][$j]?>"
                             class="matran"
                             placeholder="p[<?php echo $i;?>][<?php echo $j;?>]"
                             name="p[<?php echo $i;?>][<?php echo $j;?>]"> 
