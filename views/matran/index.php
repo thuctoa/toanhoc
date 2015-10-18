@@ -2,8 +2,7 @@
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<html>
-<h1>Giải hệ phương trình tuyến tính</h1>
+<p class="tieude">Giải hệ phương trình</p>
 <form action="/matran/index" method="post">
     Số ẩn, số phương trình là <input id="soan" type="text" name="soan" placeholder="Nhập một số ..." value="<?=$soan?>">
     <button type="submit" class="btn btn-primary">Gải hệ mới</button><br><br><br>

@@ -1,9 +1,9 @@
 <?php
 use yii\helpers\Html;
 /* @var $this yii\web\View */
-$this->title = 'Lũy thừa đa thức';
+$this->title = 'Ứng dụng toán';
 ?>
-<h1><?= Html::encode($this->title) ?></h1>
+<p class="tieude">Lũy thừa một đa thức</p>
 
 <form action="/dathuc/luythuadathuc" method="post">
         Số bậc của đa thức $A(x)$ là <input type="text" id="n" placeholder="Nhập vào một số ..." name="n" value="<?=$n?>">

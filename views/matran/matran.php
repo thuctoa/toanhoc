@@ -1,9 +1,9 @@
 <?php
 use yii\helpers\Html;
 /* @var $this yii\web\View */
-$this->title = 'Lũy thừa ma trận';
+$this->title = 'Ứng dụng toán';
 ?>
-<h1><?= Html::encode($this->title) ?></h1>
+<p class="tieude">Lũy thừa ma trận</p>
 <div onload="giannonhap();">
     <form action="/matran/matran" method="post">
             Số bậc, cấp của ma trận P là <input id ="sobac" type="text" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">

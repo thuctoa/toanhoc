@@ -1,9 +1,9 @@
 <?php
 use yii\helpers\Html;
 /* @var $this yii\web\View */
-$this->title = 'Nhân hai ma trận';
+$this->title = 'Ứng dụng toán';
 ?>
-<h1><?= Html::encode($this->title) ?></h1>
+<p class="tieude">Nhân hai ma trận với nhau</p>
 
 <form action="/matran/nhanhaimatran" method="post">
         Số hàng của ma trận A là <input type="text" placeholder="Số hàng của A ..." name="ma" value="<?=$ma?>">

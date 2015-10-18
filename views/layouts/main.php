@@ -39,41 +39,9 @@ AppAsset::register($this);
     </script>
 <?php $this->beginBody() ?>
     <div class="wrap">
-        <?php
-//            NavBar::begin([
-//                'brandLabel' => "Hướng dẫn & kiến thức",
-//               // 'brandUrl' => Yii::$app->homeUrl,
-//                'brandUrl'=>'/site/index',
-//                'options' => [
-//                    'class' => 'navbar-inverse navbar-fixed-top',
-//                ],
-//            ]);
-//            
-//            $items = [
-//                  //  ['label' => Yii::t('app','About'), 'url' => ['/site/about']],
-//                    ['label' => Yii::t('app','Contact'), 'url' => ['/site/contact']],
-//                   // ['label' => Yii::t('app','Books'), 'url' => ['/book/index']],
-//                   //  ['label' => Yii::t('app','Authors'), 'url' => ['/author/index']],
-//                    Yii::$app->user->isGuest ?
-//                        ['label' => Yii::t('app','Login'), 'url' => ['/site/login']] :
-//                        ['label' => Yii::t('app','Logout').' (' . Yii::$app->user->identity->username . ')',
-//                            'url' => ['/site/logout'],
-//                            'linkOptions' => ['data-method' => 'post']],
-//                ];
-//            if(Yii::$app->user->isGuest){
-//                $items[] = ['label' => Yii::t('app','Signup'), 'url' => ['/site/signup']];
-//            }
-//            if ( Yii::$app->user->can('permission_admin') )
-//                $items[] = ['label' => Yii::t('app','Permissions'), 'url' => ['/admin/assignment']];
-//            
-//            echo Nav::widget([
-//                'options' => ['class' => 'navbar-nav navbar-right'],
-//                'items' => $items,
-//            ]);
-//            NavBar::end();
-        ?>
         <div class="row noidung">
             <div class="col-lg-2 menutrai">
+                <p class="tieude" >Ứng dụng toán </p>
                 <?php  
                 $items = [
                             ['label' => 'Giải hệ phương trình', 'url' => ['/matran/index']],
@@ -92,7 +60,7 @@ AppAsset::register($this);
                  <?= $content ?>
             </div>
             <div class="col-lg-2 menuphai">
-                
+                <p class="tieude" >Ứng dụng toán </p>
                 <?php  
                 $items = [
                             ['label' => 'Giải phương trình', 'url' => ['/dathuc/index']],
@@ -111,14 +79,6 @@ AppAsset::register($this);
     </div>
 
     <footer class="footer">
-<!--        <div  id="language-selector" class="pull-right" style="position: relative;">
-            <?php //echo \app\components\widgets\LanguageSelector::widget(); ?>
-        </div>
-        <div class="container">
-            <p class="pull-left">&copy; <?php //echo Yii::t('app','My Company')?> <?= date('Y') ?></p>
-            <p class="pull-right"><?php //echo Yii::ngongu() ?></p>
-        </div>
-         -->
          <?php
            NavBar::begin([
                 'brandLabel' => "Ứng dụng toán",

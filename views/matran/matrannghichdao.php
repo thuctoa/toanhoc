@@ -1,9 +1,9 @@
 <?php
 use yii\helpers\Html;
 /* @var $this yii\web\View */
-$this->title = 'Tính ma trận nghịch đảo';
+$this->title = 'Ứng dụng toán';
 ?>
-<h1><?= Html::encode($this->title) ?></h1>
+<p class="tieude">Nghịch đảo ma trận</p>
 
 <form action="/matran/matrannghichdao" method="post">
         Số bậc, cấp của ma trận P là <input type="text" id ="sobac" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">

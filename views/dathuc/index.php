@@ -1,13 +1,13 @@
 <?php
 use yii\helpers\Html;
 /* @var $this yii\web\View */
-$this->title = 'Tìm nghiệm của phương trình bậc';
+$this->title = 'Ứng dụng toán';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1><?= Html::encode($this->title)?></h1>
+<p class="tieude">Giải phương trình</p>
 
  <form action="/dathuc/index" method="post">
-            Số bậc của đa thức P là <input id ="nghiemdathuc" type="text" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
+            Số bậc của phương trình, có đa thức P là <input id ="nghiemdathuc" type="text" placeholder="Nhập một số ..." name="sobac" value="<?=$sobac?>">
             <button type="submit" class="btn btn-primary">Phương trình mới</button><br><br><br>
 </form>
 <?php 

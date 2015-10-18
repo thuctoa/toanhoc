@@ -1,9 +1,9 @@
 <?php
 use yii\helpers\Html;
 /* @var $this yii\web\View */
-$this->title = 'Chia hai đa thức';
+$this->title = 'Ứng dụng toán';
 ?>
-<h1><?= Html::encode($this->title) ?></h1>
+<p class="tieude">Chia đa thức cho đa thức</p>
 
 <form action="/dathuc/chiadachodathuc" method="post">
         Số bậc của đa thức bị chia $A(x)$ là <input type="text" id="n1" placeholder="Nhập vào một số ..." name="n1" value="<?=$n1?>">
