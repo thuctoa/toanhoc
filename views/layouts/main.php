@@ -84,7 +84,7 @@ AppAsset::register($this);
                 'brandLabel' => "Ứng dụng toán",
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => ' navbar-fixed-bottom',
+                    'class' => 'breadcrumb navbar-fixed-bottom',
                 ],
             ]);
             
