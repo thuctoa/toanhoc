@@ -9,7 +9,7 @@ $this->title = 'Ứng dụng toán';
         <div class="row">
             <div class="col-lg-9">
                 Số bậc, cấp của ma trận P là 
-                <input id ="sobac" type="text" class="so_n" placeholder="..." name="sobac" value="<?=$sobac?>">
+                <input id ="sobac" type="text" class="so_n" placeholder="n =..." name="sobac" value="<?=$sobac?>">
             </div>
             <div class="col-lg-3 pheptinhmoi">
                 <button type="submit" class="btn btn-danger">Ma trận mới</button>

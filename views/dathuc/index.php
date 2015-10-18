@@ -11,7 +11,7 @@ $this->title = 'Ứng dụng toán';
         <div class="col-lg-9">
             Số bậc của phương trình, có đa thức P là 
             <input class="so_n" 
-                id ="nghiemdathuc" type="text" placeholder="..." name="sobac" value="<?=$sobac?>">
+                id ="nghiemdathuc" type="text" placeholder="n =..." name="sobac" value="<?=$sobac?>">
         </div>
          <div class="col-lg-3 pheptinhmoi">
             <button type="submit" class="btn btn-danger">Phương trình mới</button>

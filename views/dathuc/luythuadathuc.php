@@ -9,7 +9,7 @@ $this->title = 'Ứng dụng toán';
     <div class="row">
         <div class="col-lg-9">
             Số bậc của đa thức $A(x)$ là 
-            <input type="text" id="n" class="so_n" placeholder="..." name="n" value="<?=$n?>">
+            <input type="text" id="n" class="so_n" placeholder="n =..." name="n" value="<?=$n?>">
         </div>
         <div class="col-lg-3 pheptinhmoi">
             <button type="submit"  class="btn btn-danger">Đa thức mới</button>
