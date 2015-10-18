@@ -8,7 +8,10 @@ $this->title = 'Ứng dụng toán';
 <form action="/matran/markov" method="post">
     <div class="row">
         <div class="col-lg-9">
-            Số bậc, cấp của ma trận P là <input type="text" class="so_n" id ="sobac" class="matran" name="sobac" value="<?=$sobac?>">
+            Số bậc, cấp của ma trận P là 
+            <input type="text" class="so_n" 
+                   placeholder="n =..."
+                   id ="sobac" class="matran" name="sobac" value="<?=$sobac?>">
              <input type="hidden" name="khoitao" class="text-warning"  value="1">
         </div>
         <div class="col-lg-3 pheptinhmoi">
