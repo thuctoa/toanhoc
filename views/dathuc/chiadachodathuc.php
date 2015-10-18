@@ -3,7 +3,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<p class="tieude">Chia đa thức cho đa thức</p>
+<h1 class="tieude">Chia đa thức cho đa thức</h1>
 
 <form action="/dathuc/chiadachodathuc" method="post">
     <div class="row">

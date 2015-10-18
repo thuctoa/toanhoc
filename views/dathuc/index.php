@@ -4,7 +4,7 @@ use yii\helpers\Html;
 $this->title = 'Ứng dụng toán';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<p class="tieude">Giải phương trình</p>
+<h1 class="tieude">Giải phương trình</h1>
 
  <form action="/dathuc/index" method="post">
      <div class="row">

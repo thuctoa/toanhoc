@@ -3,7 +3,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<p class="tieude">Nhập vào ma trận xác suất chuyển</p>
+<h1 class="tieude">Nhập vào ma trận xác suất chuyển</h1>
 
 <form action="/matran/markov" method="post">
     <div class="row">

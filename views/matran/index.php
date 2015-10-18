@@ -2,7 +2,7 @@
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<p class="tieude">Giải hệ phương trình</p>
+<h1 class="tieude">Giải hệ phương trình</h1>
 <form action="/matran/index" method="post">
     <div class="row">
         <div class="col-lg-9">
