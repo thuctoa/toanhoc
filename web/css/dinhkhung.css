@@ -25,8 +25,9 @@ h1{
 }
 .pheptinhmoi{
     border: 1px solid #1ad280;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
+    margin-top: -19px;
 }
 .breadcrumb{
     padding: 0px;
