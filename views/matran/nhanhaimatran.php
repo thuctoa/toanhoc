@@ -7,7 +7,7 @@ $this->title = 'Ứng dụng toán';
 
 <form action="/matran/nhanhaimatran" method="post">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-9">
             Số hàng của ma trận A là 
             <input type="text" class="so_n" placeholder="..." name="ma" value="<?=$ma?>">
             , số cột <input class="so_n" type="text"value="<?=$na?>" placeholder="..." id="na" name="na" onchange="dongcuamatranb();" ><br>
@@ -15,7 +15,9 @@ $this->title = 'Ứng dụng toán';
             <input type="text" class="so_n" value="<?=$mb?>" id="mb" onchange="dongcuamatrana();" placeholder="..." name="mb" >
             , số cột <input class="so_n" type="text" placeholder="..." name="nb"  value="<?=$nb?>">
         </div>
-        <button type="submit" class="btn btn-danger">Nhân hai ma trận mới</button>
+        <div class="col-lg-3 pheptinhmoi">
+            <button type="submit" class="btn btn-danger">Nhân hai ma trận mới</button>
+        </div>
     </div>
 </form>
 

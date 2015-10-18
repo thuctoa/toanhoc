@@ -6,9 +6,13 @@ $this->title = 'Nhập vào ma trận xac suất chuyển';
 <h1><?= Html::encode($this->title) ?></h1>
 
 <form action="/matran/markov" method="post">
-        Số bậc, cấp của ma trận P là <input type="text" id ="sobac" class="matran" name="sobac" value="<?=$sobac?>">
-         <input type="hidden" name="khoitao" class="text-warning"  value="1">
-        <button type="submit" class="btn btn-danger">Ma trận xác suất chuyển mới</button><br><br><br>
+    <div class="row">
+        <div class="col-lg-9">
+            Số bậc, cấp của ma trận P là <input type="text" id ="sobac" class="matran" name="sobac" value="<?=$sobac?>">
+             <input type="hidden" name="khoitao" class="text-warning"  value="1">
+        </div>
+        <button type="submit" class="btn btn-danger">Ma trận xác suất chuyển mới</button>
+    </div>
 </form>
  <?php 
 if($sobac>0){

@@ -6,13 +6,19 @@ $this->title = 'Ứng dụng toán';
 <p class="tieude">Chia đa thức cho đa thức</p>
 
 <form action="/dathuc/chiadachodathuc" method="post">
-        Số bậc của đa thức bị chia $A(x)$ là 
-        <input type="text" id="n1" class="so_n" placeholder="..." name="n1" value="<?=$n1?>">
-       
-        , Số bậc của đa thức chia $B(x)$ là 
-        <input type="text" value="<?=$n2?>" id="n2"
-                class="so_n" placeholder="..." name="n2" >
-        <button type="submit" id="nhanhaidathuc"  class="btn btn-danger">Chia hai ma trận mới</button><br><br><br>
+    <div class="row">
+        <div class="col-lg-9">
+            Số bậc của đa thức bị chia $A(x)$ là 
+            <input type="text" id="n1" class="so_n" placeholder="..." name="n1" value="<?=$n1?>">
+
+            , Số bậc của đa thức chia $B(x)$ là 
+            <input type="text" value="<?=$n2?>" id="n2"
+                    class="so_n" placeholder="..." name="n2" >
+        </div>
+        <div class="col-lg-3 pheptinhmoi">
+            <button type="submit" id="nhanhaidathuc"  class="btn btn-danger">Chia hai ma trận mới</button>
+        </div>
+    </div>
 </form>
 <?php 
     if($n1>0&&$n2>0){

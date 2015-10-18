@@ -4,9 +4,15 @@ $this->title = 'Ứng dụng toán';
 ?>
 <p class="tieude">Giải hệ phương trình</p>
 <form action="/matran/index" method="post">
-    Số ẩn, số phương trình là 
-    <input id="soan" type="text" name="soan" class="so_n" placeholder="..." value="<?=$soan?>">
-    <button type="submit" class="btn btn-danger">Gải hệ mới</button><br><br><br>
+    <div class="row">
+        <div class="col-lg-9">
+            Số ẩn, số phương trình là 
+            <input id="soan" type="text" name="soan" class="so_n" placeholder="..." value="<?=$soan?>">
+        </div>
+        <div class="col-lg-3 pheptinhmoi">
+            <button type="submit" class="btn btn-danger">Gải hệ mới</button>
+        </div>
+    </div>
 </form>
 
 <?php 

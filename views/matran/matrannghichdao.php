@@ -6,9 +6,15 @@ $this->title = 'Ứng dụng toán';
 <p class="tieude">Nghịch đảo ma trận</p>
 
 <form action="/matran/matrannghichdao" method="post">
-        Số bậc, cấp của ma trận P là 
-        <input type="text" id ="sobac" class="so_n" placeholder="..." name="sobac" value="<?=$sobac?>">
-        <button type="submit" class="btn btn-danger">Ma trận mới</button>
+    <div class="row">
+        <div class="col-lg-9">
+            Số bậc, cấp của ma trận P là 
+            <input type="text" id ="sobac" class="so_n" placeholder="..." name="sobac" value="<?=$sobac?>">
+        </div>
+        <div class="col-lg-3 pheptinhmoi">
+            <button type="submit" class="btn btn-danger">Ma trận mới</button>
+        </div>
+    </div>
 </form>
  <?php 
 if($sobac>0){

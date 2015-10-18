@@ -7,10 +7,16 @@ $this->title = 'Ứng dụng toán';
 <p class="tieude">Giải phương trình</p>
 
  <form action="/dathuc/index" method="post">
+     <div class="row">
+        <div class="col-lg-9">
             Số bậc của phương trình, có đa thức P là 
             <input class="so_n" 
                 id ="nghiemdathuc" type="text" placeholder="..." name="sobac" value="<?=$sobac?>">
-            <button type="submit" class="btn btn-danger">Phương trình mới</button><br><br><br>
+        </div>
+         <div class="col-lg-3 pheptinhmoi">
+            <button type="submit" class="btn btn-danger">Phương trình mới</button>
+         </div>
+     </div>
 </form>
 <?php 
 if($sobac>0){
