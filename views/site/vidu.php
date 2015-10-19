@@ -67,22 +67,23 @@ if($url=='/matran/markov'){
     \end{cases}
     \Longleftrightarrow
     \begin{cases}
-        \pi_0 = \frac{1}{4}\\ 
-        \pi_1 = \frac{1}{8}\\ 
-        \pi_2 = \frac{1}{8}\\ 
-        \pi_3 = \frac{1}{2}\\ 
+        \pi_0 = \frac{1}{4} = 0.25\\ 
+        \pi_1 = \frac{1}{8} = 0.125\\ 
+        \pi_2 = \frac{1}{8} = 0.125\\ 
+        \pi_3 = \frac{1}{2} = 0.5\\ 
     \end{cases}
     $
     <br><br>
     <p>Đồng thời P là tối giản, phi tuần hoàn nên <b>phân phối giới hạn</b> của xích là</p>
     $
     \\
-    \pi=
+    \pi 
+        =
         \begin{pmatrix}
-        \frac{1}{4} & \frac{1}{8} & \frac{1}{8}  & \frac{1}{2}\\
-        \frac{1}{4} & \frac{1}{8} & \frac{1}{8}  & \frac{1}{2}\\
-        \frac{1}{4}& \frac{1}{8} & \frac{1}{8}  & \frac{1}{2}\\
-        \frac{1}{4} & \frac{1}{8} & \frac{1}{8}  & \frac{1}{2}\\
+        0.25 & 0.125 & 0.125  & 0.5\\
+        0.25 & 0.125 & 0.125  & 0.5\\
+        0.25 & 0.125 & 0.125  & 0.5\\
+        0.25 & 0.125 & 0.125  & 0.5\\
         \end{pmatrix}
     $
 <?php } ?>
