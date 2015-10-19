@@ -10,7 +10,7 @@ use yii\helpers\Url;
 </h1>
 <?php
 $url= Url::to();
-if($url=='/dathucs'||$url=='/dathuc/index'){
+if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
 ?>
     <h4>Ví dụ ta có phương trình như sau</h4>
     $x^6+x^5-10x^4+9x^2-x-1=0\\$

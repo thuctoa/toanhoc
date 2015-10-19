@@ -10,7 +10,7 @@ use yii\helpers\Url;
 </h1>
 <?php
 $url= Url::to();
-if($url=='/dathucs'||$url=='/dathuc/index'){
+if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
 ?>
     <h4>Lý thuyết </h4>
     $
