@@ -23,75 +23,75 @@ $this->title = 'Ứng dụng toán';
 if($sobac>0){
 
     ?>
-<form action="/matran/markov" method="post">
-    <table class="hephuongtrinh">
+    <form action="/matran/markov" method="post">
+        <table class="hephuongtrinh ">
+            <tr>
+                <th colspan="<?=$sobac+1?>" class="text-center">Ma trận phân phối xác suất chuyển P</th>
+
+            </tr>
+    <?php
+        for($i=0;$i<$sobac;$i++){
+    ?>
         <tr>
-            <th colspan="<?=$sobac+1?>" class="text-center">Ma trận phân phối xác suất chuyển P</th>
-            
-        </tr>
-<?php
-    for($i=0;$i<$sobac;$i++){
-?>
-    <tr>
-        <?php
-            for($j=0;$j<$sobac;$j++){
-        ?>
-                <td>
-                    <input  type="text" 
-                            onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
-                            id="<?='p'.$i.$j?>"
-                            onchange="bieuthuc('<?='p'.$i.$j?>')"
-                            value="<?=$p[$i][$j]?>"
-                            class="matran"
-                            placeholder="p[<?php echo $i;?>][<?php echo $j;?>]"
-                            name="p[<?php echo $i;?>][<?php echo $j;?>]"> 
-                </td>
-        <?php
-                }
-               
-        ?>
-   </tr>
-   
- <?php
-    }
-?>
-    </table>
-    <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
-    <input type="hidden" name="kiemtrapp" class="text-warning"  value="1">
-    <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
-    <div class="row giaihe cachtren" style="margin-bottom: 20px;">
-        <div class="col-lg-3 text-center">
-            <button type="submit" class="btn btn-warning ">Kiểm tra P</button>
-        </div>
-        <div class="col-lg-8 text-center">
-            <?php 
-            if($markovduoc==2){
-                echo '<h5 class="text-danger ketqua"><b>Ma trận vừa nhập không phải là một ma trận phân phối xác suất chuyển</b></h5>';
-            }else if($markovduoc==-1){
-                echo '<h5 class="text-success ketqua"><b>Ma trận vừa nhập là một ma trận phân phối xác suất chuyển</b></h5>';
-            }else if($markovduoc==4){
-                echo '<h5 class="text-success ketqua"><b>Xích có nhiều hơn một trạng thái hút, nên xích không có tính dừng</b></h5>';
-            }
-            else if($markovduoc==5){
-                echo '<h5 class="text-danger ketqua"><b>Ma trận không có tính tối giản</b></h5>';
-            }
-            else if($markovduoc==6){
-                echo '<h5 class="text-success ketqua"><b>Ma trận là tối giản </b></h5>';
-            }
-            else if($markovduoc==7){
-                echo '<h5 class="text-danger ketqua"><b>Không có phân phối giới hạn của ma trận,'
-                 . ' mặc dù P là tối giản nhưng tuần hoàn </b></h5>';
-            }
-            else if($markovduoc==8){
-                echo '<h5 class="text-success ketqua"><b>Ma trận là tối giản, và phi tuần hoàn nên có phân phối giới hạn</b></h5>';
-            }
-            else if($markovduoc==9){
-                echo '<h5 class="text-danger ketqua"><b>Không có phân phối giới hạn của ma trận,'
-                 . ' vì P là không tối giản</b></h5>';
-            }
+            <?php
+                for($j=0;$j<$sobac;$j++){
             ?>
+                    <td>
+                        <input  type="text" 
+                                onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
+                                id="<?='p'.$i.$j?>"
+                                onchange="bieuthuc('<?='p'.$i.$j?>')"
+                                value="<?=$p[$i][$j]?>"
+                                class="matran"
+                                placeholder="p[<?php echo $i;?>][<?php echo $j;?>]"
+                                name="p[<?php echo $i;?>][<?php echo $j;?>]"> 
+                    </td>
+            <?php
+                    }
+
+            ?>
+       </tr>
+
+     <?php
+        }
+    ?>
+        </table>
+        <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
+        <input type="hidden" name="kiemtrapp" class="text-warning"  value="1">
+        <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
+        <div class="row giaihe cachtren" style="margin-bottom: 20px;">
+            <div class="col-lg-12 text-center">
+                <button type="submit" class="btn btn-warning ">Kiểm tra P</button>
+            </div>
+            <div class="col-lg-8 text-center">
+                <?php 
+                if($markovduoc==2){
+                    echo '<h5 class="text-danger ketqua"><b>Ma trận vừa nhập không phải là một ma trận phân phối xác suất chuyển</b></h5>';
+                }else if($markovduoc==-1){
+                    echo '<h5 class="text-success ketqua"><b>Ma trận vừa nhập là một ma trận phân phối xác suất chuyển</b></h5>';
+                }else if($markovduoc==4){
+                    echo '<h5 class="text-success ketqua"><b>Xích có nhiều hơn một trạng thái hút, nên xích không có tính dừng</b></h5>';
+                }
+                else if($markovduoc==5){
+                    echo '<h5 class="text-danger ketqua"><b>Ma trận không có tính tối giản</b></h5>';
+                }
+                else if($markovduoc==6){
+                    echo '<h5 class="text-success ketqua"><b>Ma trận là tối giản </b></h5>';
+                }
+                else if($markovduoc==7){
+                    echo '<h5 class="text-danger ketqua"><b>Không có phân phối giới hạn của ma trận,'
+                     . ' mặc dù P là tối giản nhưng tuần hoàn </b></h5>';
+                }
+                else if($markovduoc==8){
+                    echo '<h5 class="text-success ketqua"><b>Ma trận là tối giản, và phi tuần hoàn nên có phân phối giới hạn</b></h5>';
+                }
+                else if($markovduoc==9){
+                    echo '<h5 class="text-danger ketqua"><b>Không có phân phối giới hạn của ma trận,'
+                     . ' vì P là không tối giản</b></h5>';
+                }
+                ?>
+            </div>
         </div>
-    </div>
 </form> 
 <?php
     if($dakiemtrapp==1){

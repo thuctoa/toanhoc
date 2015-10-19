@@ -32,6 +32,9 @@
         },{
             "id" : "class2",
             "type" : "owl:Class"
+        },{
+            "id" : "class3",
+            "type" : "owl:Class"
         }
     ],"classAttribute" : [
         {
@@ -57,11 +60,19 @@
               "undefined" : "2"},
             "instances" : 0
         }
+        ,
+        {
+           "id" : "class3",
+            "label" : {
+              "IRI-based" : "Concept",
+              "undefined" : "3"},
+            "instances" : 0
+        }
     ],"propertyAttribute" : [{
             "id" : "property0",
                         "label" : {
               "IRI-based" : "focus",
-              "undefined" : "0.2"
+              "undefined" : "0.5"
             },
             "comment" : {
               "undefined" : "Bieu do trang thai."
@@ -75,12 +86,12 @@
               } ]
             },
             "domain" : "class0",
-            "range" : "class0"
+            "range" : "class1"
         },{
             "id" : "property1",
                         "label" : {
               "IRI-based" : "focus",
-              "undefined" : "0.8"
+              "undefined" : "0.5"
             },
             "comment" : {
               "undefined" : "Bieu do trang thai."
@@ -94,7 +105,7 @@
               } ]
             },
             "domain" : "class0",
-            "range" : "class2"
+            "range" : "class3"
         },{
             "id" : "property2",
                         "label" : {
@@ -113,12 +124,50 @@
               } ]
             },
             "domain" : "class1",
+            "range" : "class2"
+        },{
+            "id" : "property3",
+                        "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "1"
+            },
+            "comment" : {
+              "undefined" : "Bieu do trang thai."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class2",
+            "range" : "class3"
+        },{
+            "id" : "property4",
+                        "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.5"
+            },
+            "comment" : {
+              "undefined" : "Bieu do trang thai."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class3",
             "range" : "class0"
         },{
-                        "id" : "property3",
+                        "id" : "property5",
                                     "label" : {
                           "IRI-based" : "focus",
-                          "undefined" : "1"
+                          "undefined" : "0.5"
                         },
                         "comment" : {
                           "undefined" : "Bieu do trang thai."
@@ -131,8 +180,8 @@
                             "type" : "label"
                           } ]
                         },
-                        "domain" : "class2",
-                        "range" : "class1"
+                        "domain" : "class3",
+                        "range" : "class3"
                     } ],
     "property":[
         {
@@ -146,6 +195,12 @@
             "type" : "owl:objectProperty"
         },{
             "id" : "property3",
+            "type" : "owl:objectProperty"
+        },{
+            "id" : "property4",
+            "type" : "owl:objectProperty"
+        },{
+            "id" : "property5",
             "type" : "owl:objectProperty"
         }
         

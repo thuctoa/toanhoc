@@ -31,3 +31,45 @@ if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
     và thu được kết quả.</p>
 <?php    
 }
+if($url=='/matran/markov'){
+?>
+    <p><b>1. Liên thông hai trạng thái $i$ và $j$ </b></p>
+    <p>Ta nói rằng trạng thái $i$ đến được trạng thái $j$ và ký hiệu là  $ i \longrightarrow j$ 
+     nếu tồn tại $ n \geqslant 0 $ sao cho $p_{ij}^{(n)} > 0.$
+    Hai trạng thái $i$ và $j$ được gọi là liên thông và ký hiệu là $i \longleftrightarrow j$ 
+     nếu $ i \longrightarrow j$ và $ j \longrightarrow i$.</p>
+    <p><b>2. Xích tối giản, ma trận tối giản </b></p>
+    <p> Một xích Markov được gọi là tối giản nếu hai trạng thái bất kì đều liên thông với nhau
+    . Ma trận chuyển P được gọi là tối giản nếu xích Markov tương ứng với nó là tối giản.</p>
+    <p><b>3. Phân phối dừng </b></p>
+    <p> Phân phối $\pi = (\pi_i)_{i \in I }$ trên không gian trạng thái $I$ được gọi là dừng 
+        với ma trận chuyển P nếu <br>
+        $$
+            \pi = \pi P, \\
+        $$
+        tức là
+        $$
+            \pi_i = \sum_{i \in I}\pi_j p_{ji} 
+            \begin{matrix}
+            & 
+            \end{matrix} 
+            \forall i \in I.
+        $$
+    </p>
+    <p><b>3. Phi tuần hoàn </b></p>
+    <p> Trạng thái $i$ được gọi là phi tuần hoàn nếu $p_{ii}^{(n)}>0$ với mọi n đủ lớn. 
+    </p>
+    <p><b>4. Phân phối giới hạn </b></p>
+    <p>
+        Giả sử P là tối giản, phi tuần hoàn và có phân phối dừng là $\pi$. Giả sử λ là phân 
+        phối bất kỳ và $(X_n)_{n \geqslant 0}$ là Markov (λ, P). Khi đó với mọi trạng thái $j$, ta có
+        $$
+            \lim_{n \to \infty} \mathbb{P}(X_n = j) = \pi_j.
+        $$
+        Đặc biệt với mọi cặp trạng thái $i, j$ ta có
+        $$
+            \lim_{n \to \infty} p_{ij}^{(n)} = \pi_j.
+        $$
+    </p>
+<?php
+}

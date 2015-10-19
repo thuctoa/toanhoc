@@ -34,3 +34,55 @@ if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
         echo Html::img('@web/img/huongdan/phuongtrinh.png',['width'=>'100%']) ;
     
 }
+if($url=='/matran/markov'){
+?>
+    <p><b>Cho xích Markov với </b></p>
+    $\mathrm{I} = \{0, 1, 2, 3\}\\
+    P = \begin{pmatrix}
+        0 & \frac{1}{2} & 0  & \frac{1}{2}\\
+        0 & 0 & 1  & 0\\
+        0 & 0 & 0  & 1\\
+        \frac{1}{2} & 0 & 0  & \frac{1}{2}\\
+        \end{pmatrix}\\
+    $
+    <br>
+    <br>
+    <p> <b>P tối giản </b>do bất kỳ hai trạng thái nào của xích cũng liên thông.
+        <b>Hình ảnh</b></p>
+    <?= Html::img('@web/img/huongdan/bieudo.svg',['width'=>'100%']) ?>
+    <br>
+    <p><b>P là phi tuần hoàn </b> do</p>
+    <?= Html::img('@web/img/huongdan/toigian.png',['width'=>'100%']) ?>
+    <br><br>
+    <p> Vì với mọi n > 8 thì tất cả các phần tử $p_{ij}^{(n)} > 0$ vậy $p_{ii}^{(n)} > 0$  $\forall n > 8$.</p>
+    <br><br>
+    <p><b>Phân phối dừng</b> của xích là </p>
+    $
+    \begin{cases}
+        \pi_0 = \pi_0 0 + \pi_1 0 + \pi_2 0 + \pi_3 \frac{1}{2}\\ 
+        \pi_1 = \pi_0 \frac{1}{2} + \pi_1 0 + \pi_2 0 + \pi_3 0\\ 
+        \pi_2 = \pi_0 0 + \pi_1 1 + \pi_2 0 + \pi_3 0\\ 
+        \pi_3 = \pi_0 \frac{1}{2} + \pi_1 0 + \pi_2 1 + \pi_3 \frac{1}{2}\\ 
+        \pi_0 + \pi_1 +\pi_2 +\pi_3 = 1
+    \end{cases}
+    \Longleftrightarrow
+    \begin{cases}
+        \pi_0 = \frac{1}{4}\\ 
+        \pi_1 = \frac{1}{8}\\ 
+        \pi_2 = \frac{1}{8}\\ 
+        \pi_3 = \frac{1}{2}\\ 
+    \end{cases}
+    $
+    <br><br>
+    <p>Đồng thời P là tối giản, phi tuần hoàn nên <b>phân phối giới hạn</b> của xích là</p>
+    $
+    \\
+    \pi=
+        \begin{pmatrix}
+        \frac{1}{4} & \frac{1}{8} & \frac{1}{8}  & \frac{1}{2}\\
+        \frac{1}{4} & \frac{1}{8} & \frac{1}{8}  & \frac{1}{2}\\
+        \frac{1}{4}& \frac{1}{8} & \frac{1}{8}  & \frac{1}{2}\\
+        \frac{1}{4} & \frac{1}{8} & \frac{1}{8}  & \frac{1}{2}\\
+        \end{pmatrix}
+    $
+<?php } ?>
