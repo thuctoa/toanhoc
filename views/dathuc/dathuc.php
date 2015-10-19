@@ -3,11 +3,11 @@ $$
     //$sobac=count($a)-1;
         if($daohamcap==0){   
     ?>
-        P_{<?=$sobac?>}(x)=
+      
     <?php
         }else{
     ?>
-        P_{<?=$sobac + $daohamcap?>}^{(<?=$daohamcap?>)}(x)=
+        
     <?php
         }
     ?>

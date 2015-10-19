@@ -5,6 +5,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
+
 /* @var $this \yii\web\View */
 /* @var $content string */
 
@@ -56,7 +57,6 @@ AppAsset::register($this);
                 ]);?>
             </div>
             <div class="col-lg-8">
-                
                  <?= $content ?>
             </div>
             <div class="col-lg-2 menuphai">
@@ -75,7 +75,20 @@ AppAsset::register($this);
                 ]);?>
             </div>
         </div>
-        
+        <div class="row">
+            <div class="col-lg-6 huongdan">
+                <?php 
+                    echo$this->render('//site/huongdan',[
+                        ]);
+                ?>
+            </div>
+            <div class="col-lg-6 huongdan">
+                <?php 
+                    echo$this->render('//site/vidu',[
+                        ]);
+                ?>
+            </div>
+        </div>
     </div>
 
     <footer class="footer">

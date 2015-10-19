@@ -13,10 +13,11 @@ $this->title = 'Ứng dụng toán';
  <form action="/dathuc/index" method="post">
      <div class="row">
         <div class="col-lg-9">
-            Số bậc của phương trình, có đa thức P là 
+            Số bậc của phương trình là 
             <input class="so_n" 
                 id ="nghiemdathuc" type="text" placeholder="n =..." name="sobac" value="<?=$sobac?>">
         </div>
+         <input type="hidden" name="huongdan" class="text-warning"  value="dahuongdan">
          <div class="col-lg-3 pheptinhmoi">
             <button type="submit" class="btn btn-danger">Phương trình mới</button>
          </div>
@@ -26,9 +27,10 @@ $this->title = 'Ứng dụng toán';
 if($sobac>0){
 ?>
 <form action="/dathuc/index" method="post">
-    $ P_{<?=$sobac?>}(x)=$
+    
     <?php
         for($i=$sobac;$i>0;$i--){
+            if($i!=1){
     ?>  
             <input  class="dathuc"
                     id="<?='a'.$i?>" 
@@ -39,6 +41,18 @@ if($sobac>0){
                     name="a[<?php echo $i;?>]"
             >$x^{<?=$i?>}+$
     <?php
+            }else{
+    ?>
+                <input  class="dathuc"
+                    id="<?='a'.$i?>" 
+                    onchange="bieuthuc('<?='a'.$i?>')"
+                    onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
+                    placeholder="a[<?php echo $i;?>]..."
+                    value="<?=$a[$i]?>" 
+                    name="a[<?php echo $i;?>]"
+                    accept="">$x+$
+    <?php
+            }
         }
     ?>
             <input class="dathuc"
@@ -49,7 +63,7 @@ if($sobac>0){
                    value="<?=$a[$i]?>" 
                    name="a[<?php echo $i;?>]"
                    
-            >$x^{<?=$i?>} =0 $
+            > = 0 
             
         <?php
             if($conghiem==-10){

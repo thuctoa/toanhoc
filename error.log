@@ -165,3 +165,51 @@ PHP message: PHP Fatal error:  Function name must be a string in /home/studies/p
 2015/10/18 20:41:46 [error] 1488#0: *489 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected end of file in /home/studies/project/toanhoc/views/matran/markov.php on line 299" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "POST /matran/markov HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/matran/markov"
 2015/10/18 20:51:08 [error] 1488#0: *614 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected end of file in /home/studies/project/toanhoc/views/matran/markov.php on line 312" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "POST /matran/markov HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/matran/markov"
 2015/10/18 20:55:15 [error] 1488#0: *645 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected end of file in /home/studies/project/toanhoc/views/matran/markov.php on line 348" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "POST /matran/markov HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/matran/markov"
+2015/10/19 12:51:29 [error] 1482#0: *317 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+exception 'yii\base\InvalidParamException' with message 'The view file does not exist: /home/studies/project/toanhoc/views/layouts/site/test.php' in /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php:226
+Stack trace:
+#0 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/studies/p...', Array, NULL)
+#1 /home/studies/project/toanhoc/views/layouts/main.php(79): yii\base\View->render('site/test')
+#2 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(325): require('/home/studies/p...')
+#3 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/studies/p...', Array)
+#4 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Controller.php(386): yii\base\View->renderFile('/home/studies/p...', Array, Object(app\controllers\SiteController))
+#5 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Controller.php(372): yii\base\Con" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "POST /dathuc/index HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/dathuc/index"
+2015/10/19 12:52:14 [error] 1482#0: *319 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+exception 'yii\base\InvalidParamException' with message 'The view file does not exist: /home/studies/project/toanhoc/views/layouts/test.php' in /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php:226
+Stack trace:
+#0 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/studies/p...', Array, NULL)
+#1 /home/studies/project/toanhoc/views/layouts/main.php(79): yii\base\View->render('test')
+#2 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(325): require('/home/studies/p...')
+#3 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/studies/p...', Array)
+#4 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Controller.php(386): yii\base\View->renderFile('/home/studies/p...', Array, Object(app\controllers\SiteController))
+#5 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Controller.php(372): yii\base\Controller->r" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "POST /dathuc/index HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/dathuc/index"
+2015/10/19 12:52:20 [error] 1482#0: *321 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+exception 'yii\base\InvalidParamException' with message 'The view file does not exist: /home/studies/project/toanhoc/views/layouts/test.php' in /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php:226
+Stack trace:
+#0 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/studies/p...', Array, NULL)
+#1 /home/studies/project/toanhoc/views/layouts/main.php(79): yii\base\View->render('test')
+#2 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(325): require('/home/studies/p...')
+#3 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/studies/p...', Array)
+#4 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Controller.php(386): yii\base\View->renderFile('/home/studies/p...', Array, Object(app\controllers\SiteController))
+#5 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Controller.php(372): yii\base\Controller->r" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /site/index HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn"
+2015/10/19 12:52:21 [error] 1482#0: *321 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+exception 'yii\base\InvalidParamException' with message 'The view file does not exist: /home/studies/project/toanhoc/views/layouts/test.php' in /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php:226
+Stack trace:
+#0 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(149): yii\base\View->renderFile('/home/studies/p...', Array, NULL)
+#1 /home/studies/project/toanhoc/views/layouts/main.php(79): yii\base\View->render('test')
+#2 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(325): require('/home/studies/p...')
+#3 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/studies/p...', Array)
+#4 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Controller.php(386): yii\base\View->renderFile('/home/studies/p...', Array, Object(app\controllers\SiteController))
+#5 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Controller.php(372): yii\base\Controller->r" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /site/index HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn"
+2015/10/19 13:00:25 [error] 1482#0: *333 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+exception 'yii\base\InvalidParamException' with message 'The view file does not exist: site/test' in /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php:226
+Stack trace:
+#0 /home/studies/project/toanhoc/views/layouts/main.php(79): yii\base\View->renderFile('site/test')
+#1 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(325): require('/home/studies/p...')
+#2 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/View.php(247): yii\base\View->renderPhpFile('/home/studies/p...', Array)
+#3 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Controller.php(386): yii\base\View->renderFile('/home/studies/p...', Array, Object(app\controllers\SiteController))
+#4 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Controller.php(372): yii\base\Controller->renderContent('<div class="sit...')
+#5 /home/studies/project/toanhoc/vendor/yiisoft/yii2/web/ErrorAction.php(108): yii\base\Controller->render('error', Array)
+#6 [intern" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /dathucs HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/site/index"
+2015/10/19 13:51:14 [error] 1480#0: *93 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Class 'Url' not found in /home/studies/project/toanhoc/views/layouts/main.php on line 79" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /dathuc/luythuadathuc HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/dathuc/nhanhaidathuc"
+2015/10/19 13:54:22 [error] 1480#0: *155 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Class 'Url' not found in /home/studies/project/toanhoc/views/site/huongdan.php on line 4" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /dathucs HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/dathuc/luythuadathuc"
