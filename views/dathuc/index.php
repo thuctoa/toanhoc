@@ -4,7 +4,11 @@ use yii\helpers\Html;
 $this->title = 'Ứng dụng toán';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1 class="tieude">Giải phương trình</h1>
+<h1 class="tieude">
+    <span class="pagerank">Ứng dụng toán </span>
+        Giải phương trình
+    <span class="pagerank"> Ứng dụng toán</span>
+</h1>
 
  <form action="/dathuc/index" method="post">
      <div class="row">
@@ -67,7 +71,7 @@ if($sobac>0){
 
     <div class="row " style="margin-top: 30px;">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-warning " >Tìm nghiệm</button>
+            <button type="submit" class="btn btn-success " >Tìm nghiệm</button>
         </div>
         <div class="col-lg-4 text-center">
             <?php if($conghiem==0){

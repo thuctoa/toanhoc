@@ -2,7 +2,11 @@
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<h1 class="tieude">Giải hệ phương trình</h1>
+<h1 class="tieude">
+    <span class="pagerank">Ứng dụng toán </span>
+        Giải hệ phương trình
+    <span class="pagerank"> Ứng dụng toán </span>
+</h1>
 <form action="/matran/index" method="post">
     <div class="row">
         <div class="col-lg-9">
@@ -71,7 +75,7 @@ if($soan>0){
     <input type="hidden" name="soan" class="text-warning"  value="<?=$soan?>">
         <div class="row giaihe cachtren">
             <div class="col-lg-2 text-center">
-                <button type="submit" class="btn btn-warning ">Giải hệ</button>
+                <button type="submit" class="btn btn-success ">Giải hệ</button>
             </div>
             <div class="col-lg-8 mketqua">
                 <?php

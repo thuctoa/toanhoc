@@ -3,7 +3,11 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<h1 class="tieude">Nhân hai ma trận với nhau</h1>
+<h1 class="tieude">
+    <span class="pagerank">Ứng dụng toán </span>
+        Nhân hai ma trận với nhau
+    <span class="pagerank"> Ứng dụng toán </span>
+</h1>
 
 <form action="/matran/nhanhaimatran" method="post">
     <div class="row">
@@ -91,7 +95,7 @@ if($na>0&&$ma>0&&$mb>0&&$nb>0){
     <input type="hidden" name="nb" class="text-warning"  value="<?=$nb?>">
     <div class="row giaihe cachtren">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-warning ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-success ">Thực hiện tính</button>
         </div>
     </div>
 </form>     

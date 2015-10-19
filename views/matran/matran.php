@@ -3,7 +3,11 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<h1 class="tieude">Lũy thừa ma trận</h1>
+<h1 class="tieude">
+    <span class="pagerank">Ứng dụng toán </span>
+        Lũy thừa ma trận
+    <span class="pagerank"> Ứng dụng toán </span>
+</h1>
 <div onload="giannonhap();">
     <form action="/matran/matran" method="post">
         <div class="row">
@@ -55,7 +59,7 @@ $this->title = 'Ứng dụng toán';
 
         <div class="row giaihe cachtren">
             <div class="col-lg-2 text-center">
-                <button type="submit" class="btn btn-warning " >Thực hiện tính</button>
+                <button type="submit" class="btn btn-success " >Thực hiện tính</button>
             </div>
             <div class="col-lg-3 text-center">
                 Số mũ = <input type="text" name="somu" class="matran"  value="<?=$somu?>">

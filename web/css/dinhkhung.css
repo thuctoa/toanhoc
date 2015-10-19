@@ -9,7 +9,7 @@
     
 }
 .tieude{
-    background:  #008000;
+    background: blue;
     color: white;
     text-align: center;
     padding: 3px;
@@ -41,4 +41,8 @@ h1{
 }
 .cachtren{
     margin-top: 50px;
+}
+.pagerank{
+    color: blue;
+    font-size: 10px;
 }

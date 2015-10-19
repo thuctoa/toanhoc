@@ -3,7 +3,11 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<h1 class="tieude">Nhân hai đa thức với nhau</h1>
+<h1 class="tieude">
+    <span class="pagerank">Ứng dụng toán </span>
+        Nhân hai đa thức với nhau
+    <span class="pagerank"> Ứng dụng toán </span>
+</h1>
 
 <form action="/dathuc/nhanhaidathuc" method="post">
     <div class="row">
@@ -102,7 +106,7 @@ $this->title = 'Ứng dụng toán';
     <input type="hidden" name="n2" class="text-warning"  value="<?=$n2?>">
     <div class="row cachtren">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-warning ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-success ">Thực hiện tính</button>
         </div>
     </div>
 <?php
