@@ -9,12 +9,24 @@
     
 }
 .tieude{
-    background: blue;
-    color: white;
+    background: #EAEAEA;
+    color: black;
     text-align: center;
     padding: 3px;
     margin-bottom: 20px;
      
+}
+.huongdan-tieude{
+    background:  #EEE;
+    color: black;
+    text-align: center;
+    padding: 3px;
+    margin-bottom: 20px;
+}
+.prhuongdan{
+    
+    color: #EEE;
+    font-size: 10px;
 }
 h1{
        font-size: 26px;
@@ -43,11 +55,20 @@ h1{
     margin-top: 50px;
 }
 .pagerank{
-    color: blue;
+    color: #EEE;
     font-size: 10px;
 }
 .huongdan{
     min-height: 50vh;
     margin-top: 30px;
+    border: 1px solid #EEE;
+}
+.huongdan-head{
+    margin-top: 50px;
+}
+a{
+    color: black;
+}
+li{
     border: 1px solid #EEE;
 }

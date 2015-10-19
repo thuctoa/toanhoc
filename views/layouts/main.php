@@ -75,7 +75,8 @@ AppAsset::register($this);
                 ]);?>
             </div>
         </div>
-        <div class="row">
+        <div class="row huongdan-head">
+            
             <div class="col-lg-6 huongdan">
                 <?php 
                     echo$this->render('//site/huongdan',[

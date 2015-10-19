@@ -3,16 +3,16 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 ?>
-<h1 class="tieude">
-    <span class="pagerank">Ứng dụng toán </span>
-        Hướng dẫn
-    <span class="pagerank"> Ứng dụng toán </span>
-</h1>
+<h4 class="huongdan-tieude">
+    <span class="prhuongdan">Ứng dụng toán </span>
+        Nhắc lại
+    <span class="prhuongdan"> Ứng dụng toán </span>
+</h4>
 <?php
 $url= Url::to();
 if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
 ?>
-    <h4>Lý thuyết </h4>
+<h4> <b>Lý thuyết</b> </h4>
     $
         \text{Phương có trình có dạng}\\
         a_nx^n + a_{n-1}x^{n-1} + ... + a_1x + a_0 = 0\\
@@ -21,7 +21,7 @@ if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
         a_i:\text{ Là các hệ số thực của phương trình}\\
         \text{Số nghiệm tìm được tối đa của phương trình là n nghiệm}\\
     $
-    <h4>Ứng dụng toán trong hệ thống này </h4>
+    <h4><b>Ứng dụng toán trong hệ thống này </b></h4>
     <p><b>Bước 1: </b> Đầu tiên bạn nhập số bậc của phương trình,
     để báo cho hệ thống biết và tự tạo ra các hệ số $a_i$ cho bạn nhập. Sau đó 
     bấm vào nút "Phương trình mới" ngay góc trên bên phải màn hình.</p>
