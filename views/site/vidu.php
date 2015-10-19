@@ -5,7 +5,7 @@ use yii\helpers\Url;
 ?>
 <h4 class="huongdan-tieude">
     <span class="prhuongdan">Ứng dụng toán </span>
-        Ví dụ 
+        Ví dụ cụ thể 
     <span class="prhuongdan"> Ứng dụng toán </span>
 </h4>
 <?php

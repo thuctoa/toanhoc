@@ -19,7 +19,7 @@ $this->title = 'Ứng dụng toán';
         </div>
          <input type="hidden" name="huongdan" class="text-warning"  value="dahuongdan">
          <div class="col-lg-3 pheptinhmoi">
-            <button type="submit" class="btn btn-danger">Phương trình mới</button>
+            <button type="submit" class="btn btn-danger ">Phương trình mới</button>
          </div>
      </div>
 </form>
