@@ -18,6 +18,9 @@ $config = [
     
     
     'components' => [
+         'view' => [
+             'class' => 'app\components\View',
+         ],
         'i18n' => [
             'translations' => [
                 'app*' => [

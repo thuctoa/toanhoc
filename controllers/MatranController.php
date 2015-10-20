@@ -32,101 +32,104 @@ class MatranController extends \yii\web\Controller
         $b_giai=[];
         if(isset($_POST['soan'])){//thay doi so an, so phuong trinh
             $soan=$_POST['soan'];
-            
-            for($i=0;$i<$soan;$i++){//khoi tao ma tran a va b
-                $a[$i]=[];
-                for($j=0;$j<$soan;$j++){
-                    $a[$i][$j]='';
-                }
-                $b[$i]='';
-                $x[$i]='';
-            }
-            if(isset($_POST['b'])){
-               
-                $b=$_POST['b'];//gan gia tri dau vao
-                $a=$_POST['a'];
-                for($i=0;$i<$soan;$i++){
+            if($soan<33){
+                for($i=0;$i<$soan;$i++){//khoi tao ma tran a va b
+                    $a[$i]=[];
                     for($j=0;$j<$soan;$j++){
-                        if($a[$i][$j]!=''){
-                            $a[$i][$j]= $this->calculate_string($a[$i][$j]); 
+                        $a[$i][$j]='';
+                    }
+                    $b[$i]='';
+                    $x[$i]='';
+                }
+                if(isset($_POST['b'])){
+
+                    $b=$_POST['b'];//gan gia tri dau vao
+                    $a=$_POST['a'];
+                    for($i=0;$i<$soan;$i++){
+                        for($j=0;$j<$soan;$j++){
+                            if($a[$i][$j]!=''){
+                                $a[$i][$j]= $this->calculate_string($a[$i][$j]); 
+                            }else{
+                                $a[$i][$j]=0;
+                            }
+                        }
+                        if($b[$i]!=''){
+                            $b[$i]= $this->calculate_string($b[$i]); 
                         }else{
-                            $a[$i][$j]=0;
+                            $b[$i]=0;
                         }
                     }
-                    if($b[$i]!=''){
-                        $b[$i]= $this->calculate_string($b[$i]); 
-                    }else{
-                        $b[$i]=0;
-                    }
-                }
-                
-                $b_giai=$b;
-                $a_giai=$a;
-                $conghiem=0;//kiem tra tinh co nghiem
-                if($soan>1){
-                    for($t=1;$t<$soan;$t++){//thuc hien giai he
-                        if($a_giai[$t-1][$t-1]==0){//hoan doi hang co phan tu troi khac 0
-                            $conghiem=0;
-                            for($i=$t;$i<$soan;$i++){//tim tu hang t tro di co phan tu cung cot t-1 khac 0 la duoc
-                                if($a_giai[$i][$t-1]!=0){//hoan doi hang i va hang t-1
-                                    $conghiem=1;
-                                    //hoan doi a
-                                    for($j=0;$j<$soan;$j++){
-                                        $hoandoi=$a_giai[$t-1][$j];
-                                        $a_giai[$t-1][$j]=$a_giai[$i][$j];
-                                        $a_giai[$i][$j]=$hoandoi;
+
+                    $b_giai=$b;
+                    $a_giai=$a;
+                    $conghiem=0;//kiem tra tinh co nghiem
+                    if($soan>1){
+                        for($t=1;$t<$soan;$t++){//thuc hien giai he
+                            if($a_giai[$t-1][$t-1]==0){//hoan doi hang co phan tu troi khac 0
+                                $conghiem=0;
+                                for($i=$t;$i<$soan;$i++){//tim tu hang t tro di co phan tu cung cot t-1 khac 0 la duoc
+                                    if($a_giai[$i][$t-1]!=0){//hoan doi hang i va hang t-1
+                                        $conghiem=1;
+                                        //hoan doi a
+                                        for($j=0;$j<$soan;$j++){
+                                            $hoandoi=$a_giai[$t-1][$j];
+                                            $a_giai[$t-1][$j]=$a_giai[$i][$j];
+                                            $a_giai[$i][$j]=$hoandoi;
+                                        }
+                                        //hoan doi b
+                                        $hoandoi=$b_giai[$t-1];
+                                        $b_giai[$t-1]=$b_giai[$i];
+                                        $b_giai[$i]=$hoandoi;
+                                        break;
                                     }
-                                    //hoan doi b
-                                    $hoandoi=$b_giai[$t-1];
-                                    $b_giai[$t-1]=$b_giai[$i];
-                                    $b_giai[$i]=$hoandoi;
+                                }
+                                if($conghiem==0){//he vo nghiem
                                     break;
                                 }
                             }
-                            if($conghiem==0){//he vo nghiem
-                                break;
+                            $conghiem=1;
+                            $duongcheo=$a_giai[$t-1][$t-1];
+                            for($i=$t;$i<$soan;$i++){
+                                $u=$a_giai[$i][$t-1];
+                                for($j=$t-1;$j<$soan;$j++){//cong thuc duon cheo troi
+                                    $a_giai[$i][$j]=$a_giai[$i][$j]-$a_giai[$t-1][$j]*$u/$duongcheo;
+                                }
+                                 $b_giai[$i]=$b_giai[$i]-$u*$b_giai[$t-1]/$duongcheo;
                             }
                         }
-                        $conghiem=1;
-                        $duongcheo=$a_giai[$t-1][$t-1];
-                        for($i=$t;$i<$soan;$i++){
-                            $u=$a_giai[$i][$t-1];
-                            for($j=$t-1;$j<$soan;$j++){//cong thuc duon cheo troi
-                                $a_giai[$i][$j]=$a_giai[$i][$j]-$a_giai[$t-1][$j]*$u/$duongcheo;
-                            }
-                             $b_giai[$i]=$b_giai[$i]-$u*$b_giai[$t-1]/$duongcheo;
-                        }
-                    }
-                    for($i=0;$i<$soan;$i++){
-                        if($a_giai[$i][$i]==0){
-                            if($b_giai[$i]==0){
-                                $conghiem=2;
-                            }else{
-                                $conghiem=0;
-                                break;
-                            }
-                           
-                        }
-                    }
-                    if($conghiem==1){
-                        for($i=$soan-1;$i>=0;$i--){//tim nghiem
-                            $tongax=0;
-                            for($j=$i+1;$j<$soan;$j++){
-                                $tongax+=$a_giai[$i][$j]*$x[$j];
-                            }
-                            $x[$i]=($b_giai[$i]-$tongax)/$a_giai[$i][$i];
-                        }
+                        for($i=0;$i<$soan;$i++){
+                            if($a_giai[$i][$i]==0){
+                                if($b_giai[$i]==0){
+                                    $conghiem=2;
+                                }else{
+                                    $conghiem=0;
+                                    break;
+                                }
 
+                            }
+                        }
+                        if($conghiem==1){
+                            for($i=$soan-1;$i>=0;$i--){//tim nghiem
+                                $tongax=0;
+                                for($j=$i+1;$j<$soan;$j++){
+                                    $tongax+=$a_giai[$i][$j]*$x[$j];
+                                }
+                                $x[$i]=($b_giai[$i]-$tongax)/$a_giai[$i][$i];
+                            }
+
+                        }
+                    }
+                    else if($soan==1){//neu chi co 1 an mot phuong trinh
+                        if($a[0][0]==0){
+                            $conghiem=0;
+                        }else{
+                            $conghiem=1;
+                            $x[0]=$b[0]/$a[0][0];
+                        }
                     }
                 }
-                else if($soan==1){//neu chi co 1 an mot phuong trinh
-                    if($a[0][0]==0){
-                        $conghiem=0;
-                    }else{
-                        $conghiem=1;
-                        $x[0]=$b[0]/$a[0][0];
-                    }
-                }
+            }else{
+                $conghiem=32;
             }
         }
         

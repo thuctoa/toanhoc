@@ -20,7 +20,7 @@ $this->title = 'Ứng dụng toán';
 </form>
 
 <?php 
-if($soan>0){
+if($soan>0&&$soan<33){
 ?>
 <form action="/matran/index" method="post">
     <table class="hephuongtrinh">
@@ -90,9 +90,9 @@ if($soan>0){
                         \{
                          <?php
                             for($i=0;$i<$soan-1;$i++){
-                                echo 'x_'.$i.'='.$x[$i].', ';
+                                echo 'x_'.$i.'='.$this->mumuoi($x[$i]).', ';
                             }
-                            echo 'x_'.$i.'='.$x[$i];
+                            echo 'x_'.$i.'='.$this->mumuoi($x[$i]);
                         ?>
                         \}\\
                         \\
@@ -103,13 +103,17 @@ if($soan>0){
                         echo '<h5 class="text-danger ketqua"><b>Hệ phương trình vô nghiệm</b></h5>';
                     }else if($conghiem==2){
                         echo '<h5 class="text-warning ketqua"><b>Hệ phương trình có vô số nghiệm</b></h5>';
-                    }
+                    } 
                 ?>
             </div>
         </div>
 
 </form>
 <?php
+}
+if($conghiem==32){
+    echo '<h5 class="text-danger ketqua"><b>Số ẩn không lớn hơn 32, nếu muốn giải quyết mời bạn liên'
+    . ' lạc với chúng tôi để được hỗ trợ.</b></h5>';
 }
 ?>
 <?php
@@ -186,9 +190,9 @@ if($soan>0){
                     <?php 
                         }
                         if($a_giai[$i][$j]!=0){
-                            echo $a_giai[$i][$j].'x_'.$j.' = '.$b_giai[$i];
+                            echo $a_giai[$i][$j].'x_'.$j.' = '.$this->mumuoi($b_giai[$i]);
                         }else{
-                            echo ' = '.$b_giai[$i];
+                            echo ' = '.$this->mumuoi($b_giai[$i]);
                         }
                         echo "\\\\";
                     }
@@ -202,7 +206,7 @@ if($soan>0){
             \begin{cases}
             <?php
             for($i=0;$i<$soan;$i++){
-                echo 'x_'.$i.' = '.$x[$i];
+                echo 'x_'.$i.' = '.$this->mumuoi($x[$i]);
                 echo "\\\\";
             }
             ?>
