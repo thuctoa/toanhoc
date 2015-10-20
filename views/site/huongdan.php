@@ -8,11 +8,11 @@ use yii\helpers\Url;
         Lưu ý nhỏ
     <span class="prhuongdan"> Ứng dụng toán </span>
 </h2>
+<h2><b> Ứng dụng toán - lưu ý </b></h2>
 <?php
 $url= Url::to();
 if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
 ?>
-<h4> <b>Lý thuyết</b> </h4>
     $
         \text{Phương có trình có dạng}\\
         a_nx^n + a_{n-1}x^{n-1} + ... + a_1x + a_0 = 0\\
@@ -75,7 +75,6 @@ if($url=='/matran/markov'){
 }
 if($url=='/dathuc/luythuadathuc'||$url=='/dathuc/nhanhaidathuc'||$url=='/dathuc/chiadachodathuc'){
 ?>
-    <h2>Ứng dụng toán</h2>
     Phục vụ cho việc tính toán hoặc kiểm tra kết quả của phép tính toán của bạn.<br>
     Các hệ số tính toán được đều dướ dạng số thập phân.
     
@@ -83,7 +82,6 @@ if($url=='/dathuc/luythuadathuc'||$url=='/dathuc/nhanhaidathuc'||$url=='/dathuc/
 }
 if($url=='/matran/index'||$url=='/matrans'){
 ?>
-    <h2><b> Ứng dụng toán - nhắc lại </b></h2>
     Hệ phương trình tuyến tính n ẩn n phương trình luôn có dạng 
     $$
         Ax=B
