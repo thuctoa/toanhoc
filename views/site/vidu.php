@@ -142,9 +142,9 @@ if($url=='/matran/index'||$url=='/matrans'){
     Ví dụ ta có hệ phương trình tuyến tính 3 ẩn 3 phương trình như sau
     $$
         \begin{cases}
-            1x + 2y + 3z   = 6 \\
-            -3x + 1y + 4z  = 3 \\
-            3x  -2y + 1z  = 0 \\
+            x + 2y + 3z   = 6 \\
+            -3x + y + 4z  = 3 \\
+            3x  -2y + z  = 0 \\
         \end{cases} 
     $$
     Ở đây các hệ số là
