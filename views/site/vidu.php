@@ -86,4 +86,55 @@ if($url=='/matran/markov'){
         0.25 & 0.125 & 0.125  & 0.5\\
         \end{pmatrix}
     $
-<?php } ?>
+<?php } 
+if($url=='/dathuc/luythuadathuc'){
+?>
+    Ví dụ ta có một đa thức.
+    $$
+        x^2 + 2x + 3
+    $$
+    Ta cần tính đa thức lũy thừa 3
+    $$
+        (x^2 + 2x + 3)^3 =x^6+6x^5+21x^4+44x^3+63x^2+54^x+27
+    $$
+    Hình ảnh
+    <?= Html::img('@web/img/huongdan/dathuc-luythua.png',['width'=>'100%']) ?>
+<?php
+}
+if($url=='/dathuc/nhanhaidathuc'){
+?>
+    Ví dụ ta có đa thức $A(x)$.
+    $$
+        2x^3+3x^2+3^x+2 
+    $$
+    Nhân với đa thức $B(x)$
+    $$
+        3x^2+2x+1
+    $$
+    Kết quả phép tính là 
+    $$
+        (2x^3+3x^2+3x+2)(3x^2+2x+1)=6x^5+13x^4+17x^3+15x^2+7x+2
+    $$
+    Hình ảnh
+    <?= Html::img('@web/img/huongdan/dathuc-nhan.png',['width'=>'100%']) ?>
+<?php
+}
+if($url=='/dathuc/chiadachodathuc'){
+?>
+    Ví dụ ta có đa thức $A(x)$.
+    $$
+        2x^4+5x^3+2x+3
+    $$
+    Chi cho đa thức $B(x)$
+    $$
+        x^2+2x+2
+    $$
+    Kết quả phép tính là 
+    $$
+       \frac{2x^4+5x^3+2x+3}{x^2+2x+2} =2x^2+x−6+\frac{12x+15}{x^2+2x+2}
+    $$
+    Hình ảnh
+    <?= Html::img('@web/img/huongdan/dathuc-chia.png',['width'=>'100%']) ?>
+<?php
+}
+

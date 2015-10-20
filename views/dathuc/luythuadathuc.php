@@ -12,7 +12,7 @@ $this->title = 'Ứng dụng toán';
 <form action="/dathuc/luythuadathuc" method="post">
     <div class="row">
         <div class="col-lg-9">
-            Số bậc của đa thức $A(x)$ là 
+            Số bậc của đa thức là 
             <input type="text" id="n" class="so_n" placeholder="n =..." name="n" value="<?=$n?>">
         </div>
         <div class="col-lg-3 pheptinhmoi">
@@ -23,36 +23,32 @@ $this->title = 'Ứng dụng toán';
 <?php 
     if($n>0){
 ?>
-    <form action="/dathuc/luythuadathuc" method="post">
+<div class="cachtren bieuthuc-dathuc text-center">
+<form action="/dathuc/luythuadathuc" method="post">
     <div class="row">
         <div class="col-lg-12">
-            <table>
-                <tr>
-                    <th colspan="<?=$n+1?>" class="text-center">Đa thức $A(x)$ </th>
-                </tr>
 <?php
                 for($i=$n;$i>0;$i--){
 ?>  
-                    <td>
+                   
                         <input type="text" id="<?='a'.$i?>"
                                onchange="bieuthuc('<?='a'.$i?>')" 
                                onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
                                value="<?=$a[$i]?>" class="matran" 
                                placeholder="a[<?php echo $i;?>]" 
                                name="a[<?php echo $i;?>]"> $x^{<?=$i?>}+$
-                    </td>
+                   
 <?php
                 }
 ?>
-                    <td>
+                    
                         <input type="text" id="<?='a'.$i?>"
                                onchange="bieuthuc('<?='a'.$i?>')" 
                                onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
                                value="<?=$a[$i]?>" class="matran" 
                                placeholder="a[<?php echo $i;?>]" 
                                name="a[<?php echo $i;?>]"> $x^{<?=$i?>}$
-                    </td>
-            </table>
+                  
 <?php
             if($ladathuc==1){
                 echo '<h5 class="text-danger ketqua"><b>'
@@ -66,14 +62,16 @@ $this->title = 'Ứng dụng toán';
     </div>
     <input type="hidden" name="n" class="text-warning"  value="<?=$n?>">
     <div class="row cachtren">
-        <div class="col-lg-2 text-center">
+        <div class="col-lg-12 text-center">
+            <span>Số mũ </span> <input type="text" id="somu" placeholder="Số mũ ..." name="somu" value="<?=$somu?>">
+        </div>
+        <div class="col-lg-12 text-center">
             <button type="submit" class="btn btn-danger ">Thực hiện tính</button>
         </div>
-        <div class="col-lg-2 text-center">
-            <input type="text" id="somu" placeholder="Số mũ ..." name="somu" value="<?=$somu?>">
-        </div>
+        
     </div>
-    
+</form>
+</div>
 <?php
     if($ladathuc==2){
                 echo '<h5 class="text-danger ketqua"><b>'
@@ -85,12 +83,15 @@ $this->title = 'Ứng dụng toán';
 ?>
     $$
     \text{Đa thức ban đầu}\\
-    A(x) = <?=$this->render('dathuccon',[
+    <?=$this->render('dathuccon',[
            'sobac'=>$n,
             'a'=>$a,
         ]);?> \\
     \text{Kết quả}\\
-    A^{<?=$somu?>}(x)=<?=$this->render('dathuccon',[
+    (<?=$this->render('dathuccon',[
+           'sobac'=>$n,
+            'a'=>$a,
+        ]);?> )^{<?=$somu?>}=<?=$this->render('dathuccon',[
            'sobac'=>$n_luythua,
             'a'=>$a_luythua,
         ]);?> \\

@@ -73,3 +73,11 @@ if($url=='/matran/markov'){
     </p>
 <?php
 }
+if($url=='/dathuc/luythuadathuc'||$url=='/dathuc/nhanhaidathuc'||$url=='/dathuc/chiadachodathuc'){
+?>
+    <h2>Ứng dụng toán</h2>
+    Phục vụ cho việc tính toán hoặc kiểm tra kết quả của phép tính toán của bạn.<br>
+    Các hệ số tính toán được đều dướ dạng số thập phân.
+    
+<?php
+}
