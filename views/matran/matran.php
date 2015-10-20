@@ -59,12 +59,13 @@ $this->title = 'Ứng dụng toán';
         <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
 
         <div class="row giaihe cachtren">
-            <div class="col-lg-2 text-center">
-                <button type="submit" class="btn btn-success " >Thực hiện tính</button>
-            </div>
-            <div class="col-lg-3 text-center">
+            <div class="col-lg-12 text-center">
                 Số mũ = <input type="text" name="somu" class="matran"  value="<?=$somu?>">
             </div>
+            <div class="col-lg-12 text-center">
+                <button type="submit" class="btn btn-danger " >Thực hiện tính</button>
+            </div>
+            
             <div class="col-lg-4 text-center">
                 <?php if($luythuaduoc==0){
                     echo '<h5 class="text-danger ketqua"><b>Không thực hiện được phép lũy thừa vì ma trận không khả nghịch</b></h5>';

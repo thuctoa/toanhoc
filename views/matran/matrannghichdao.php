@@ -60,8 +60,8 @@ if($sobac>0){
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
     
     <div class="row giaihe cachtren">
-        <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-success ">Thực hiện tính</button>
+        <div class="col-lg-12 text-center">
+            <button type="submit" class="btn btn-danger ">Thực hiện tính</button>
         </div>
         <div class="col-lg-2 text-center">
              <input type="hidden" name="somu" class="matran"  value="-1">

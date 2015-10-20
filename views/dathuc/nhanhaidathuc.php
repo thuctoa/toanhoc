@@ -106,7 +106,7 @@ $this->title = 'Ứng dụng toán';
     <input type="hidden" name="n2" class="text-warning"  value="<?=$n2?>">
     <div class="row cachtren">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-success ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-danger ">Thực hiện tính</button>
         </div>
     </div>
 <?php

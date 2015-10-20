@@ -25,7 +25,7 @@ $this->title = 'Ứng dụng toán';
 if($soan>0){
 ?>
 <form action="/matran/index" method="post">
-    <table>
+    <table class="hephuongtrinh">
         <?php
             for($i=0;$i<$soan;$i++){
                 echo "<tr>";
@@ -76,8 +76,8 @@ if($soan>0){
     
     <input type="hidden" name="soan" class="text-warning"  value="<?=$soan?>">
         <div class="row giaihe cachtren">
-            <div class="col-lg-2 text-center">
-                <button type="submit" class="btn btn-success ">Giải hệ</button>
+            <div class="col-lg-12 text-center">
+                <button type="submit" class="btn btn-danger ">Giải hệ</button>
             </div>
             <div class="col-lg-8 mketqua">
                 <?php
@@ -212,4 +212,3 @@ if($soan>0){
     <?php
     }
     ?>
-</html>

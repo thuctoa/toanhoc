@@ -26,7 +26,7 @@ $this->title = 'Ứng dụng toán';
 <?php 
 if($sobac>0){
 ?>
-<form action="/dathuc/index" method="post">
+<form action="/dathuc/index" class="bieuthuc-dathuc text-center" method="post">
     
     <?php
         for($i=$sobac;$i>0;$i--){
@@ -84,8 +84,8 @@ if($sobac>0){
     <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
 
     <div class="row " style="margin-top: 30px;">
-        <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-success " >Tìm nghiệm</button>
+        <div class="col-lg-12 text-center">
+            <button type="submit" class="btn btn-danger " >Tìm nghiệm</button>
         </div>
         <div class="col-lg-4 text-center">
             <?php if($conghiem==0){
