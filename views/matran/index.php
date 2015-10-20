@@ -3,7 +3,7 @@
 $this->title = 'Ứng dụng toán';
 ?>
 <h1 class="tieude">
-            Giải Hệ Phương Trình 
+            Giải Hệ Phương Trình - Online
 </h1>
 
 <div class="cachtren"></div>

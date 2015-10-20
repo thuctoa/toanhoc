@@ -5,7 +5,7 @@ $this->title = 'Ứng dụng toán';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <h1 class="tieude">
-        Giải Phương Trình
+        Giải Phương Trình - Online
 </h1>
 <div class="cachtren"></div>
  <form action="/dathuc/index" method="post">

@@ -4,7 +4,7 @@ use yii\helpers\Html;
 $this->title = 'Ứng dụng toán';
 ?>
 <h1 class="tieude">
-    Lũy Thừa Ma Trận
+    Lũy Thừa Ma Trận - Online
 </h1>
 <div class="cachtren"></div>
 <div onload="giannonhap();">
