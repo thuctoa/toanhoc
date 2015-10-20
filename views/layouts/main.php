@@ -40,7 +40,12 @@ AppAsset::register($this);
     </script>
 <?php $this->beginBody() ?>
     <div class="wrap">
+        
+        <div class="row">
+            <h1 class="tieude text-center "> Ứng Dụng Toán</h1>
+        </div>
         <div class="row noidung">
+            
             <div class="col-lg-2 menutrai">
                 
                 <?php  
@@ -91,7 +96,6 @@ AppAsset::register($this);
             </div>
         </div>
     </div>
-
     <footer class="footer">
          <?php
            NavBar::begin([

@@ -3,8 +3,8 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<h1 class="tieude">Đề tài 6 - Nhóm 3</h1>
-
+<h1 class="text-center">Đề tài 6 - Nhóm 3</h1>
+<div class="cachtren"></div>
 <form action="/matran/markov" method="post">
     <div class="row">
         <div class="col-lg-9">

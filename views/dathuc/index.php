@@ -4,12 +4,10 @@ use yii\helpers\Html;
 $this->title = 'Ứng dụng toán';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1 class="tieude">
-    <span class="pagerank">Ứng dụng toán </span>
-        Giải phương trình
-    <span class="pagerank"> Ứng dụng toán</span>
+<h1 >
+        Ứng dụng toán - Giải phương trình
 </h1>
-
+<div class="cachtren"></div>
  <form action="/dathuc/index" method="post">
      <div class="row">
         <div class="col-lg-9">

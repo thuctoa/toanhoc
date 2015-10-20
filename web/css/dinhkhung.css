@@ -13,10 +13,8 @@
     color: white;
     text-align: center;
     padding: 3px;
-    margin-bottom: 20px;
-    margin-right:  -15px;
-    margin-left: -15px;
     font-weight: bold;
+    margin-top: 0px;
 }
 .huongdan-tieude{
     background:  #095C66;
@@ -26,16 +24,12 @@
     margin-bottom: 20px;
     margin-right:  -15px;
     margin-left: -15px;
-     margin-top: 0px;
+    margin-top: 0px;
 }
 .prhuongdan{
     
     color: #095C66;
     font-size: 10px;
-}
-h1{
-       font-size: 26px;
-       margin-top: 1px;
 }
 .so_n{
     width: 60px;
@@ -53,9 +47,6 @@ h1{
     padding: 0px;
     margin: 0px;
 }
-h1{
-    margin-bottom: 10px;
-}
 .cachtren{
     margin-top: 50px;
 }
@@ -71,7 +62,7 @@ h1{
     border-top:  1px solid black;
 }
 .huongdan-head{
-    margin-top: 50px;
+    margin-top: 300px;
 }
 a{
     color: black;

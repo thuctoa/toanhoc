@@ -3,11 +3,9 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 ?>
-<h4 class="huongdan-tieude">
-    <span class="prhuongdan">Ứng dụng toán </span>
-        Ví dụ cụ thể 
-    <span class="prhuongdan"> Ứng dụng toán </span>
-</h4>
+<h2 class="huongdan-tieude">
+    Ứng dụng toán - Ví dụ cụ thể 
+</h2>
 <?php
 $url= Url::to();
 if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
