@@ -139,7 +139,7 @@ if($url=='/dathuc/chiadachodathuc'){
 }
 if($url=='/matran/index'||$url=='/matrans'){
 ?>
-    Ví dụ ta có hệ phương trình tuyến tính 3 ẩn 3 phương trình như sau
+    <b> Ví dụ ta có hệ phương trình tuyến tính 3 ẩn 3 phương trình như sau</b>
     $$
         \begin{cases}
             x + 2y + 3z   = 6 \\
@@ -158,13 +158,13 @@ if($url=='/matran/index'||$url=='/matrans'){
         a_{20}= 3& a_{21}= -2& a_{22}= 1& b_2  = 0\\
         \hline
     \end{array}
-    Nghiệm giải được là
+    <b> Nghiệm giải được là </b>
         \begin{cases}
             x =x_0   = 0.625 \\
             y =x_1  = 1.375 \\
             z =x_2  = 0.875 \\
         \end{cases} 
-    Hình ảnh
+    <b> Hình ảnh </b>
     <?= Html::img('@web/img/huongdan/matran-hephuongtrinh.png',['width'=>'100%']) ?>
 <?php
 }
