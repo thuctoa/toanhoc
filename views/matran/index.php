@@ -3,7 +3,9 @@
 $this->title = 'Ứng dụng toán';
 ?>
 <h1 class="tieude">
-     Ứng Dụng Toán - Giải Hệ Phương Trình 
+        <span class="pagerank"> Ứng dụng toán </span>
+            Giải Hệ Phương Trình 
+        <span class="pagerank"> Ứng dụng toán </span>
 </h1>
 
 <div class="cachtren"></div>
