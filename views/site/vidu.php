@@ -29,7 +29,7 @@ if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
             \end{cases}
         $
     </p>
-    <h3><b>Hình ảnh của  Ứng Dụng Toán: </b> </h3>
+    <h3><b>Hình ảnh của ứng dụng toán: </b> </h3>
 <?php
         echo Html::img('@web/img/huongdan/phuongtrinh.png',['width'=>'100%']) ;
     
@@ -97,7 +97,7 @@ if($url=='/dathuc/luythuadathuc'){
     $$
         (x^2 + 2x + 3)^3 =x^6+6x^5+21x^4+44x^3+63x^2+54^x+27
     $$
-    <h3 >Hình ảnh của  Ứng Dụng Toán </h3>
+    <h3 >Hình ảnh của ứng dụng toán </h3>
     <?= Html::img('@web/img/huongdan/dathuc-luythua.png',['width'=>'100%']) ?>
 <?php
 }
@@ -115,7 +115,7 @@ if($url=='/dathuc/nhanhaidathuc'){
     $$
         (2x^3+3x^2+3x+2)(3x^2+2x+1)=6x^5+13x^4+17x^3+15x^2+7x+2
     $$
-    <h3>Hình ảnh của  Ứng Dụng Toán</h3>
+    <h3>Hình ảnh của ứng dụng toán</h3>
     <?= Html::img('@web/img/huongdan/dathuc-nhan.png',['width'=>'100%']) ?>
 <?php
 }
@@ -133,7 +133,7 @@ if($url=='/dathuc/chiadachodathuc'){
     $$
        \frac{2x^4+5x^3+2x+3}{x^2+2x+2} =2x^2+x−6+\frac{12x+15}{x^2+2x+2}
     $$
-    <h3>Hình ảnh của  Ứng Dụng Toán </h3>
+    <h3>Hình ảnh của ứng dụng toán </h3>
     <?= Html::img('@web/img/huongdan/dathuc-chia.png',['width'=>'100%']) ?>
 <?php
 }
@@ -164,7 +164,7 @@ if($url=='/matran/index'||$url=='/matrans'){
             y =x_1  = 1.375 \\
             z =x_2  = 0.875 \\
         \end{cases} 
-    <h3> Hình ảnh của  Ứng Dụng Toán </h3>
+    <h3> Hình ảnh của ứng dụng toán </h3>
     <?= Html::img('@web/img/huongdan/matran-hephuongtrinh.png',['width'=>'100%']) ?>
 <?php
 }

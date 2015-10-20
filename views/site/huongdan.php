@@ -13,7 +13,7 @@ use yii\helpers\Url;
 $url= Url::to();
 if($url!='/matran/markov'){
 ?>
-<h3><b> Ứng Dụng toán - Nhắc lại </b></h3>
+<h3><b> Ứng dụng toán - Nhắc lại </b></h3>
 <?php
     }else{
 ?>
