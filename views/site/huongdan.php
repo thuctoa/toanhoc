@@ -4,9 +4,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 ?>
 <h2 class="huongdan-tieude">
-    <span class="prhuongdan"> Ứng dụng toán </span>
         Lưu ý nhỏ
-    <span class="prhuongdan"> Ứng dụng toán </span>
 </h2>
 
 <?php

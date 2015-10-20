@@ -4,7 +4,7 @@ use yii\helpers\Html;
 $this->title = 'Ứng dụng toán';
 ?>
 <h1 class="tieude">
-     Ứng Dụng Toán - Ma Trận Nghịch Đảo
+     Ma Trận Nghịch Đảo
 </h1>
 <div class="cachtren"></div>
 <form action="/matran/matrannghichdao" method="post">
