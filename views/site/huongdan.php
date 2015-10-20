@@ -11,7 +11,7 @@ use yii\helpers\Url;
 $url= Url::to();
 if($url!='/matran/markov'){
 ?>
-<h3><b> Một vài lưu ý của Ứng dụng toán</b></h3>
+<h3><b> Ứng dụng toán xin có một vài lưu ý nhỏ </b></h3>
 <?php
     }else{
 ?>
