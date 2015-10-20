@@ -24,6 +24,9 @@ if($soan>0){
 ?>
 <form action="/matran/index" method="post">
     <table class="hephuongtrinh">
+        <tr>
+            <th colspan="<?=$soan+1?>" class="text-center">Nhập vào các hệ số của hệ phương trình</th>
+        </tr>
         <?php
             for($i=0;$i<$soan;$i++){
                 echo "<tr>";
