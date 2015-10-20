@@ -151,7 +151,7 @@ if($url=='/matran/index'||$url=='/matrans'){
     
     \begin{array}{|c|c|c|}
         \hline
-        aa_{00}= 1 & a_{01}= 2 & a_{02}= 3 & b_0  = 6 \\
+        a_{00}= 1 & a_{01}= 2 & a_{02}= 3 & b_0  = 6 \\
         \hline
         a_{10}= -3 & a_{11}= 1& a_{12}= 4& b_1  = 3\\
         \hline
