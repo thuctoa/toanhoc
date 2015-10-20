@@ -115,3 +115,6 @@ a{
 .wrap{
     margin-bottom: 40px;
 }
+.navbar-nav > li > a {
+    color: white;
+}
