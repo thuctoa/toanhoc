@@ -21,6 +21,7 @@
     padding: 3px;
     font-weight: bold;
     margin-top: 0px;
+    
 }
 .huongdan-tieude{
     background:  #095C66;
@@ -73,7 +74,7 @@
 a{
     color: black;
 }
-li{
+.nav-pills > li > a {
     border: 1px solid #EEE;
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
@@ -99,4 +100,18 @@ li{
 }
 .noidung{
     margin-top: 50px;
+    
+}
+.logo{
+    margin-top: -15px;
+}
+.container {
+    min-height: 100px; 
+}
+.breadcrumb{
+    background: rgba(10,10,10,0.5);
+    color: white;
+}
+.wrap{
+    margin-bottom: 40px;
 }
