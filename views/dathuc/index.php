@@ -4,6 +4,7 @@ use yii\helpers\Html;
 $this->title = 'Ứng dụng toán';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
+<h2>Ứng dụng toán dựa trên sức mạnh của máy tính </h2>
 <h1 >
         Ứng dụng toán - Giải phương trình
 </h1>
