@@ -83,7 +83,7 @@ if($url=='/dathuc/luythuadathuc'||$url=='/dathuc/nhanhaidathuc'||$url=='/dathuc/
 }
 if($url=='/matran/index'||$url=='/matrans'){
 ?>
-    <p><b> Nhắc lại </b></p>
+    <h2><b> Ứng dụng toán - nhắc lại </b></h2>
     Hệ phương trình tuyến tính n ẩn n phương trình luôn có dạng 
     $$
         Ax=B
