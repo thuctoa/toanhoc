@@ -24,7 +24,7 @@
     
 }
 .huongdan-tieude{
-    background:  #095C66;
+    background: rgba(10,10,40,0.7); // #095C66;
     color: white;
     text-align: center;
     padding: 3px;
@@ -64,12 +64,12 @@
 .huongdan{
     min-height: 50vh;
     margin-top: 30px;
-    border-left: 1px solid black;
+    border-left: 1px solid rgba(10,10,40,0.7);
     //border-right: 1px solid black;
-    border-top:  1px solid black;
+    border-top:  1px solid rgba(10,10,40,0.7);
 }
 .huongdan-head{
-    margin-top: 200px;
+    margin-top: 50px;
 }
 a{
     color: black;
