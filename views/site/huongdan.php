@@ -8,7 +8,7 @@ use yii\helpers\Url;
         Lưu ý nhỏ
     <span class="prhuongdan"> Ứng dụng toán </span>
 </h2>
-<h2><b> Ứng dụng toán - lưu ý </b></h2>
+<h2><b> Nhắc lại </b></h2>
 <?php
 $url= Url::to();
 if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){

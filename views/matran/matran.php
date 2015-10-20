@@ -4,9 +4,7 @@ use yii\helpers\Html;
 $this->title = 'Ứng dụng toán';
 ?>
 <h1 class="tieude">
-    <span class="pagerank"> Ứng dụng toán </span>
-        Lũy thừa ma trận
-    <span class="pagerank"> Ứng dụng toán </span>
+     Ứng Dụng Toán - Lũy Thừa Ma Trận
 </h1>
 <div class="cachtren"></div>
 <div onload="giannonhap();">
