@@ -137,4 +137,35 @@ if($url=='/dathuc/chiadachodathuc'){
     <?= Html::img('@web/img/huongdan/dathuc-chia.png',['width'=>'100%']) ?>
 <?php
 }
+if($url=='/matran/index'||$url=='/matrans'){
+?>
+    Ví dụ ta có hệ phương trình tuyến tính 3 ẩn 3 phương trình như sau
+    $$
+        \begin{cases}
+            1x + 2y + 3z   = 6 \\
+            -3x + 1y + 4z  = 3 \\
+            3x  -2y + 1z  = 0 \\
+        \end{cases} 
+    $$
+    Ở đây các hệ số là
+    
+    \begin{array}{|c|c|c|}
+        \hline
+        aa_{00}= 1 & a_{01}= 2 & a_{02}= 3 & b_0  = 6 \\
+        \hline
+        a_{00}= -3 & a_{01}= 1& a_{02}= 4& b_0  = 3\\
+        \hline
+        a_{00}= 3& a_{01}= -2& a_{02}= 1& b_0  = 0\\
+        \hline
+    \end{array}
+    Nghiệm giải được là
+        \begin{cases}
+            x =x_0   = 0.625 \\
+            y =x_1  = 1.375 \\
+            z =x_2  = 0.875 \\
+        \end{cases} 
+    Hình ảnh
+    <?= Html::img('@web/img/huongdan/matran-hephuongtrinh.png',['width'=>'100%']) ?>
+<?php
+}
 

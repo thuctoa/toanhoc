@@ -81,3 +81,61 @@ if($url=='/dathuc/luythuadathuc'||$url=='/dathuc/nhanhaidathuc'||$url=='/dathuc/
     
 <?php
 }
+if($url=='/matran/index'||$url=='/matrans'){
+?>
+    Hệ phương trình tuyến tính n ẩn n phương trình luôn có dạng 
+    $$
+        Ax=B
+    $$
+    <p>Trong đó A là một ma trận vuông cấp n gồm các hệ số $a_{ij}$, B là một ma trận cột
+        bao gồm các hệ số $b_i$.</p>
+    Ở dạng tường minh 
+    $$
+       \begin{pmatrix}
+            a_{00} & a_{01} & \cdots & a_{0(n-1)} \\
+            a_{10} & a_{11} & \cdots & a_{1(n-1)} \\
+            \vdots & \vdots & \ddots & \vdots \\
+            a_{(n-1)0} & a_{(n-1)1} & \cdots & a_{(n-1)(n-1)} \\
+            \end{pmatrix}
+         \begin{pmatrix}
+            x_{0} \\
+            x_{1} \\
+            \vdots\\
+            x_{(n-1)}\\
+            \end{pmatrix}    
+        = \begin{pmatrix}
+            b_{0} \\
+            b_{1} \\
+            \vdots\\
+            b_{(n-1)}\\
+            \end{pmatrix}
+    $$
+    $\Leftrightarrow$
+    $$
+        \begin{cases}
+            a_{00}x_0 + a_{01}x_1 + \cdots + a_{0(n-1)}x_{n-1} = b_0\\
+            a_{10}x_0 + a_{11}x_1 + \cdots + a_{0(n-1)}x_{n-1} = b_1\\
+            \vdots  \\
+            a_{(n-1)0}x_0 + a_{(n-1)1}x_1 + \cdots + a_{(n-1)(n-1)}x_{n-1} = b_{n-1}\\
+        \end{cases}
+        
+    $$
+    Nếu ở phổ thông ta hay gặp các hệ 2 ẩn
+    $$
+        \begin{cases}
+            a_1x + b_1y   = c_1 \\
+            a_2x + b_2y   = c_2 \\
+        \end{cases} 
+    $$
+    hoặc 3 ấn số 
+    $$
+        \begin{cases}
+            a_1x + b_1y + c_1z   = d_1 \\
+            a_2x + b_2y + c_2z  = d_2 \\
+            a_3x + b_3y + c_3z  = d_3 \\
+        \end{cases} 
+    $$
+    Thì ta cũng coi như các hệ số $a_i, b_i, c_i, d_i$ cũng như các hệ số 
+    $a_{ij}, b_i$ như dạng tổng quát để giải.
+<?php
+}
