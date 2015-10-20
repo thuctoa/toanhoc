@@ -8,11 +8,22 @@ use yii\helpers\Url;
         Lưu ý nhỏ
     <span class="prhuongdan"> Ứng dụng toán </span>
 </h2>
-<h2><b> Nhắc lại </b></h2>
+
 <?php
 $url= Url::to();
-if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
+if($url!='/matran/markov'){
 ?>
+<h3><b> Ứng Dụng toán - Nhắc lại </b></h3>
+<?php
+    }else{
+?>
+    <h3><b> Lý thuyết </b></h3>
+<?php 
+    }
+if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
+    
+?>
+
     $
         \text{Phương có trình có dạng}\\
         a_nx^n + a_{n-1}x^{n-1} + ... + a_1x + a_0 = 0\\
