@@ -4,7 +4,7 @@ use yii\helpers\Html;
 $this->title = 'Ứng dụng toán';
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
-<h1 class="tieude">
+<h1 class="tieude ">
         Giải Phương Trình
 </h1>
 <div class="cachtren"></div>

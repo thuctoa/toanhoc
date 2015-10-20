@@ -53,7 +53,7 @@ AppAsset::register($this);
                         ];
                 
                 echo Nav::widget([
-                    'options' => ['class' => 'nav nav-pills nav-stacked'],
+                    'options' => ['class' => ' nav nav-pills nav-stacked '],
                     'items' => $items,
                 ]);?>
             </div>
@@ -61,7 +61,6 @@ AppAsset::register($this);
                  <?= $content ?>
             </div>
             <div class="col-lg-2 menuphai">
-                
                 <?php  
                 $items = [
                             ['label' => 'Giải phương trình', 'url' => ['/dathuc/index']],
@@ -71,7 +70,7 @@ AppAsset::register($this);
                         ];
                 
                 echo Nav::widget([
-                    'options' => ['class' => 'nav nav-pills nav-stacked'],
+                    'options' => ['class' => 'nav nav-pills nav-stacked '],
                     'items' => $items,
                 ]);?>
             </div>

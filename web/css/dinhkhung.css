@@ -1,4 +1,5 @@
 .menutrai{
+    
     border: 1px solid #EEE;
 }
 .menuphai{
@@ -9,6 +10,11 @@
     
 }
 .tieude{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
     background: rgba(0,0,0,0.8);
     color: white;
     text-align: center;
@@ -90,4 +96,7 @@ li{
 #somu{
     width: 50px;
     margin-bottom: 10px;
+}
+.noidung{
+    margin-top: 50px;
 }
