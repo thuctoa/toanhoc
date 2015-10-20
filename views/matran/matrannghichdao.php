@@ -3,8 +3,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<h1>
-    Ứng dụng toán - Nghịch đảo ma trận
+<h1 class="tieude">
+    <span class="pagerank"> Ứng dụng toán </span>
+        Ma trận nghịch đảo
+    <span class="pagerank"> Ứng dụng toán </span>
 </h1>
 <div class="cachtren"></div>
 <form action="/matran/matrannghichdao" method="post">

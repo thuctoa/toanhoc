@@ -4,7 +4,9 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 ?>
 <h2 class="huongdan-tieude">
-    Ứng dụng toán - Lưu ý nhỏ
+    <span class="prhuongdan"> Ứng dụng toán </span>
+        Lưu ý nhỏ
+    <span class="prhuongdan"> Ứng dụng toán </span>
 </h2>
 <?php
 $url= Url::to();

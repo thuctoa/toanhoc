@@ -2,9 +2,12 @@
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<h1 >
-Ứng dụng toán - Giải hệ phương trình
+<h1 class="tieude">
+    <span class="pagerank"> Ứng dụng toán </span>
+        Giải hệ phương trình 
+    <span class="pagerank"> Ứng dụng toán </span>
 </h1>
+
 <div class="cachtren"></div>
 <form action="/matran/index" method="post">
     <div class="row">

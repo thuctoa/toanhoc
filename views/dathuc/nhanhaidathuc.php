@@ -3,8 +3,10 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 $this->title = 'Ứng dụng toán';
 ?>
-<h1 >
-    Ứng dụng toán - Nhân hai đa thức với nhau
+<h1 class="tieude">
+    <span class="pagerank"> Ứng dụng toán </span>
+        Nhân đa thức với đa thức
+    <span class="pagerank"> Ứng dụng toán </span>
 </h1>
 <div class="cachtren"></div>
 <form action="/dathuc/nhanhaidathuc" method="post">
