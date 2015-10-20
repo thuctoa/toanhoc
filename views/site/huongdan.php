@@ -4,7 +4,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 ?>
 <h2 class="huongdan-tieude">
-        Lưu ý nhỏ
+        Lưu Ý
 </h2>
 
 <?php

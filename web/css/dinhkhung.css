@@ -21,7 +21,7 @@
     padding: 3px;
     font-weight: bold;
     margin-top: 0px;
-    
+    font-size: 25px;
 }
 .huongdan-tieude{
     background: rgba(10,10,40,0.7); // #095C66;
@@ -32,6 +32,7 @@
     margin-right:  -15px;
     margin-left: -15px;
     margin-top: 0px;
+    font-size: 20px;
 }
 .prhuongdan{
     
@@ -117,4 +118,7 @@ a{
 }
 .navbar-nav > li > a {
     color: white;
+}
+body{
+    font-family: Verdana, Arial, Helvetica, sans-serif;
 }

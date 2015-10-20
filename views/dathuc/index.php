@@ -25,7 +25,7 @@ $this->title = 'Ứng dụng toán';
 if($sobac>0){
 ?>
 <form action="/dathuc/index" class="bieuthuc-dathuc text-center" method="post">
-    <p>Nhập vào các hệ số của phương trình</p>
+    <p><b>Nhập vào các hệ số của phương trình</b></p><br>
     <?php
         for($i=$sobac;$i>0;$i--){
             if($i!=1){

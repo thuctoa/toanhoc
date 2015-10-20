@@ -24,7 +24,7 @@ $this->title = 'Ứng dụng toán';
 <div class="cachtren bieuthuc-dathuc text-center">
 <form action="/dathuc/luythuadathuc" method="post">
     <div class="row">
-        <p>Nhập vào các hệ số của đa thức</p>
+        <p><b>Nhập vào các hệ số của đa thức </b></p><br>
         <div class="col-lg-12">
 <?php
                 for($i=$n;$i>0;$i--){

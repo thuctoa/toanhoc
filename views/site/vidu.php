@@ -4,7 +4,7 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 ?>
 <h2 class="huongdan-tieude">
-        Ví dụ cụ thể
+        Ví Dụ
 </h2>
 <?php
 $url= Url::to();
