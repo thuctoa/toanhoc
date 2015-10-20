@@ -64,7 +64,7 @@
 .huongdan{
     min-height: 50vh;
     margin-top: 30px;
-    border-left: 1px solid rgba(10,10,40,0.7);
+    border-left: 1px solid rgba(0,0,0,0.8);
     //border-right: 1px solid black;
     border-top:  1px solid rgba(10,10,40,0.7);
 }
