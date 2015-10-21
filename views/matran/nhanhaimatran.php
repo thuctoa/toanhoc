@@ -10,13 +10,13 @@ $this->title = 'Ứng dụng toán';
 <form action="/matran/nhanhaimatran" method="post">
     <div class="row">
         <div class="col-lg-9">
-           <b> Số hàng của ma trận A là 
-            <input type="text" class="so_n" placeholder="m =..." name="ma" value="<?=$ma?>">
-            , số cột <input class="so_n" type="text"value="<?=$na?>" placeholder="n =..." id="na" name="na" onchange="dongcuamatranb();" ><br>
-            Số hàng của ma trận B là 
-            <input type="text" class="so_n" value="<?=$mb?>" id="mb" onchange="dongcuamatrana();" placeholder="m =..." name="mb" >
-            , số cột <input class="so_n" type="text" placeholder="n =..." name="nb"  value="<?=$nb?>">
-           </b>
+           <b> Số hàng của ma trận A là </b>
+            <input type="text" class="so_n" placeholder="m = .." name="ma" value="<?=$ma?>">
+            <b>, số cột</b> <input class="so_n" type="text"value="<?=$na?>" placeholder="n = .." id="na" name="na" onchange="dongcuamatranb();" ><br>
+           <b> Số hàng của ma trận B là </b>
+            <input type="text" class="so_n" value="<?=$mb?>" id="mb" onchange="dongcuamatrana();" placeholder="m = .." name="mb" >
+           <b> , số cột </b><input class="so_n" type="text" placeholder="n = .." name="nb"  value="<?=$nb?>">
+           
         </div>
         <div class="col-lg-3 pheptinhmoi">
             <button type="submit" class="btn btn-default">Nhân hai ma trận mới</button>

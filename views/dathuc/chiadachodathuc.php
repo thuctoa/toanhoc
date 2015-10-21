@@ -10,13 +10,13 @@ $this->title = 'Ứng dụng toán';
 <form action="/dathuc/chiadachodathuc" method="post">
     <div class="row">
         <div class="col-lg-9">
-          <b>  Số bậc của đa thức bị chia $A(x)$ là 
-            <input type="text" id="n1" class="so_n" placeholder="n =..." name="n1" value="<?=$n1?>">
+          <b>  Số bậc của đa thức bị chia $A(x)$ là </b>
+            <input type="text" id="n1" class="so_n" placeholder="n = .." name="n1" value="<?=$n1?>">
 
-            <br> Số bậc của đa thức chia $B(x)$ là 
+          <b>  <br> Số bậc của đa thức chia $B(x)$ là &nbsp;&nbsp;&nbsp;</b>
             <input type="text" value="<?=$n2?>" id="n2"
-                    class="so_n" placeholder="n =..." name="n2" >
-          </b>
+                    class="so_n" placeholder="n = .." name="n2" >
+          
         </div>
         <div class="col-lg-3 pheptinhmoi">
             <button type="submit" id="nhanhaidathuc"  class="btn btn-default">Chia đa thức mới</button>

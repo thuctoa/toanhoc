@@ -10,12 +10,12 @@ $this->title = 'Ứng dụng toán';
 <form action="/dathuc/nhanhaidathuc" method="post">
     <div class="row">
         <div class="col-lg-9">
-            <b>  Số bậc của đa thức $A(x)$ là <input type="text" id="n1" class="so_n" placeholder ="n =..." name="n1" value="<?=$n1?>">
+            <b>  Số bậc của đa thức $A(x)$ là </b> <input type="text" id="n1" class="so_n" placeholder ="n = .." name="n1" value="<?=$n1?>">
 
-                , Số bậc của đa thức $B(x)$ là <input class="so_n" 
+               <b>  , Số bậc của đa thức $B(x)$ là </b><input class="so_n" 
                         type="text" value="<?=$n2?>" id="n2"
-                                                  placeholder="n =..." name="n2" >
-            </b>
+                                                  placeholder="n = .." name="n2" >
+            
         </div>
         <div class="col-lg-3 pheptinhmoi">
             <button type="submit" id="nhanhaidathuc"  class="btn btn-default">Nhân đa thức mới</button>

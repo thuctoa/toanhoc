@@ -13,7 +13,7 @@ $this->title = 'Ứng dụng toán';
         <div class="col-lg-9">
             <b> Số bậc của phương trình là</b> 
             <input class="so_n" 
-                id ="nghiemdathuc" type="text" placeholder="n =..." name="sobac" value="<?=$sobac?>">
+                id ="nghiemdathuc" type="text" placeholder="n = .." name="sobac" value="<?=$sobac?>">
         </div>
          <input type="hidden" name="huongdan" class="text-warning"  value="dahuongdan">
          <div class="col-lg-3 pheptinhmoi">

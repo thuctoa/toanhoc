@@ -11,7 +11,7 @@ $this->title = 'Ứng dụng toán';
     <div class="row">
         <div class="col-lg-9">
             <b>Số ẩn, số phương trình là </b>
-            <input id="soan" type="text" name="soan" class="so_n" placeholder="n =..." value="<?=$soan?>">
+            <input id="soan" type="text" name="soan" class="so_n" placeholder="n = .." value="<?=$soan?>">
         </div>
         <div class="col-lg-3 pheptinhmoi">
             <button type="submit" class="btn btn-default">Giải hệ mới</button>
