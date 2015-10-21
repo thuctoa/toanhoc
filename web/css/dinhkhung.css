@@ -134,7 +134,7 @@ body{
 .noidung{
     margin-left: 16.7%;
     border-style: inset;
-    border-width: medium;
+    border-width: thick;
     padding-bottom: 100px;
     background: rgba(0,0,0,0.8);
     color: white;
