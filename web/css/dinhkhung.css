@@ -136,7 +136,7 @@ body{
     background: rgba(0,0,0,0.8);
     color: white;
     max-height: 100vh;
-    max-width: 130vh;
+    max-width: 900px;
     overflow: scroll;
 }
 .noidung-dau{
