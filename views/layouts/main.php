@@ -40,7 +40,7 @@ AppAsset::register($this);
     </script>
 <?php $this->beginBody() ?>
     <div class="wrap">
-        <div class="row ">
+        <div class="row noidung-dau">
             <div class="col-lg-2 menutrai">
                 
                 <?php  
@@ -76,6 +76,7 @@ AppAsset::register($this);
                 ]);?>
             </div>
         </div>
+        <div class="huongdan-dau"></div>
         <div class="row huongdan-head">
             <div class="col-lg-2"></div>
             <div class="col-lg-8 huongdan">
