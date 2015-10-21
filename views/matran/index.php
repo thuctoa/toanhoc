@@ -10,7 +10,7 @@ $this->title = 'Ứng dụng toán';
 <form action="/matran/index" method="post">
     <div class="row">
         <div class="col-lg-9">
-            Số ẩn, số phương trình là 
+            <b>Số ẩn, số phương trình là </b>
             <input id="soan" type="text" name="soan" class="so_n" placeholder="n =..." value="<?=$soan?>">
         </div>
         <div class="col-lg-3 pheptinhmoi">

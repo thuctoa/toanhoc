@@ -11,7 +11,7 @@ $this->title = 'Ứng dụng toán';
  <form action="/dathuc/index" method="post">
      <div class="row">
         <div class="col-lg-9">
-            Số bậc của phương trình là 
+            <b> Số bậc của phương trình là</b> 
             <input class="so_n" 
                 id ="nghiemdathuc" type="text" placeholder="n =..." name="sobac" value="<?=$sobac?>">
         </div>

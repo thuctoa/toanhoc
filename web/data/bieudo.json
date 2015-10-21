@@ -32,9 +32,6 @@
         },{
             "id" : "class2",
             "type" : "owl:Class"
-        },{
-            "id" : "class3",
-            "type" : "owl:Class"
         }
     ],"classAttribute" : [
         {
@@ -60,19 +57,30 @@
               "undefined" : "2"},
             "instances" : 0
         }
-        ,
-        {
-           "id" : "class3",
-            "label" : {
-              "IRI-based" : "Concept",
-              "undefined" : "3"},
-            "instances" : 0
-        }
     ],"propertyAttribute" : [{
             "id" : "property0",
                         "label" : {
               "IRI-based" : "focus",
-              "undefined" : "0.5"
+              "undefined" : "0.2"
+            },
+            "comment" : {
+              "undefined" : "Bieu do trang thai."
+            },
+            "annotations" : {
+              "term_status" : [ {
+                "identifier" : "term_status",
+                "language" : "undefined",
+                "value" : "testing",
+                "type" : "label"
+              } ]
+            },
+            "domain" : "class0",
+            "range" : "class0"
+        },{
+            "id" : "property1",
+                        "label" : {
+              "IRI-based" : "focus",
+              "undefined" : "0.3"
             },
             "comment" : {
               "undefined" : "Bieu do trang thai."
@@ -88,7 +96,7 @@
             "domain" : "class0",
             "range" : "class1"
         },{
-            "id" : "property1",
+            "id" : "property2",
                         "label" : {
               "IRI-based" : "focus",
               "undefined" : "0.5"
@@ -105,25 +113,6 @@
               } ]
             },
             "domain" : "class0",
-            "range" : "class3"
-        },{
-            "id" : "property2",
-                        "label" : {
-              "IRI-based" : "focus",
-              "undefined" : "1"
-            },
-            "comment" : {
-              "undefined" : "Bieu do trang thai."
-            },
-            "annotations" : {
-              "term_status" : [ {
-                "identifier" : "term_status",
-                "language" : "undefined",
-                "value" : "testing",
-                "type" : "label"
-              } ]
-            },
-            "domain" : "class1",
             "range" : "class2"
         },{
             "id" : "property3",
@@ -142,32 +131,13 @@
                 "type" : "label"
               } ]
             },
-            "domain" : "class2",
-            "range" : "class3"
-        },{
-            "id" : "property4",
-                        "label" : {
-              "IRI-based" : "focus",
-              "undefined" : "0.5"
-            },
-            "comment" : {
-              "undefined" : "Bieu do trang thai."
-            },
-            "annotations" : {
-              "term_status" : [ {
-                "identifier" : "term_status",
-                "language" : "undefined",
-                "value" : "testing",
-                "type" : "label"
-              } ]
-            },
-            "domain" : "class3",
+            "domain" : "class1",
             "range" : "class0"
         },{
-                        "id" : "property5",
+                        "id" : "property4",
                                     "label" : {
                           "IRI-based" : "focus",
-                          "undefined" : "0.5"
+                          "undefined" : "1"
                         },
                         "comment" : {
                           "undefined" : "Bieu do trang thai."
@@ -180,8 +150,8 @@
                             "type" : "label"
                           } ]
                         },
-                        "domain" : "class3",
-                        "range" : "class3"
+                        "domain" : "class2",
+                        "range" : "class1"
                     } ],
     "property":[
         {
@@ -198,9 +168,6 @@
             "type" : "owl:objectProperty"
         },{
             "id" : "property4",
-            "type" : "owl:objectProperty"
-        },{
-            "id" : "property5",
             "type" : "owl:objectProperty"
         }
         

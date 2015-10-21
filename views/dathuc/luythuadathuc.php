@@ -10,7 +10,7 @@ $this->title = 'Ứng dụng toán';
 <form action="/dathuc/luythuadathuc" method="post">
     <div class="row">
         <div class="col-lg-9">
-            Số bậc của đa thức là 
+            <b>Số bậc của đa thức là </b>
             <input type="text" id="n" class="so_n" placeholder="n =..." name="n" value="<?=$n?>">
         </div>
         <div class="col-lg-3 pheptinhmoi">

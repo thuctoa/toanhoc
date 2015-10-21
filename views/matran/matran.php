@@ -11,7 +11,7 @@ $this->title = 'Ứng dụng toán';
     <form action="/matran/matran" method="post">
         <div class="row">
             <div class="col-lg-9">
-                Số bậc, cấp của ma trận P là 
+                <b>  Số bậc, cấp của ma trận P là </b>
                 <input id ="sobac" type="text" class="so_n" placeholder="n =..." name="sobac" value="<?=$sobac?>">
             </div>
             <div class="col-lg-3 pheptinhmoi">

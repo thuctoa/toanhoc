@@ -12,7 +12,7 @@ use yii\helpers\Url;
         </i>
     </u>
 </h2>
-
+<i>
 <?php
 $url= Url::to();
 if($url!='/matran/markov'){
@@ -38,7 +38,7 @@ if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
         $a_i$: Là các hệ số thực của phương trình <br>
         Số nghiệm tìm được tối đa của phương trình là n nghiệm <br>
     
-    <h4><b>Ứng dụng toán trong hệ thống này </b></h4>
+    <h4>Ứng dụng toán trong hệ thống này </h4>
     <p><b>Bước 1: </b> Đầu tiên bạn nhập số bậc của phương trình,
     để báo cho hệ thống biết và tự tạo ra các hệ số $a_i$ cho bạn nhập. Sau đó 
     bấm vào nút "Phương trình mới" ngay góc trên bên phải màn hình.</p>
@@ -155,3 +155,5 @@ if($url=='/matran/index'||$url=='/matrans'){
     $a_{ij}, b_i$ như dạng tổng quát để giải.
 <?php
 }
+?>
+</i>

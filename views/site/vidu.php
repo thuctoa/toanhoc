@@ -12,11 +12,12 @@ use yii\helpers\Url;
         </i>
     </u>
 </h2>
+<i>
 <?php
 $url= Url::to();
 if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
 ?>
-<h4><b>Ví dụ ta có phương trình như sau </b></h4>
+<h4>Ví dụ ta có phương trình như sau </h4>
     $x^6+x^5-10x^4+9x^2-x-1=0\\$
     <p><b>Bước 1: </b> Ở đây thì ta thấy rằng số mũ cao nhất là 6, vậy bậc của phương trình là 6 </p>
     <p><b>Bước 2: </b> 
@@ -33,7 +34,7 @@ if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
             \end{cases}
         $
     </p>
-    <h4><b>Hình ảnh của ứng dụng toán: </b> </h4>
+    <h4>Hình ảnh của ứng dụng toán: </h4>
 <?php
         echo Html::img('@web/img/huongdan/phuongtrinh.png',['width'=>'100%']) ;
     
@@ -172,4 +173,5 @@ if($url=='/matran/index'||$url=='/matrans'){
     <?= Html::img('@web/img/huongdan/matran-hephuongtrinh.png',['width'=>'100%']) ?>
 <?php
 }
-
+?>
+</i>
