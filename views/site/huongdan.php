@@ -4,7 +4,13 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 ?>
 <h2 >
-        Lưu Ý
+    <u>
+        <i>
+            <b>
+                Lưu ý
+            </b>
+        </i>
+    </u>
 </h2>
 
 <?php

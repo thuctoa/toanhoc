@@ -4,7 +4,13 @@ use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 ?>
 <h2 >
-        Ví Dụ
+    <u>
+        <i>
+            <b>
+                Ví dụ
+            </b>
+        </i>
+    </u>
 </h2>
 <?php
 $url= Url::to();
