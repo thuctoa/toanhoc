@@ -72,6 +72,7 @@ a{
 }
 .nav-pills > li > a {
     border: 1px solid #EEE;
+    background: rgba(10,10,10,0.2);
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     color: #fff;
@@ -110,6 +111,7 @@ a{
 }
 .navbar-nav > li > a {
     color: white;
+    
 }
 body{
     font-family: Verdana, Arial, Helvetica, sans-serif;
