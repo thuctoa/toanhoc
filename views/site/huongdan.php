@@ -24,7 +24,7 @@ if($url!='/matran/markov'){
     <h3><b> Lý thuyết </b></h3>
 <?php 
     }
-if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
+if($url=='/dathucs'||$url=='/dathuc/index'){
     
 ?>
 
@@ -97,7 +97,7 @@ if($url=='/dathuc/luythuadathuc'||$url=='/dathuc/nhanhaidathuc'||$url=='/dathuc/
     
 <?php
 }
-if($url=='/matran/index'||$url=='/matrans'){
+if($url=='/matran/index'||$url=='/matrans'||$url=='/'){
 ?>
     Hệ phương trình tuyến tính n ẩn n phương trình luôn có dạng 
     $$

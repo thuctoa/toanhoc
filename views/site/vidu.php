@@ -15,7 +15,7 @@ use yii\helpers\Url;
 <i>
 <?php
 $url= Url::to();
-if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
+if($url=='/dathucs'||$url=='/dathuc/index'){
 ?>
 <h4>Ví dụ ta có phương trình như sau </h4>
     $x^6+x^5-10x^4+9x^2-x-1=0\\$
@@ -142,7 +142,7 @@ if($url=='/dathuc/chiadachodathuc'){
     <?= Html::img('@web/img/huongdan/dathuc-chia.png',['width'=>'100%']) ?>
 <?php
 }
-if($url=='/matran/index'||$url=='/matrans'){
+if($url=='/matran/index'||$url=='/matrans'||$url=='/'){
 ?>
     <b> Ví dụ ta có hệ phương trình tuyến tính 3 ẩn 3 phương trình như sau</b>
     $$
