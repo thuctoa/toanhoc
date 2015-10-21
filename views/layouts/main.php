@@ -104,7 +104,7 @@ AppAsset::register($this);
                 'brandLabel' => "<img class='img-circle img-responsive logo' height='100' width='100' src='" . Yii::$app->request->baseUrl . "/img/logo"  . ".png' alt='Image Missing'>",
                 'brandUrl' => Yii::$app->homeUrl,
                 'options' => [
-                    'class' => 'breadcrumb navbar-fixed-bottom',
+                    'class' => 'breadcrumb ',
                 ],
             ]);
             
