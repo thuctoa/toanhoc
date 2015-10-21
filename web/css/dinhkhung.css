@@ -13,7 +13,7 @@
 .tieude{
     margin-left: -15px;
     margin-right: -15px;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.5);
     color: white;
     text-align: center;
     padding: 3px;
@@ -38,10 +38,13 @@
     font-size: 10px;
 }
 .so_n{
-    width: 60px;
+    width: 80px;
     //border: 1px solid red;
     padding: 3px;
     margin: 2px;
+}
+.btn{
+    font-size: 20px;
 }
 .pheptinhmoi{
 /*    border: 1px solid #EEE;
@@ -141,6 +144,7 @@ body{
     max-height: 100vh;
     max-width: 1000px;
     overflow: scroll;
+    font-size: 22px;
 }
 .noidung-dau{
     position: fixed;
