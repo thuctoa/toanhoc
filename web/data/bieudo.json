@@ -61,7 +61,7 @@
             "id" : "property0",
                         "label" : {
               "IRI-based" : "focus",
-              "undefined" : "0.2"
+              "undefined" : "0.3"
             },
             "comment" : {
               "undefined" : "Bieu do trang thai."
@@ -80,7 +80,7 @@
             "id" : "property1",
                         "label" : {
               "IRI-based" : "focus",
-              "undefined" : "0.3"
+              "undefined" : "0.2"
             },
             "comment" : {
               "undefined" : "Bieu do trang thai."

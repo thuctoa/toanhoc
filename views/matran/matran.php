@@ -15,7 +15,7 @@ $this->title = 'Ứng dụng toán';
                 <input id ="sobac" type="text" class="so_n" placeholder="n =..." name="sobac" value="<?=$sobac?>">
             </div>
             <div class="col-lg-3 pheptinhmoi">
-                <button type="submit" class="btn btn-danger">Ma trận mới</button>
+                <button type="submit" class="btn btn-default">Ma trận mới</button>
             </div>
         </div>
     </form>
@@ -61,7 +61,7 @@ $this->title = 'Ứng dụng toán';
                 Số mũ = <input type="text" name="somu" class="matran"  value="<?=$somu?>">
             </div>
             <div class="col-lg-12 text-center">
-                <button type="submit" class="btn btn-danger " >Thực hiện tính</button>
+                <button type="submit" class="btn btn-default " >Thực hiện tính</button>
             </div>
             
             <div class="col-lg-4 text-center">

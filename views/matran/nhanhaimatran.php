@@ -19,7 +19,7 @@ $this->title = 'Ứng dụng toán';
            </b>
         </div>
         <div class="col-lg-3 pheptinhmoi">
-            <button type="submit" class="btn btn-danger">Nhân hai ma trận mới</button>
+            <button type="submit" class="btn btn-default">Nhân hai ma trận mới</button>
         </div>
     </div>
 </form>
@@ -94,7 +94,7 @@ if($na>0&&$ma>0&&$mb>0&&$nb>0){
     <input type="hidden" name="nb" class="text-warning"  value="<?=$nb?>">
     <div class="row giaihe cachtren">
         <div class="col-lg-12 text-center">
-            <button type="submit" class="btn btn-danger ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-default ">Thực hiện tính</button>
         </div>
     </div>
 </form>     

@@ -17,7 +17,7 @@ $this->title = 'Ứng dụng toán';
              <input type="hidden" name="khoitao" class="text-warning"  value="1">
         </div>
         <div class="col-lg-3 pheptinhmoi">
-            <button type="submit" class="btn btn-danger">Ma trận chuyển mới</button>
+            <button type="submit" class="btn btn-default">Ma trận chuyển mới</button>
         </div>
     </div>
 </form>
@@ -63,32 +63,32 @@ if($sobac>0){
         <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
         <div class="row giaihe cachtren" style="margin-bottom: 20px;">
             <div class="col-lg-12 text-center">
-                <button type="submit" class="btn btn-warning ">Kiểm tra P</button>
+                <button type="submit" class="btn btn-default ">Kiểm tra P</button>
             </div>
             <div class="col-lg-8 text-center">
                 <?php 
                 if($markovduoc==2){
-                    echo '<h5 class="text-danger ketqua"><b>Ma trận vừa nhập không phải là một ma trận phân phối xác suất chuyển</b></h5>';
+                    echo '<h5 class=" ketqua"><b>Ma trận vừa nhập không phải là một ma trận phân phối xác suất chuyển</b></h5>';
                 }else if($markovduoc==-1){
-                    echo '<h5 class="text-success ketqua"><b>Ma trận vừa nhập là một ma trận phân phối xác suất chuyển</b></h5>';
+                    echo '<h5 class=" ketqua"><b>Ma trận vừa nhập là một ma trận phân phối xác suất chuyển</b></h5>';
                 }else if($markovduoc==4){
-                    echo '<h5 class="text-success ketqua"><b>Xích có nhiều hơn một trạng thái hút, nên xích không có tính dừng</b></h5>';
+                    echo '<h5 class=" ketqua"><b>Xích có nhiều hơn một trạng thái hút, nên xích không có tính dừng</b></h5>';
                 }
                 else if($markovduoc==5){
-                    echo '<h5 class="text-danger ketqua"><b>Ma trận không có tính tối giản</b></h5>';
+                    echo '<h5 class=" ketqua"><b>Ma trận không có tính tối giản</b></h5>';
                 }
                 else if($markovduoc==6){
-                    echo '<h5 class="text-success ketqua"><b>Ma trận là tối giản </b></h5>';
+                    echo '<h5 class=" ketqua"><b>Ma trận là tối giản </b></h5>';
                 }
                 else if($markovduoc==7){
-                    echo '<h5 class="text-danger ketqua"><b>Không có phân phối giới hạn của ma trận,'
+                    echo '<h5 class=" ketqua"><b>Không có phân phối giới hạn của ma trận,'
                      . ' mặc dù P là tối giản nhưng tuần hoàn </b></h5>';
                 }
                 else if($markovduoc==8){
-                    echo '<h5 class="text-success ketqua"><b>Ma trận là tối giản, và phi tuần hoàn nên có phân phối giới hạn</b></h5>';
+                    echo '<h5 class=" ketqua"><b>Ma trận là tối giản, và phi tuần hoàn nên có phân phối giới hạn</b></h5>';
                 }
                 else if($markovduoc==9){
-                    echo '<h5 class="text-danger ketqua"><b>Không có phân phối giới hạn của ma trận,'
+                    echo '<h5 class=" ketqua"><b>Không có phân phối giới hạn của ma trận,'
                      . ' vì P là không tối giản</b></h5>';
                 }
                 ?>
@@ -123,7 +123,7 @@ if($sobac>0){
         Số bước n = <input type="text" name="somu" class="matran so_n"  value="<?=$somu?>">
     </div>
     <div class="col-lg-2 text-center">
-        <button type="submit" class="btn btn-success ">Tính $P^{(n)}$ </button>
+        <button type="submit" class="btn btn-default ">Tính $P^{(n)}$ </button>
     </div>
 </form>
 <form action="/matran/markov" method="post">
@@ -148,7 +148,7 @@ if($sobac>0){
     ?>
     <input type="hidden" name="phanphoidung" class="text-warning"  value="1">           
     <div class="col-lg-2 text-center">
-        <button type="submit" class="btn btn-success ">Phân phối dừng </button>
+        <button type="submit" class="btn btn-default ">Phân phối dừng </button>
     </div>
 </form>
 
@@ -174,7 +174,7 @@ if($sobac>0){
     ?>
     <input type="hidden" name="tinhtoigian" class="text-warning"  value="1">           
     <div class="col-lg-2 text-center">
-        <button type="submit" class="btn btn-success ">Tính tối giản</button>
+        <button type="submit" class="btn btn-default ">Tính tối giản</button>
     </div>
 </form>
 
@@ -202,15 +202,14 @@ if($sobac>0){
     
     <input type="hidden" name="phanphoigioihan" class="text-warning"  value="1">           
     <div class="col-lg-2 text-center">
-        <button type="submit" class="btn btn-success ">Phân phối giới hạn</button>
+        <button type="submit" class="btn btn-default ">Phân phối giới hạn</button>
     </div>
 </form>
 <?php
     }
-     
+     echo '<br><br><br><br><br><br>';
 }
 ?>
-<br><br><br><br><br>
 <?php
     if($markovduoc==1){
 ?>
@@ -282,6 +281,7 @@ if($sobac>0){
 <?php
     }
     if($dakiemtrapp==1&&$markovduoc!=2){
+       
        echo $this->render('/matran/bieudo',[
            'p'=>$p,
            'sobac'=>$sobac

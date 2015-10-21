@@ -14,7 +14,7 @@ $this->title = 'Ứng dụng toán';
             <input id="soan" type="text" name="soan" class="so_n" placeholder="n =..." value="<?=$soan?>">
         </div>
         <div class="col-lg-3 pheptinhmoi">
-            <button type="submit" class="btn btn-danger">Giải hệ mới</button>
+            <button type="submit" class="btn btn-default">Giải hệ mới</button>
         </div>
     </div>
 </form>
@@ -78,7 +78,7 @@ if($soan>0&&$soan<33){
     <input type="hidden" name="soan" class="text-warning"  value="<?=$soan?>">
         <div class="row giaihe cachtren">
             <div class="col-lg-12 text-center">
-                <button type="submit" class="btn btn-danger ">Giải hệ</button>
+                <button type="submit" class="btn btn-default ">Giải hệ</button>
             </div>
             <div class="col-lg-8 mketqua">
                 <?php

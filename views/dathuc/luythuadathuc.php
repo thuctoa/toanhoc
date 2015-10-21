@@ -14,7 +14,7 @@ $this->title = 'Ứng dụng toán';
             <input type="text" id="n" class="so_n" placeholder="n =..." name="n" value="<?=$n?>">
         </div>
         <div class="col-lg-3 pheptinhmoi">
-            <button type="submit"  class="btn btn-danger">Đa thức mới</button>
+            <button type="submit"  class="btn btn-default">Đa thức mới</button>
         </div>
     </div>
 </form>
@@ -65,7 +65,7 @@ $this->title = 'Ứng dụng toán';
             <span>Số mũ </span> <input type="text" id="somu" placeholder="Số mũ ..." name="somu" value="<?=$somu?>">
         </div>
         <div class="col-lg-12 text-center">
-            <button type="submit" class="btn btn-danger ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-default ">Thực hiện tính</button>
         </div>
         
     </div>

@@ -14,7 +14,7 @@ $this->title = 'Ứng dụng toán';
             <input type="text" id ="sobac" class="so_n" placeholder="n =..." name="sobac" value="<?=$sobac?>">
         </div>
         <div class="col-lg-3 pheptinhmoi">
-            <button type="submit" class="btn btn-danger">Ma trận mới</button>
+            <button type="submit" class="btn btn-default">Ma trận mới</button>
         </div>
     </div>
 </form>
@@ -59,7 +59,7 @@ if($sobac>0){
     
     <div class="row giaihe cachtren">
         <div class="col-lg-12 text-center">
-            <button type="submit" class="btn btn-danger ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-default ">Thực hiện tính</button>
         </div>
         <div class="col-lg-2 text-center">
              <input type="hidden" name="somu" class="matran"  value="-1">

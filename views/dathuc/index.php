@@ -17,7 +17,7 @@ $this->title = 'Ứng dụng toán';
         </div>
          <input type="hidden" name="huongdan" class="text-warning"  value="dahuongdan">
          <div class="col-lg-3 pheptinhmoi">
-            <button type="submit" class="btn btn-danger ">Phương trình mới</button>
+            <button type="submit" class="btn btn-default">Phương trình mới</button>
          </div>
      </div>
 </form>
@@ -34,7 +34,7 @@ if($sobac>0){
                     id="<?='a'.$i?>" 
                     onchange="bieuthuc('<?='a'.$i?>')"
                     onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
-                    placeholder="a[<?php echo $i;?>]..."
+                    placeholder="a[<?php echo $i;?>]"
                     value="<?=$a[$i]?>" 
                     name="a[<?php echo $i;?>]"
             >$x^{<?=$i?>}+$
@@ -45,7 +45,7 @@ if($sobac>0){
                     id="<?='a'.$i?>" 
                     onchange="bieuthuc('<?='a'.$i?>')"
                     onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
-                    placeholder="a[<?php echo $i;?>]..."
+                    placeholder="a[<?php echo $i;?>]"
                     value="<?=$a[$i]?>" 
                     name="a[<?php echo $i;?>]"
                     accept="">$x+$
@@ -57,7 +57,7 @@ if($sobac>0){
                    id="<?='a'.$i?>"
                    onchange="bieuthuc('<?='a'.$i?>')"
                    onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
-                   placeholder="a[<?php echo $i;?>]..."
+                   placeholder="a[<?php echo $i;?>]"
                    value="<?=$a[$i]?>" 
                    name="a[<?php echo $i;?>]"
                    
@@ -83,7 +83,7 @@ if($sobac>0){
 
     <div class="row " style="margin-top: 30px;">
         <div class="col-lg-12 text-center">
-            <button type="submit" class="btn btn-danger " >Tìm nghiệm</button>
+            <button type="submit" class="btn btn-default" >Tìm nghiệm</button>
         </div>
         <div class="col-lg-4 text-center">
             <?php if($conghiem==0){

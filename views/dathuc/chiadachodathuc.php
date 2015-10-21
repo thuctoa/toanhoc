@@ -19,7 +19,7 @@ $this->title = 'Ứng dụng toán';
           </b>
         </div>
         <div class="col-lg-3 pheptinhmoi">
-            <button type="submit" id="nhanhaidathuc"  class="btn btn-danger">Chia đa thức mới</button>
+            <button type="submit" id="nhanhaidathuc"  class="btn btn-default">Chia đa thức mới</button>
         </div>
     </div>
 </form>
@@ -106,7 +106,7 @@ $this->title = 'Ứng dụng toán';
     <input type="hidden" name="n2" class="text-warning"  value="<?=$n2?>">
     <div class="row cachtren">
         <div class="col-lg-2 text-center">
-            <button type="submit" class="btn btn-danger ">Thực hiện tính</button>
+            <button type="submit" class="btn btn-default ">Thực hiện tính</button>
         </div>
     </div>
 <?php
