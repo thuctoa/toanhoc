@@ -41,7 +41,12 @@ $this->title = 'Ứng dụng toán';
                                onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
                                value="<?=$a[$i]?>" class="matran" 
                                placeholder="a[<?php echo $i;?>]" 
-                               name="a[<?php echo $i;?>]"> $x^{<?=$i?>}+$
+                               name="a[<?php echo $i;?>]"> 
+                         <?php if($i!=1){?>
+                            $x^{<?=$i?>}+$
+                        <?php }else{?>
+                            $x+$
+                        <?php }?>
                     </td>
 <?php
                 }
@@ -52,7 +57,7 @@ $this->title = 'Ứng dụng toán';
                                onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
                                value="<?=$a[$i]?>" class="matran" 
                                placeholder="a[<?php echo $i;?>]" 
-                               name="a[<?php echo $i;?>]"> $x^{<?=$i?>}$
+                               name="a[<?php echo $i;?>]"> 
                     </td>
             </table>
 <?php
@@ -77,7 +82,12 @@ $this->title = 'Ứng dụng toán';
                                    onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
                                    value="<?=$b[$i]?>" class="matran" 
                                    placeholder="b[<?php echo $i;?>]" 
-                                   name="b[<?php echo $i;?>]"> $x^{<?=$i?>}+$
+                                   name="b[<?php echo $i;?>]"> 
+                                    <?php if($i!=1){?>
+                                    $x^{<?=$i?>}+$
+                                    <?php }else{?>
+                                        $x+$
+                                    <?php }?>
                         </td>
 <?php
                     }
@@ -88,7 +98,7 @@ $this->title = 'Ứng dụng toán';
                                    onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
                                    value="<?=$b[$i]?>" class="matran" 
                                    placeholder="b[<?php echo $i;?>]" 
-                                   name="b[<?php echo $i;?>]"> $x^{<?=$i?>}$
+                                   name="b[<?php echo $i;?>]"> 
                         </td>
                        
             </table>

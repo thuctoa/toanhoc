@@ -29,14 +29,18 @@ $this->title = 'Ứng dụng toán';
 <?php
                 for($i=$n;$i>0;$i--){
 ?>  
-                   
+                    
                         <input type="text" id="<?='a'.$i?>"
                                onchange="bieuthuc('<?='a'.$i?>')" 
                                onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
                                value="<?=$a[$i]?>" class="matran" 
                                placeholder="a[<?php echo $i;?>]" 
-                               name="a[<?php echo $i;?>]"> $x^{<?=$i?>}+$
-                   
+                               name="a[<?php echo $i;?>]"> 
+                        <?php if($i!=1){?>
+                        $x^{<?=$i?>}+$
+                        <?php }else{?>
+                            $x+$
+                        <?php }?>
 <?php
                 }
 ?>
@@ -46,7 +50,7 @@ $this->title = 'Ứng dụng toán';
                                onkeypress="this.style.width = ((this.value.length + 1) * 8+10) + 'px';"
                                value="<?=$a[$i]?>" class="matran" 
                                placeholder="a[<?php echo $i;?>]" 
-                               name="a[<?php echo $i;?>]"> $x^{<?=$i?>}$
+                               name="a[<?php echo $i;?>]">
                   
 <?php
             if($ladathuc==1){
