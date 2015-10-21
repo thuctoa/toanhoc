@@ -161,4 +161,9 @@ body{
 }
 input{
     background: rgba(10,10,10,0.2);
+    font-size: 14px;
+}
+.cachtrenduoi{
+    margin-top: 10px;
+    margin-bottom: 10px;
 }

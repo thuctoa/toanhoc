@@ -25,7 +25,7 @@
 
 /*------- Colors ------*/
 .class, .object, .disjoint, .objectproperty, .disjointwith, .equivalentproperty, .transitiveproperty, .functionalproperty, .inversefunctionalproperty, .symmetricproperty {
-    fill: #acf;
+    fill: white;
 }
 .label .datatype, .datatypeproperty {
     fill: #9c6;

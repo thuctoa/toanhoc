@@ -6,7 +6,7 @@ $this->title = 'Ứng dụng toán';
 <h1 class="tieude">
         Đề tài 6 - Nhóm 3
 </h1>
-<div class="cachtren"></div>
+<div class="cachtrenduoi"></div>
 <form action="/matran/markov" method="post">
     <div class="row">
         <div class="col-lg-8">
@@ -28,7 +28,7 @@ if($sobac>0){
     <form action="/matran/markov" method="post">
         <table class="hephuongtrinh ">
             <tr>
-                <th colspan="<?=$sobac+1?>" class="text-center">Ma trận phân phối xác suất chuyển P</th>
+                <th colspan="<?=$sobac+1?>" class="text-center">Nhập vào các $p_{ij}$</th>
 
             </tr>
     <?php
@@ -61,38 +61,43 @@ if($sobac>0){
         <input type="hidden" name="sobac" class="text-warning"  value="<?=$sobac?>">
         <input type="hidden" name="kiemtrapp" class="text-warning"  value="1">
         <input type="hidden" name="dakiemtrapp" class="text-warning"  value="1">
-        <div class="row giaihe cachtren" style="margin-bottom: 20px;">
+        <div class="row giaihe cachtrenduoi" style="margin-bottom: 20px;">
             <div class="col-lg-12 text-center">
                 <button type="submit" class="btn btn-default ">Kiểm tra P</button>
             </div>
-            <div class="col-lg-8 text-center">
+            
+            <div class="col-lg-12 text-center cachtrenduoi">
+                
                 <?php 
                 if($markovduoc==2){
-                    echo '<h5 class=" ketqua"><b>Ma trận vừa nhập không phải là một ma trận phân phối xác suất chuyển</b></h5>';
+                    
+                    echo  '<div class="alert alert-danger" role="alert"><h5 class=" ketqua"> Ma trận vừa nhập không phải là một ma trận phân phối xác suất chuyển.</h5>';
+
                 }else if($markovduoc==-1){
-                    echo '<h5 class=" ketqua"><b>Ma trận vừa nhập là một ma trận phân phối xác suất chuyển</b></h5>';
+                    echo '<div class="alert alert-success" role="alert"><h5 class=" ketqua"><b>Ma trận vừa nhập là một ma trận phân phối xác suất chuyển</b></h5></div>';
                 }else if($markovduoc==4){
-                    echo '<h5 class=" ketqua"><b>Xích có nhiều hơn một trạng thái hút, nên xích không có tính dừng</b></h5>';
+                    echo '<div class="alert alert-danger" role="alert"><h5 class=" ketqua"><b>Xích có nhiều hơn một trạng thái hút, nên xích không có tính dừng</b></h5></div>';
                 }
                 else if($markovduoc==5){
-                    echo '<h5 class=" ketqua"><b>Ma trận không có tính tối giản</b></h5>';
+                    echo '<div class="alert alert-danger" role="alert"><h5 class=" ketqua"><b>Ma trận không có tính tối giản</b></h5></div>';
                 }
                 else if($markovduoc==6){
-                    echo '<h5 class=" ketqua"><b>Ma trận là tối giản </b></h5>';
+                    echo '<div class="alert alert-success" role="alert"><h5 class=" ketqua"><b>Ma trận là tối giản </b></h5></div>';
                 }
                 else if($markovduoc==7){
-                    echo '<h5 class=" ketqua"><b>Không có phân phối giới hạn của ma trận,'
-                     . ' mặc dù P là tối giản nhưng tuần hoàn </b></h5>';
+                    echo '<div class="alert alert-danger" role="alert"><h5 class=" ketqua"><b>Không có phân phối giới hạn của ma trận,'
+                     . ' mặc dù P là tối giản nhưng tuần hoàn </b></h5></div>';
                 }
                 else if($markovduoc==8){
-                    echo '<h5 class=" ketqua"><b>Ma trận là tối giản, và phi tuần hoàn nên có phân phối giới hạn</b></h5>';
+                    echo '<div class="alert alert-success" role="alert"><h5 class=" ketqua"><b>Ma trận là tối giản, và phi tuần hoàn nên có phân phối giới hạn</b></h5></div>';
                 }
                 else if($markovduoc==9){
-                    echo '<h5 class=" ketqua"><b>Không có phân phối giới hạn của ma trận,'
-                     . ' vì P là không tối giản</b></h5>';
+                    echo '<div class="alert alert-danger" role="alert"><h5 class=" ketqua"><b>Không có phân phối giới hạn của ma trận,'
+                     . ' vì P là không tối giản</b></h5></div>';
                 }
                 ?>
-            </div>
+                </div>
+            
         </div>
 </form> 
 <?php
@@ -119,10 +124,10 @@ if($sobac>0){
      <?php
         }
     ?>
-    <div class="col-lg-3 text-center">
+    <div class="col-lg-4 text-center">
         Số bước n = <input type="text" name="somu" class="matran so_n"  value="<?=$somu?>">
     </div>
-    <div class="col-lg-2 text-center">
+    <div class="col-lg-8 text-center">
         <button type="submit" class="btn btn-default ">Tính $P^{(n)}$ </button>
     </div>
 </form>
@@ -147,7 +152,7 @@ if($sobac>0){
         }
     ?>
     <input type="hidden" name="phanphoidung" class="text-warning"  value="1">           
-    <div class="col-lg-2 text-center">
+    <div class="col-lg-12 text-center cachtrenduoi">
         <button type="submit" class="btn btn-default ">Phân phối dừng </button>
     </div>
 </form>
@@ -173,7 +178,7 @@ if($sobac>0){
         }
     ?>
     <input type="hidden" name="tinhtoigian" class="text-warning"  value="1">           
-    <div class="col-lg-2 text-center">
+    <div class="col-lg-12 text-center cachtrenduoi">
         <button type="submit" class="btn btn-default ">Tính tối giản</button>
     </div>
 </form>
@@ -201,13 +206,13 @@ if($sobac>0){
     <input type="hidden" name="tinhtoigian" class="text-warning"  value="1">  
     
     <input type="hidden" name="phanphoigioihan" class="text-warning"  value="1">           
-    <div class="col-lg-2 text-center">
+    <div class="col-lg-12 text-center cachtrenduoi">
         <button type="submit" class="btn btn-default ">Phân phối giới hạn</button>
     </div>
 </form>
 <?php
     }
-     echo '<br><br><br><br><br><br>';
+     echo '<br><br><br><br><br><br><br><br><br><br><br><br>';
 }
 ?>
 <?php
