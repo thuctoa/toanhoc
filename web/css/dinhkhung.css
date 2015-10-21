@@ -133,12 +133,13 @@ body{
 }
 .noidung{
     margin-left: 16.7%;
-    border: 1px solid rgba(0,0,0,0.2);
+    border-style: inset;
+    border-width: medium;
     padding-bottom: 100px;
     background: rgba(0,0,0,0.8);
     color: white;
     max-height: 100vh;
-    max-width: 900px;
+    max-width: 1000px;
     overflow: scroll;
 }
 .noidung-dau{
