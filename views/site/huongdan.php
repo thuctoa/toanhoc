@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 ?>
-<h2 >
+<h3 >
     <u>
         <i>
             <b>
@@ -11,7 +11,7 @@ use yii\helpers\Url;
             </b>
         </i>
     </u>
-</h2>
+</h3>
 <i>
 <?php
 $url= Url::to();
