@@ -52,7 +52,7 @@ path, .nofill {
 	fill: #000;
 }
 .class, path, line, .fineline {
-	stroke: #000;
+	stroke: white;
 }
 .white, .subclass, .dottedMarker path, .subclassproperty, .external + text {
     fill: #fff;
