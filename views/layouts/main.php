@@ -40,8 +40,7 @@ AppAsset::register($this);
     </script>
 <?php $this->beginBody() ?>
     <div class="wrap">
-        <div class="row noidung">
-            
+        <div class="row ">
             <div class="col-lg-2 menutrai">
                 
                 <?php  
@@ -57,9 +56,11 @@ AppAsset::register($this);
                     'items' => $items,
                 ]);?>
             </div>
-            <div class="col-lg-8" >
+             
+            <div class="col-lg-8 noidung" >
                  <?= $content ?>
             </div>
+            
             <div class="col-lg-2 menuphai">
                 <?php  
                 $items = [
@@ -76,20 +77,26 @@ AppAsset::register($this);
             </div>
         </div>
         <div class="row huongdan-head">
-            
-            <div class="col-lg-6 huongdan">
-                <?php 
-                    echo$this->render('//site/huongdan',[
-                        ]);
-                ?>
-            </div>
-            <div class="col-lg-6 huongdan">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 huongdan">
                 <?php 
                     echo$this->render('//site/vidu',[
                         ]);
                 ?>
             </div>
+            <div class="col-lg-2"></div>
         </div>
+        <div class="row huongdan-head">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8 huongdan">
+                <?php 
+                    echo$this->render('//site/huongdan',[
+                        ]);
+                ?>
+            </div>
+            <div class="col-lg-2"></div>
+        </div>
+       
     </div>
     <footer class="footer">
          <?php

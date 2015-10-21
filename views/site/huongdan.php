@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 ?>
-<h2 class="huongdan-tieude">
+<h2 >
         Lưu Ý
 </h2>
 
@@ -11,7 +11,7 @@ use yii\helpers\Url;
 $url= Url::to();
 if($url!='/matran/markov'){
 ?>
-<h3><b> Ứng dụng toán nhắc lại một chút kiến thức </b></h3>
+<h3> Ứng dụng toán nhắc lại một chút kiến thức </h3>
 <?php
     }else{
 ?>
@@ -22,14 +22,16 @@ if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
     
 ?>
 
-    $
-        \text{Phương có trình có dạng}\\
-        a_nx^n + a_{n-1}x^{n-1} + ... + a_1x + a_0 = 0\\
-        \text{Trong đó:}\\
-        n:\text{ Là số bậc của phương trình, chính là số mũ cao nhất của x}\\
-        a_i:\text{ Là các hệ số thực của phương trình}\\
-        \text{Số nghiệm tìm được tối đa của phương trình là n nghiệm}\\
-    $
+   
+        Phương có trình có dạng<br>
+        $
+            a_nx^n + a_{n-1}x^{n-1} + ... + a_1x + a_0 = 0\\
+        $
+        <br>Trong đó: <br>
+        $n$: Là số bậc của phương trình, chính là số mũ cao nhất của $x$ <br>
+        $a_i$: Là các hệ số thực của phương trình <br>
+        Số nghiệm tìm được tối đa của phương trình là n nghiệm <br>
+    
     <h4><b>Ứng dụng toán trong hệ thống này </b></h4>
     <p><b>Bước 1: </b> Đầu tiên bạn nhập số bậc của phương trình,
     để báo cho hệ thống biết và tự tạo ra các hệ số $a_i$ cho bạn nhập. Sau đó 

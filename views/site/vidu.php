@@ -3,7 +3,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\Url;
 ?>
-<h2 class="huongdan-tieude">
+<h2 >
         Ví Dụ
 </h2>
 <?php
@@ -27,7 +27,7 @@ if($url=='/dathucs'||$url=='/dathuc/index'||$url=='/'){
             \end{cases}
         $
     </p>
-    <h3><b>Hình ảnh của ứng dụng toán: </b> </h3>
+    <h4><b>Hình ảnh của ứng dụng toán: </b> </h4>
 <?php
         echo Html::img('@web/img/huongdan/phuongtrinh.png',['width'=>'100%']) ;
     
@@ -93,9 +93,9 @@ if($url=='/dathuc/luythuadathuc'){
     $$
     Ta cần tính đa thức lũy thừa 3
     $$
-        (x^2 + 2x + 3)^3 =x^6+6x^5+21x^4+44x^3+63x^2+54^x+27
+        (x^2 + 2x + 3)^3 =x^6+6x^5+21x^4+44x^3+63x^2+54x+27
     $$
-    <h3 >Hình ảnh của ứng dụng toán </h3>
+    <h4 >Hình ảnh của ứng dụng toán </h4>
     <?= Html::img('@web/img/huongdan/dathuc-luythua.png',['width'=>'100%']) ?>
 <?php
 }
@@ -131,7 +131,7 @@ if($url=='/dathuc/chiadachodathuc'){
     $$
        \frac{2x^4+5x^3+2x+3}{x^2+2x+2} =2x^2+x−6+\frac{12x+15}{x^2+2x+2}
     $$
-    <h3>Hình ảnh của ứng dụng toán </h3>
+    <h4>Hình ảnh của ứng dụng toán </h4>
     <?= Html::img('@web/img/huongdan/dathuc-chia.png',['width'=>'100%']) ?>
 <?php
 }
@@ -162,7 +162,7 @@ if($url=='/matran/index'||$url=='/matrans'){
             y =x_1  = 1.375 \\
             z =x_2  = 0.875 \\
         \end{cases} 
-    <h3> Hình ảnh của ứng dụng toán </h3>
+    <h4> Hình ảnh của ứng dụng toán </h4>
     <?= Html::img('@web/img/huongdan/matran-hephuongtrinh.png',['width'=>'100%']) ?>
 <?php
 }
