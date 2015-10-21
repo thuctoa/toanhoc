@@ -11,7 +11,7 @@ $this->title = 'Ứng dụng toán';
     <div class="row">
         <div class="col-lg-9">
             <b>Số bậc của đa thức là </b>
-            <input type="text" id="n" class="so_n" placeholder="n = .." name="n" value="<?=$n?>">
+            <input type="text" id="nghiemdathuc" class="so_n" placeholder="n = .." name="n" value="<?=$n?>">
         </div>
         <div class="col-lg-3 pheptinhmoi">
             <button type="submit"  class="btn btn-default">Đa thức mới</button>
