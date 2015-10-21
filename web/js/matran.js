@@ -49,7 +49,7 @@ if(document.getElementById('sobac')){
         for(var j=0;j<sobac;j++){
             str=document.getElementById('p'+i+j);
             if(str.value.length!=0){
-                str.style.width = ((str.value.length + 1) * 8) + 'px';
+                str.style.width = ((str.value.length + 1) * 8+10) + 'px';
             }
         }
     }
@@ -61,7 +61,7 @@ if(document.getElementById('nghiemdathuc')){
         for(var i=0;i<=sobac;i++){
             str=document.getElementById('a'+i);
             if(str.value.length!=0){
-                str.style.width = ((str.value.length + 1) * 8) + 'px';
+                str.style.width = ((str.value.length + 1) * 8+10) + 'px';
             }
         }
     }
@@ -72,7 +72,7 @@ if(document.getElementById('nhanhaidathuc')){
         for(var i=0;i<=n1;i++){
             str=document.getElementById('a'+i);
             if(str.value.length!=0){
-                str.style.width = ((str.value.length + 1) * 8) + 'px';
+                str.style.width = ((str.value.length + 1) * 8+10) + 'px';
             }
         }
     }
@@ -81,7 +81,7 @@ if(document.getElementById('nhanhaidathuc')){
         for(var i=0;i<=n2;i++){
             str=document.getElementById('b'+i);
             if(str.value.length!=0){
-                str.style.width = ((str.value.length + 1) * 8) + 'px';
+                str.style.width = ((str.value.length + 1) * 8+10) + 'px';
             }
         }
     }
@@ -94,12 +94,12 @@ if(document.getElementById('soan')){
         for(var j=0;j<sobac;j++){
             str=document.getElementById('a'+i+j);
             if(str.value.length!=0){
-                str.style.width = ((str.value.length + 1) * 8) + 'px';
+                str.style.width = ((str.value.length + 1) * 8+10) + 'px';
             }
         }
         str=document.getElementById('b'+i);
         if(str.value.length!=0){
-            str.style.width = ((str.value.length + 1) * 8) + 'px';
+            str.style.width = ((str.value.length + 1) * 8+10) + 'px';
         }
     }
 }
