@@ -316,30 +316,31 @@ class MatranController extends \yii\web\Controller
                         }
                         if($tinhdung>1){//xich co nhieu hon mot trang thai hut, vay xich khong dung
                             $markovduoc=4;
-                        }
-                        //thuc hien giai he tim pi
-                        $a_ppd=[];
-                        $b_ppd=[];
-                        for($i=0;$i<$sobac;$i++){
-                            if($i==0){
-                                $b_ppd[$i]=1;
-                            }else{
-                                 $b_ppd[$i]=0;
-                            }
-                            for($j=0;$j<$sobac;$j++){
+                        }else{
+                            //thuc hien giai he tim pi
+                            $a_ppd=[];
+                            $b_ppd=[];
+                            for($i=0;$i<$sobac;$i++){
                                 if($i==0){
-                                    $a_ppd[$i][$j]=1;
+                                    $b_ppd[$i]=1;
                                 }else{
-                                    if($i==$j){
-                                        $a_ppd[$i][$j]=$p[$j][$i]-1;
+                                     $b_ppd[$i]=0;
+                                }
+                                for($j=0;$j<$sobac;$j++){
+                                    if($i==0){
+                                        $a_ppd[$i][$j]=1;
                                     }else{
-                                        $a_ppd[$i][$j]=$p[$j][$i];
+                                        if($i==$j){
+                                            $a_ppd[$i][$j]=$p[$j][$i]-1;
+                                        }else{
+                                            $a_ppd[$i][$j]=$p[$j][$i];
+                                        }
                                     }
                                 }
                             }
+                            $phanphoidung=  $this->giaihe($a_ppd, $b_ppd, $sobac);
+                            $phanphoidung=  $this->lamdepketqua($phanphoidung, $sobac, 0);
                         }
-                        $phanphoidung=  $this->giaihe($a_ppd, $b_ppd, $sobac);
-                        $phanphoidung=  $this->lamdepketqua($phanphoidung, $sobac, 0);
 
                     }
                 }else{
@@ -356,30 +357,31 @@ class MatranController extends \yii\web\Controller
                 }
                 if($tinhdung>1){//xich co nhieu hon mot trang thai hut, vay xich khong dung
                     $markovduoc=4;
-                }
-                //thuc hien giai he tim pi
-                $a_ppd=[];
-                $b_ppd=[];
-                for($i=0;$i<$sobac;$i++){
-                    if($i==0){
-                        $b_ppd[$i]=1;
-                    }else{
-                         $b_ppd[$i]=0;
-                    }
-                    for($j=0;$j<$sobac;$j++){
+                }else{
+                    //thuc hien giai he tim pi
+                    $a_ppd=[];
+                    $b_ppd=[];
+                    for($i=0;$i<$sobac;$i++){
                         if($i==0){
-                            $a_ppd[$i][$j]=1;
+                            $b_ppd[$i]=1;
                         }else{
-                            if($i==$j){
-                                $a_ppd[$i][$j]=$p[$j][$i]-1;
+                             $b_ppd[$i]=0;
+                        }
+                        for($j=0;$j<$sobac;$j++){
+                            if($i==0){
+                                $a_ppd[$i][$j]=1;
                             }else{
-                                $a_ppd[$i][$j]=$p[$j][$i];
+                                if($i==$j){
+                                    $a_ppd[$i][$j]=$p[$j][$i]-1;
+                                }else{
+                                    $a_ppd[$i][$j]=$p[$j][$i];
+                                }
                             }
                         }
                     }
+                    $phanphoidung=  $this->giaihe($a_ppd, $b_ppd, $sobac);
+                    $phanphoidung=  $this->lamdepketqua($phanphoidung, $sobac, 0);
                 }
-                $phanphoidung=  $this->giaihe($a_ppd, $b_ppd, $sobac);
-                $phanphoidung=  $this->lamdepketqua($phanphoidung, $sobac, 0);
             }
            
         }
