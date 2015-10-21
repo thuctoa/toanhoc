@@ -9,7 +9,7 @@ $this->title = 'Ứng dụng toán';
 <div class="cachtren"></div>
 <form action="/matran/markov" method="post">
     <div class="row">
-        <div class="col-lg-9">
+        <div class="col-lg-8">
             <b>Số bậc, cấp của ma trận P là </b>
             <input type="text" class="so_n" 
                    placeholder="n =..."
