@@ -44,7 +44,7 @@
     margin: 2px;
 }
 .btn{
-    font-size: 20px;
+    font-size: 18px;
 }
 .pheptinhmoi{
 /*    border: 1px solid #EEE;
@@ -119,6 +119,7 @@ a{
 body{
     font-family: Verdana, Arial, Helvetica, sans-serif;
     background-image: url(../img/background.png);
+    font-size: 13px;
 }
 .menutrai{
     position: fixed;
