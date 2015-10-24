@@ -339,7 +339,7 @@ class MatranController extends \yii\web\Controller
                                 }
                             }
                             $phanphoidung=  $this->giaihe($a_ppd, $b_ppd, $sobac);
-                            $phanphoidung=  $this->lamdepketqua($phanphoidung, $sobac, 0);
+                            //$phanphoidung=  $this->lamdepketqua($phanphoidung, $sobac, 0);
                         }
 
                     }
