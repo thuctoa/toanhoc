@@ -23,6 +23,17 @@ AppAsset::register($this);
     <?php $this->head() ?>
 </head>
 <body>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Thức -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9196118749168921"
+     data-ad-slot="6500263098"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 <!-- Google Tag Manager -->
 <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-M4S9FR"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
