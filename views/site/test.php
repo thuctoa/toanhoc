@@ -13,7 +13,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
   <url>
-    <loc>http://www.example.org/business/article55.html</loc>
+    <loc>http://ungdungtoan.com/site/test</loc>
     <news:news>
       <news:publication>
         <news:name>Ứng dụng toán</news:name>
