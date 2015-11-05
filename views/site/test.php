@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Ứng dụng toán</title>
-</head>
-<body>
-
-<h1>Ứng dụng toán</h1>
-<h2>Ứng dụng toán</h2>
-<h3>Ứng dụng toán</h3>
-<p>Ứng dụng toán.</p>
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
@@ -28,5 +17,3 @@
     </news:news>
   </url>
 </urlset>
-</body>
-</html>
