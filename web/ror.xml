@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://ungdungtoan.com/</title>
+  <link>http://ungdungtoan.com/</link>
+
+<item>
+     <link>http://ungdungtoan.com/</link>
+     <title>Ứng dụng toán</title>
+     <description>Ứng dụng toán</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/matrans</link>
+     <title>Ứng dụng toán</title>
+     <description>Ứng dụng toán</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/matran/matran</link>
+     <title>Ứng dụng toán</title>
+     <description>Ứng dụng toán</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/matran/nhanhaimatran</link>
+     <title>Ứng dụng toán</title>
+     <description>Ứng dụng toán</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/matran/matrannghichdao</link>
+     <title>Ứng dụng toán</title>
+     <description>Ứng dụng toán</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/dathucs</link>
+     <title>Ứng dụng toán</title>
+     <description>Ứng dụng toán</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/dathuc/luythuadathuc</link>
+     <title>Ứng dụng toán</title>
+     <description>Ứng dụng toán</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/dathuc/nhanhaidathuc</link>
+     <title>Ứng dụng toán</title>
+     <description>Ứng dụng toán</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/dathuc/chiadachodathuc</link>
+     <title>Ứng dụng toán</title>
+     <description>Ứng dụng toán</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/site/contact</link>
+     <title>Góp ý</title>
+     <description>Góp ý</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/site/login</link>
+     <title>Đăng nhập</title>
+     <description>Đăng nhập</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/site/signup</link>
+     <title>Tạo tài khoản</title>
+     <description>Tạo tài khoản</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://ungdungtoan.com/site/request-password-reset</link>
+     <title>Request password reset</title>
+     <description>Request password reset</description>
+     <ror:updatePeriod>daily</ror:updatePeriod>
+     <ror:sortOrder>2</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  

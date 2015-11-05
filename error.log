@@ -220,3 +220,43 @@ Stack trace:
 2015/10/21 20:28:32 [error] 1580#0: *92 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected end of file in /home/studies/project/toanhoc/views/dathuc/luythuadathuc.php on line 105" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /dathuc/luythuadathuc HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/dathuc/luythuadathuc"
 2015/10/21 20:28:32 [error] 1580#0: *92 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected end of file in /home/studies/project/toanhoc/views/dathuc/luythuadathuc.php on line 105" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /dathuc/luythuadathuc HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/dathuc/luythuadathuc"
 2015/10/21 20:28:32 [error] 1580#0: *92 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected end of file in /home/studies/project/toanhoc/views/dathuc/luythuadathuc.php on line 105" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /dathuc/luythuadathuc HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/dathuc/luythuadathuc"
+2015/11/05 23:16:40 [error] 1599#0: *15 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+exception 'yii\base\UnknownPropertyException' with message 'Setting unknown property: yii\web\UrlManager::0' in /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Component.php:197
+Stack trace:
+#0 /home/studies/project/toanhoc/vendor/yiisoft/yii2/BaseYii.php(518): yii\base\Component->__set('0', Array)
+#1 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Object.php(105): yii\BaseYii::configure(Object(yii\web\UrlManager), Array)
+#2 [internal function]: yii\base\Object->__construct(Array)
+#3 /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/Container.php(372): ReflectionClass->newInstanceArgs(Array)
+#4 /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/Container.php(151): yii\di\Container->build('yii\web\UrlMana...', Array, Array)
+#5 /home/studies/project/toanhoc/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('yii\web\UrlMana...', Array, Array)
+#6 /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/ServiceLocator.php(133" while reading response header from upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /matrans HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn", referrer: "http://toanhoc.vn/matran/matran"
+2015/11/05 23:23:27 [error] 1599#0: *108 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'Missing required parameter "id" when instantiating "xj\sitemap\actions\SitemapIndexAction".' in /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/Container.php:451
+Stack trace:
+#0 /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->resolveDependencies(Array, Object(ReflectionClass))
+#1 /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/Container.php(151): yii\di\Container->build('xj\sitemap\acti...', Array, Array)
+#2 /home/studies/project/toanhoc/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('xj\sitemap\acti...', Array, Array)
+#3 /home/studies/project/t" while reading upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /sitemap.xml HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn"
+2015/11/05 23:23:27 [error] 1599#0: *108 FastCGI sent in stderr: "oanhoc/vendor/yiisoft/yii2/base/Component.php(663): yii\BaseYii::createObject(Array)
+#4 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Component.php(647): yii\base\Component->attachBehaviorInternal('sitemap-google-...', Array)
+#5 /home/studies/project/toanhoc/vendor/yiisoft/y" while reading upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /sitemap.xml HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn"
+2015/11/05 23:24:04 [error] 1599#0: *115 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'Missing required parameter "id" when instantiating "xj\sitemap\actions\SitemapIndexAction".' in /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/Container.php:451
+Stack trace:
+#0 /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->resolveDependencies(Array, Object(ReflectionClass))
+#1 /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/Container.php(151): yii\di\Container->build('xj\sitemap\acti...', Array, Array)
+#2 /home/studies/project/toanhoc/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('xj\sitemap\acti...', Array, Array)
+#3 /home/studies/project/t" while reading upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /sitemap.1.xml.gz HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn"
+2015/11/05 23:24:04 [error] 1599#0: *115 FastCGI sent in stderr: "oanhoc/vendor/yiisoft/yii2/base/Component.php(663): yii\BaseYii::createObject(Array)
+#4 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Component.php(647): yii\base\Component->attachBehaviorInternal('sitemap-google-...', Array)
+#5 /home/studies/project/toanhoc/vendor/yiisoft/y" while reading upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /sitemap.1.xml.gz HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn"
+2015/11/05 23:24:09 [error] 1599#0: *116 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+exception 'yii\base\InvalidConfigException' with message 'Missing required parameter "id" when instantiating "xj\sitemap\actions\SitemapIndexAction".' in /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/Container.php:451
+Stack trace:
+#0 /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/Container.php(364): yii\di\Container->resolveDependencies(Array, Object(ReflectionClass))
+#1 /home/studies/project/toanhoc/vendor/yiisoft/yii2/di/Container.php(151): yii\di\Container->build('xj\sitemap\acti...', Array, Array)
+#2 /home/studies/project/toanhoc/vendor/yiisoft/yii2/BaseYii.php(344): yii\di\Container->get('xj\sitemap\acti...', Array, Array)
+#3 /home/studies/project/toanhoc/v" while reading upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /SITE/sitemap.1.xml.gz HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn"
+2015/11/05 23:24:09 [error] 1599#0: *116 FastCGI sent in stderr: "endor/yiisoft/yii2/base/Component.php(663): yii\BaseYii::createObject(Array)
+#4 /home/studies/project/toanhoc/vendor/yiisoft/yii2/base/Component.php(647): yii\base\Component->attachBehaviorInternal('sitemap-google-...', Array)
+#5 /home/studies/project/toanhoc/vendor/yiisoft/y" while reading upstream, client: 127.0.0.1, server: toanhoc.vn, request: "GET /SITE/sitemap.1.xml.gz HTTP/1.1", upstream: "fastcgi://unix:/var/run/php5-fpm.sock:", host: "toanhoc.vn"

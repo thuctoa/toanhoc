@@ -93,7 +93,7 @@ class BaseYii
      */
     public static function getVersion()
     {
-        return '2.0.5';
+        return '2.0.6';
     }
 
     /**
@@ -466,9 +466,7 @@ class BaseYii
     {
         return 'Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a>';
     }
-    public static function ngongu(){
-        return 'Language :';
-    }
+
     /**
      * Translates a message to the specified language.
      *

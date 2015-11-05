@@ -12,6 +12,14 @@ use app\models\SignupForm;
 use app\models\PasswordResetRequestForm;
 use app\models\ResetPasswordForm;
 
+use app\models\User;
+use yii\data\ActiveDataProvider;
+use yii\data\ArrayDataProvider;
+use xj\sitemap\models\Url;
+use xj\sitemap\models\BaiduUrl;
+use xj\sitemap\actions\SitemapUrlsetAction;
+use xj\sitemap\actions\SitemapIndexAction;
+
 class SiteController extends Controller
 {
     public function behaviors()
