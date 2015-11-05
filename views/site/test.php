@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
+<title>Ứng dụng toán</title>
 </head>
 <body>
 
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
+<h1>Ứng dụng toán</h1>
+<h2>Ứng dụng toán</h2>
+<h3>Ứng dụng toán</h3>
+<p>Ứng dụng toán.</p>
 
 </body>
 </html>
